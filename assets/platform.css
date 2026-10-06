@@ -45,6 +45,7 @@ img { max-width: 100%; }
 .tree > li > details > summary a, .tree > li > a { font-weight: 600; }
 
 /* article */
+article { overflow-wrap: anywhere; }
 article h1 { font-size: 28px; line-height: 1.35; margin: 4px 0 18px; }
 article h2 { font-size: 21px; margin: 34px 0 12px; padding-left: 12px; border-left: 4px solid var(--navy); line-height: 1.4; }
 article h3 { font-size: 17px; margin: 22px 0 8px; }
@@ -139,7 +140,14 @@ body.present .present { background: var(--navy); color: #fff; border-color: var(
   body.side-open .side { display: block; }
   .menu { display: inline-block; }
   .top nav, .present { display: none; }
+  .top { gap: 10px; padding: 0 12px; }
+  .top .sp { display: none; }
+  .brand { min-width: 0; flex: 1; white-space: normal; font-size: 14.5px; line-height: 1.3; }
+  .brand i, .menu { flex-shrink: 0; }
+  .vbadge { flex-shrink: 0; white-space: nowrap; }
   .main { padding: 18px 16px 30px; }
-  .wb { grid-template-columns: 1fr; } .wbtag { justify-self: start; } .wb i { grid-column: 1; grid-row: auto; }
+  .wb { grid-template-columns: 1fr; } .wb > * { grid-column: 1 !important; grid-row: auto; } .wbtag { justify-self: start; }
+  .files li { flex-wrap: wrap; }
+  .files .file { white-space: normal; overflow-wrap: anywhere; }
 }
 @media print { .top, .side, .pager { display: none; } .layout { display: block; } .main { max-width: none; padding: 0; } }
