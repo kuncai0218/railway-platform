@@ -7,8 +7,707 @@
 <span class="sp"></span><button class="present" id="presentBtn" title="演示模式：隐藏目录、放大字号，← → 翻页，Esc 退出">演示模式</button></header>
 <div class="layout"><aside class="side" id="side"><div class="sidelinks"><a href="https://kuncai0218.github.io/railway-s2/" target="_blank" rel="noopener">三测点判读系统 ↗</a><a href="https://kuncai0218.github.io/railway-ledger/" target="_blank" rel="noopener">台账判读台 ↗</a><a href="https://kuncai0218.github.io/railway-study/" target="_blank" rel="noopener">学习教程 ↗</a></div><ul class="tree"><li><details><summary><a class="" href="index.html">首页</a></summary><ul><li><a class="" href="index.html#route">总体技术路线图</a></li><li><a class="" href="index.html#idea">总体思路</a></li><li><a class="" href="index.html#timeline">进展时间线</a></li></ul></details></li><li><details><summary><a class="" href="g1.html">一、共用数据与样本准备</a></summary><ul><li><a class="" href="1-1.html">1.1 数据源</a></li><li><a class="" href="1-2.html">1.2 质量检查与时相匹配</a></li><li><a class="" href="1-3.html">1.3 空间对齐与误差检查</a></li><li><details><summary><a class="" href="1-4.html">1.4 人工判读与标注规范</a></summary><ul><li><a class="" href="1-4-1.html">1.4.1 语义分割标注规范</a></li><li><a class="" href="1-4-2.html">1.4.2 变化检测标注规范</a></li><li><a class="" href="1-4-3.html">1.4.3 河岸线标注规范</a></li></ul></details></li><li><a class="" href="1-5.html">1.5 评价协议</a></li></ul></details></li><li><details><summary><a class="" href="g2.html">二、层次一 三个测点初步探究</a></summary><ul><li><a class="" href="2-1.html">2.1 三个测点概况</a></li><li><details><summary><a class="" href="2-2.html">2.2 三个测点 · Sentinel-2</a></summary><ul><li><a class="" href="2-2-1.html">2.2.1 数据准备</a></li><li><a class="" href="2-2-2.html">2.2.2 语义分割</a></li><li><a class="" href="2-2-3.html">2.2.3 变化检测</a></li><li><a class="" href="2-2-4.html">2.2.4 伪变化抑制</a></li><li><a class="" href="2-2-5.html">2.2.5 河岸线研究</a></li></ul></details></li><li><details><summary><a class="" href="2-3.html">2.3 三个测点 · 高分辨率</a></summary><ul><li><a class="" href="2-3-1.html">2.3.1 数据准备</a></li><li><a class="" href="2-3-2.html">2.3.2 语义分割</a></li><li><a class="" href="2-3-3.html">2.3.3 变化检测</a></li><li><a class="" href="2-3-4.html">2.3.4 伪变化抑制</a></li><li><a class="" href="2-3-5.html">2.3.5 河岸线研究</a></li></ul></details></li></ul></details></li><li><details><summary><a class="" href="g3.html">三、层次二 全量台账事件研究</a></summary><ul><li><a class="" href="3-1.html">3.1 台账整理与核验</a></li><li><details><summary><a class="" href="3-2.html">3.2 台账事件 · Sentinel-2</a></summary><ul><li><a class="" href="3-2-1.html">3.2.1 数据准备</a></li><li><a class="" href="3-2-2.html">3.2.2 语义分割</a></li><li><a class="" href="3-2-3.html">3.2.3 变化检测</a></li><li><a class="" href="3-2-4.html">3.2.4 伪变化抑制</a></li><li><a class="" href="3-2-5.html">3.2.5 河岸线研究</a></li></ul></details></li><li><details><summary><a class="" href="3-3.html">3.3 台账事件 · 高分辨率</a></summary><ul><li><a class="" href="3-3-1.html">3.3.1 数据准备</a></li><li><a class="" href="3-3-2.html">3.3.2 语义分割</a></li><li><a class="" href="3-3-3.html">3.3.3 变化检测</a></li><li><a class="" href="3-3-4.html">3.3.4 伪变化抑制</a></li><li><a class="" href="3-3-5.html">3.3.5 河岸线研究</a></li></ul></details></li><li><a class="" href="3-4.html">3.4 灾前线索分析</a></li></ul></details></li><li><a class="" href="4.html">四、精度评估与最优方案</a></li><li><a class="" href="5.html">五、方法改进</a></li><li><details><summary><a class="" href="g6.html">六、资料</a></summary><ul><li><a class="" href="6-1.html">6.1 代码与数据文件</a></li><li><a class="" href="6-2.html">6.2 参考文献</a></li><li><a class="" href="6-3.html">6.3 汇报记录</a></li><li><a class="" href="6-4.html">6.4 名词解释</a></li></ul></details></li><li><details open><summary><a class="cur" href="r1010.html">七、10.10 汇报</a></summary><ul><li><a class="" href="r1010.html#s0">0 总体技术路线</a></li><li><a class="" href="r1010.html#s1">1 摘要</a></li><li><a class="" href="r1010.html#s2">2 数据</a></li><li><a class="" href="r1010.html#s3">3 评价方法</a></li><li><a class="" href="r1010.html#s4">4 变化检测方法比较</a></li><li><a class="" href="r1010.html#s5">5 多源辅助信息融合</a></li><li><a class="" href="r1010.html#s6">6 最好方案的结果</a></li><li><a class="" href="r1010.html#s7">7 与已有研究的比较</a></li><li><a class="" href="r1010.html#s8">8 误差来源与改进计划</a></li><li><a class="" href="r1010.html#s9">9 株洲南河岸线</a></li><li><a class="" href="r1010.html#s10">10 下一步</a></li><li><a class="" href="r1010.html#s11">11 具体安排</a></li></ul></details></li></ul></aside>
 <main class="main"><div class="crumb"><a href="index.html">首页</a></div><article><h1>七、10.10 汇报</h1><div class="lead">2026-10-10 向老师所做的阶段汇报：三个测点 Sentinel-2 变化检测的数据与标注、评价方法、方法比较、辅助信息融合实验、最好方案的结果与误差分析、株洲南河岸线历史分析，以及下一步的高分辨率影像、台账研究和具体安排。</div>
-<div class="note"><p>本章含未发表的结果数值、台账资料和采购预算，按平台公开范围只在内部版提供全文。下面列出汇报提纲；相关内容见各对应页面。</p></div>
-<ol class="outline"><li id="s0">0 总体技术路线</li><li id="s1">1 摘要</li><li id="s2">2 数据</li><li id="s3">3 评价方法</li><li id="s4">4 变化检测方法比较</li><li id="s5">5 多源辅助信息融合</li><li id="s6">6 最好方案的结果</li><li id="s7">7 与已有研究的比较</li><li id="s8">8 误差来源与下一周的改进计划</li><li id="s9">9 株洲南河岸线 10 米历史分析</li><li id="s10">10 下一步：高分辨率影像、河道补充影像与台账研究</li><li id="s11">11 具体安排</li></ol></article>
+<div class="note"><p>本章为 2026-10-10 阶段汇报的全文。铁路方提供的台账明细、高分辨率影像和采购预算按平台公开范围只在内部版提供。</p></div>
+<style>.r1010{--bg:#fff;--fg:#1b2230;--mut:#5a6475;--line:#e3e7ee;--hl:#eef3f9;--acc:#2f6db5;--good:#1e9e6a;--bad:#c0392b;--tie:#7a7a7a}.r1010 .note{color:var(--mut);font-size:13px}.r1010 .tw{overflow-x:auto;margin:6px 0 14px}.r1010 table{border-collapse:collapse;font-size:13.5px}.r1010 th,.r1010 td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}.r1010 th{background:var(--hl)}.r1010 td{font-variant-numeric:tabular-nums}.r1010 .b{display:inline-block;padding:0 7px;border-radius:9px;font-size:12px;color:#fff;white-space:nowrap}.r1010 .good{background:var(--good)}.r1010 .bad{background:var(--bad)}.r1010 .tie{background:var(--tie)}.r1010 .na{background:#999}.r1010 figure{margin:12px 0}.r1010 figure img{border:1px solid var(--line);border-radius:4px}.r1010 .math{font-family:'Cambria Math','Times New Roman',serif;font-size:17px;text-align:center;margin:12px 0}.r1010 .tcap,.r1010 .fcap{font-size:14px;margin:18px 0 6px;color:var(--fg)}.r1010 figcaption{font-size:13.5px;color:var(--mut);margin-top:4px}.r1010 figure img{cursor:zoom-in;width:100%;height:auto}.r1010 main img,.r1010 .r1010 img{max-width:100%;height:auto;cursor:zoom-in}.r1010 svg.chart{cursor:zoom-in}.r1010 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}@media (max-width:820px){.r1010 .grid3{grid-template-columns:1fr}}.r1010 figure.case4 img{max-width:820px}.r1010 .chart{width:100%;height:auto}.r1010 .chart .ct{font-size:20px;font-weight:700;fill:var(--fg)}.r1010 .chart .lgd{font-size:15px;fill:var(--fg)}.r1010 .chart .cat{font-size:15px;fill:var(--fg)}.r1010 .chart .tk{font-size:13px;fill:var(--mut)}.r1010 .chart .vl{font-size:14px;fill:var(--fg)}.r1010 .chart .gd{stroke:var(--line)}.r1010 .chart .rf{stroke:var(--bad);stroke-width:2;stroke-dasharray:6 4}.r1010 .chart .rft{font-size:14px;fill:var(--bad)}.r1010 .desks{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin:12px 0}.r1010 .desk{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--fg);background:var(--hl)}.r1010 .desk span{font-size:13px;color:var(--mut)}.r1010 .desk i{font-style:normal;color:var(--acc);font-size:13px}.r1010 .lb{position:fixed;inset:0;z-index:9999;background:rgba(10,14,20,.88);display:flex;flex-direction:column}.r1010 .lb[hidden]{display:none}.r1010 .lbbar{display:flex;gap:12px;align-items:center;padding:10px 16px;color:#fff;font-size:14px}.r1010 .lbbar #lbcap{flex:1;min-width:0}.r1010 .lbtip{opacity:.7;font-size:12px}.r1010 .lbbar button{background:#fff;color:#111;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}.r1010 .lbstage{flex:1;overflow:hidden;display:flex;align-items:center;justify-content:center;touch-action:none}.r1010 .lbbox{transform-origin:center center;cursor:grab}.r1010 .lbimg{max-width:94vw;max-height:84vh;display:block;image-rendering:pixelated;background:#fff}.r1010 .lbsvg{width:min(1400px,94vw);height:auto;background:var(--bg);padding:10px;border-radius:6px}.r1010 .arch .ab{fill:var(--bg);stroke:var(--line);stroke-width:1.5}.r1010 .arch .ai{fill:var(--hl);stroke:var(--acc);stroke-width:1.5}.r1010 .arch .ae{fill:#fdf1e7;stroke:#d86614;stroke-width:1.5}.r1010 .arch .at{font-size:15px;fill:var(--fg)}.r1010 .arch .al{stroke:var(--mut);stroke-width:2}.r1010 .arch .am{fill:var(--mut)}.r1010 .arch .alb{font-size:13px;fill:var(--mut)}.r1010 .rel{font-size:13px;color:var(--mut);margin:2px 0 12px}.r1010 .lb{position:fixed}</style><div class="r1010"><p class='note'>2026-10-10 · 测点：株洲南、衡阳北、韶关南</p><h2 id="s0">0 总体技术路线</h2><p class='rel'>平台相关页面：<a href="index.html#route">首页 · 总体技术路线图</a></p><figure><img src="media/r1010/588baf72b4c893ae.png" alt='铁路沿线多时相遥感风险识别总体技术路线'><figcaption><b>图 0-1</b>　项目总体技术路线</figcaption></figure><p>本报告对应图 0-1 中“层次一　三个测点初步探究”的 Sentinel-2 部分，按以下顺序组织：第 2、3 节介绍数据、变化标注和评价方法；第 <a href="#s4">4</a> 节比较各类直接变化检测方法（路线 B）；第 <a href="#s5">5</a> 节系统研究辅助信息的融合；第 6—8 节分析最好方案的结果、与已有研究的比较和误差来源，并给出下一周的改进计划；第 <a href="#s9">9</a> 节是株洲南河岸线的 10 米历史分析（专题拓展）；第 10、11 节是下一步计划和具体安排。路线 A（先地物分割、再比较）与路线 B 的严格对比还在完善，计划下一周完成。</p><h2 id="s1">1 摘要</h2><p class='rel'>平台相关页面：<a href="4.html">四、精度评估与最优方案</a></p><p>铁路沿线的施工扰动、山坡开挖和岸线变化需要长期、低成本地监测。本研究以京广铁路株洲南、衡阳北、韶关南三个测点为对象，利用 2021 年 7 月至 2026 年 7 月的 Sentinel-2 多光谱影像（10 米分辨率），构建了包含 511 个前后影像对、19,768 个逐像元变化标注的数据集；在“换测点”（推广到没见过的地点）和“同测点新时期”（用于以后的监测）两种测试下，比较了四类共 17 种变化检测方法，并系统研究了 46 个辅助信息层的融合方式及其作用。主要结论如下。</p>
+<ol>
+<li><strong>最好的方案</strong>是 OlmoEarth 遥感大模型加“后段旁支”融合全部辅助信息：换测点 F1 为 0.600，同测点新时期 F1 为 0.552；同一方案换 3 个随机种子，换测点 F1 为 0.615 ± 0.013，结果稳定。</li>
+<li><strong>模型比较</strong>：OlmoEarth 是唯一在三个测点、两种测试下都稳定的模型。换测点总体 F1 上，它与 FC-EF、Prithvi-300M 接近（0.600、0.567、0.596），但合并分数主要由变化最多的衡阳北决定；分测点看，其他模型在留株洲南测试时都表现很差（F1 只有 0.057—0.284），OlmoEarth 为 0.482。同测点新时期 OlmoEarth 也明显领先，其余模型都不超过 0.479。</li>
+<li><strong>多光谱和辅助信息不可缺少</strong>：OlmoEarth 只用真彩色（RGB）三个波段时，换测点 F1 只有 0.179；用全部 12 个波段但不加辅助信息时为 0.092，主要是留衡阳北测试那一轮失效。</li>
+<li><strong>辅助信息的作用</strong>：各组信息之间有很强的互相替代性——只加任意一组，换测点 F1 就能恢复到 0.49—0.58；从全部中单独去掉某一组时，只有地形组会让三个测点都稳定下降。融合方式上，最简单的后段旁支最好，相加、FiLM、门控、交叉注意力四种多尺度注入都稳定更差。</li>
+<li><strong>与已有研究相比</strong>：公开的 Sentinel-2 变化检测基准 OSCD 上，已发表方法的 F1 约为 0.42—0.58；本研究的精度处在同一水平的上沿（两者的数据和变化定义不同，只能作量级参考）。</li>
+<li><strong>以事件为单位</strong>：换测点测试中，面积不小于 400 平方米的真实变化事件有 61% 被检出；但模型报出的变化区域中有 76% 与人工标注没有重叠，主要是衡阳北零散的小块误报。成片的明显变化已比较可靠，零散误报是下一步要解决的主要问题。</li>
+<li><strong>误差来源</strong>：一是门槛从训练测点搬到新测点时不再最优，若门槛恰好合适，换测点 F1 可达 0.717（仅作上限）；二是有雾影像，只看无雾影像对时 F1 为 0.660；三是误报高度集中在衡阳北（占全部误报的 94%），多在水体、施工裸土和建成区上；四是小于 20 个像元的小变化和水位、洪水变化召回低。下一周将围绕门槛校准和伪变化抑制继续提高 F1（第 <a href="#s8">8</a> 节）。</li>
+</ol>
+<h2 id="s2">2 数据</h2><p class='rel'>平台相关页面：<a href="2-1.html">2.1 三个测点概况</a> · <a href="2-2-1.html">2.2.1 数据准备</a> · <a href="1-4-2.html">1.4.2 变化检测标注规范</a> · <a href="https://kuncai0218.github.io/railway-s2/" target='_blank' rel='noopener'>三测点判读系统 ↗</a></p><h3 id="s2-1">2.1 研究区</h3>
+<p>三个测点都位于京广铁路沿线，分别代表河流与山地交错、施工扰动集中、山地坡面三类典型环境（表 2-1、图 2-1）。每个测点研究一块 2.56 km × 2.56 km 的范围，对应 Sentinel-2 影像上 256 × 256 个 10 米像元。</p>
+<p class='tcap'><b>表 2-1</b>　三个测点的环境与关注对象</p><div class='tw'><table><thead><tr><th>测点</th><th>环境</th><th>关注对象</th></tr></thead><tbody><tr><td>株洲南</td><td>湘江东北岸，铁路紧贴山脚</td><td>长大边坡、铁路上方的山体和铁路一侧的岸线</td></tr><tr><td>衡阳北</td><td>铁路上方有大片红土施工区</td><td>施工范围扩大和雨后泥沙下泄</td></tr><tr><td>韶关南</td><td>北江东南岸，铁路一侧贴山、一侧临河</td><td>山坡裸露、滑塌和河岸变化</td></tr></tbody></table></div>
+<div class='grid3'><figure class=''><img src="media/r1010/a48559c0521f352c.jpg" alt='株洲南：铁路紧贴山脚，右侧为长大边坡' loading='lazy'><figcaption><b>图 2-1a</b>　株洲南：铁路紧贴山脚，右侧为长大边坡</figcaption></figure><figure class=''><img src="media/r1010/1e93bc6762fd1126.jpg" alt='衡阳北：铁路上方的红土施工区' loading='lazy'><figcaption><b>图 2-1b</b>　衡阳北：铁路上方的红土施工区</figcaption></figure><figure class=''><img src="media/r1010/43b106a67ccf2cd5.jpg" alt='韶关南：铁路一侧贴山、一侧临河' loading='lazy'><figcaption><b>图 2-1c</b>　韶关南：铁路一侧贴山、一侧临河</figcaption></figure></div>
+<h3 id="s2-2">2.2 影像与影像对</h3>
+<p>影像采用 Sentinel-2 L2A 级地表反射率产品，共 12 个波段（10 米、20 米、60 米波段统一重采样到 10 米网格），时间范围为 2021 年 7 月至 2026 年 7 月。变化检测的基本单元是“影像对”：每一期影像与它之前最近的一期清晰影像组成一对，前期影像先精确配准到后期影像的网格上（逐对估计平移量），使两期影像逐像元对齐。当某个变化框的前期影像需要换成更早的清晰影像时，该框单独组成一个“补充对”。整期被云遮挡、无法判读的影像对不参与训练和评价。</p>
+<p>最终数据集共有 511 个影像对（其中补充对 34 个），三个测点的情况见表 2-2 和图 2-2。标注把每个像元记为三种状态之一：变化（1）、经核查的没变（0）、不算（255，不参与训练和评价，例如云下、看不清或不计入的季节性变化）。三个测点的变化量差别很大：衡阳北有大片施工区，变化像元占全部的 63%；株洲南最少，只有 1,752 个。</p>
+<p class='tcap'><b>表 2-2</b>　数据集概况（1 个像元 = 10 米 × 10 米 = 100 平方米）</p><div class='tw'><table><thead><tr><th>测点</th><th>影像期数</th><th>时间范围</th><th>影像对（其中补充对）</th><th>有变化的影像对</th><th>变化像元：真变化 / 水位 / 洪水</th><th>变化像元合计</th><th>经核查没变的像元</th><th>不算的像元占比</th></tr></thead><tbody><tr><td>株洲南</td><td>170</td><td>2021-07-31 至 2026-07-12</td><td>182（13）</td><td>19</td><td>1,460 / 292 / 0</td><td>1,752</td><td>3,931,914</td><td>67%</td></tr><tr><td>衡阳北</td><td>199</td><td>2021-07-28 至 2026-07-10</td><td>215（17）</td><td>59</td><td>11,566 / 841 / 0</td><td>12,407</td><td>10,677,241</td><td>24%</td></tr><tr><td>韶关南</td><td>111</td><td>2021-07-28 至 2026-07-12</td><td>114（4）</td><td>22</td><td>4,328 / 1,063 / 218</td><td>5,609</td><td>3,089,700</td><td>59%</td></tr></tbody></table></div>
+<figure class='cf'><svg viewBox='0 0 1000 315' class='chart' role='img' aria-label='各测点的影像对数'><text x='0' y='24' class='ct'>各测点的影像对数</text><rect x='0' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='22' y='54' class='lgd'>影像对</text><rect x='92' y='40' width='16' height='16' rx='3' fill='#e08a2c'/><text x='114' y='54' class='lgd'>有变化的影像对</text><line x1='300.0' x2='300.0' y1='86' y2='281' class='gd'/><text x='300.0' y='301' text-anchor='middle' class='tk'>0</text><line x1='422.0' x2='422.0' y1='86' y2='281' class='gd'/><text x='422.0' y='301' text-anchor='middle' class='tk'>50</text><line x1='544.0' x2='544.0' y1='86' y2='281' class='gd'/><text x='544.0' y='301' text-anchor='middle' class='tk'>100</text><line x1='666.0' x2='666.0' y1='86' y2='281' class='gd'/><text x='666.0' y='301' text-anchor='middle' class='tk'>150</text><line x1='788.0' x2='788.0' y1='86' y2='281' class='gd'/><text x='788.0' y='301' text-anchor='middle' class='tk'>200</text><line x1='910.0' x2='910.0' y1='86' y2='281' class='gd'/><text x='910.0' y='301' text-anchor='middle' class='tk'>250</text><text x='288' y='118.5' text-anchor='end' class='cat'>株洲南</text><rect x='300' y='92' width='444.1' height='20' rx='3' fill='#1f5f8b'><title>株洲南 · 影像对：182</title></rect><text x='750.1' y='107' class='vl'>182</text><rect x='300' y='115' width='46.4' height='20' rx='3' fill='#e08a2c'><title>株洲南 · 有变化的影像对：19</title></rect><text x='352.4' y='130' class='vl'>19</text><text x='288' y='179.5' text-anchor='end' class='cat'>衡阳北</text><rect x='300' y='153' width='524.6' height='20' rx='3' fill='#1f5f8b'><title>衡阳北 · 影像对：215</title></rect><text x='830.6' y='168' class='vl'>215</text><rect x='300' y='176' width='144.0' height='20' rx='3' fill='#e08a2c'><title>衡阳北 · 有变化的影像对：59</title></rect><text x='450.0' y='191' class='vl'>59</text><text x='288' y='240.5' text-anchor='end' class='cat'>韶关南</text><rect x='300' y='214' width='278.2' height='20' rx='3' fill='#1f5f8b'><title>韶关南 · 影像对：114</title></rect><text x='584.2' y='229' class='vl'>114</text><rect x='300' y='237' width='53.7' height='20' rx='3' fill='#e08a2c'><title>韶关南 · 有变化的影像对：22</title></rect><text x='359.7' y='252' class='vl'>22</text></svg><figcaption><b>图 2-2a</b>　各测点的影像对数与其中有变化的影像对数</figcaption></figure><figure class='cf'><svg viewBox='0 0 1000 384' class='chart' role='img' aria-label='各测点的变化像元数（按类型）'><text x='0' y='24' class='ct'>各测点的变化像元数（按类型）</text><rect x='0' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='22' y='54' class='lgd'>持续的真变化</text><rect x='140' y='40' width='16' height='16' rx='3' fill='#7a9a3a'/><text x='162' y='54' class='lgd'>水位变化</text><rect x='248' y='40' width='16' height='16' rx='3' fill='#e08a2c'/><text x='270' y='54' class='lgd'>洪水</text><line x1='300.0' x2='300.0' y1='86' y2='350' class='gd'/><text x='300.0' y='370' text-anchor='middle' class='tk'>0</text><line x1='422.0' x2='422.0' y1='86' y2='350' class='gd'/><text x='422.0' y='370' text-anchor='middle' class='tk'>4,000</text><line x1='544.0' x2='544.0' y1='86' y2='350' class='gd'/><text x='544.0' y='370' text-anchor='middle' class='tk'>8,000</text><line x1='666.0' x2='666.0' y1='86' y2='350' class='gd'/><text x='666.0' y='370' text-anchor='middle' class='tk'>12,000</text><line x1='788.0' x2='788.0' y1='86' y2='350' class='gd'/><text x='788.0' y='370' text-anchor='middle' class='tk'>16,000</text><line x1='910.0' x2='910.0' y1='86' y2='350' class='gd'/><text x='910.0' y='370' text-anchor='middle' class='tk'>20,000</text><text x='288' y='130.0' text-anchor='end' class='cat'>株洲南</text><rect x='300' y='92' width='44.5' height='20' rx='3' fill='#1f5f8b'><title>株洲南 · 持续的真变化：1,460</title></rect><text x='350.5' y='107' class='vl'>1,460</text><rect x='300' y='115' width='8.9' height='20' rx='3' fill='#7a9a3a'><title>株洲南 · 水位变化：292</title></rect><text x='314.9' y='130' class='vl'>292</text><rect x='300' y='138' width='1.0' height='20' rx='3' fill='#e08a2c'><title>株洲南 · 洪水：0</title></rect><text x='306.0' y='153' class='vl'>0</text><text x='288' y='214.0' text-anchor='end' class='cat'>衡阳北</text><rect x='300' y='176' width='352.8' height='20' rx='3' fill='#1f5f8b'><title>衡阳北 · 持续的真变化：11,566</title></rect><text x='658.8' y='191' class='vl'>11,566</text><rect x='300' y='199' width='25.7' height='20' rx='3' fill='#7a9a3a'><title>衡阳北 · 水位变化：841</title></rect><text x='331.7' y='214' class='vl'>841</text><rect x='300' y='222' width='1.0' height='20' rx='3' fill='#e08a2c'><title>衡阳北 · 洪水：0</title></rect><text x='306.0' y='237' class='vl'>0</text><text x='288' y='298.0' text-anchor='end' class='cat'>韶关南</text><rect x='300' y='260' width='132.0' height='20' rx='3' fill='#1f5f8b'><title>韶关南 · 持续的真变化：4,328</title></rect><text x='438.0' y='275' class='vl'>4,328</text><rect x='300' y='283' width='32.4' height='20' rx='3' fill='#7a9a3a'><title>韶关南 · 水位变化：1,063</title></rect><text x='338.4' y='298' class='vl'>1,063</text><rect x='300' y='306' width='6.6' height='20' rx='3' fill='#e08a2c'><title>韶关南 · 洪水：218</title></rect><text x='312.6' y='321' class='vl'>218</text></svg><figcaption><b>图 2-2b</b>　各测点标为变化的像元数，按变化类型分开</figcaption></figure>
+<h3 id="s2-3">2.3 什么算“变化”：类别定义与判定方法</h3>
+<p>本研究关心的是反映地表实际改变、可能影响铁路安全的变化，而不是由季节或成像条件造成的光谱差异。标注时，每一处前后差异被判为三种结果之一：<strong>变化</strong>、<strong>没变</strong>或<strong>不算</strong>。最终计为“变化”的有三类：持续的真变化、水位变化和洪水；农田季节变化、林草物候、水色变化、雾和耀斑造成的伪变化等记为“不算”（表 2-3）。</p>
+<p class='tcap'><b>表 2-3</b>　变化标注的类别：哪些算变化、哪些不算</p><div class='tw'><table><thead><tr><th>标注结果</th><th>类别</th><th>定义</th><th>在影像上的表现与判定依据</th><th>像元数（株洲南 / 衡阳北 / 韶关南）</th></tr></thead><tbody><tr><td><b>变化</b>（1）</td><td>持续的真变化</td><td>地表覆盖发生改变，并且之后持续存在（具体形式见表 2-4）</td><td>植被指数明显下降，或可见光、短波红外明显变亮；对照之后的清晰影像，确认变化持续存在</td><td>1,460 / 11,566 / 4,328</td></tr><tr><td></td><td>水位变化</td><td>水塘、水库放水或蓄水；河汊、岸边涨落露滩</td><td>水陆边界移动，水体指数升高或降低；本身是一过性的，不要求持续</td><td>292 / 841 / 1,063</td></tr><tr><td></td><td>洪水</td><td>江河涨水淹没岸边，几周内退去</td><td>岸边大片新出现水面，之后退回</td><td>0 / 0 / 218</td></tr><tr><td><b>不算</b>（255）</td><td>农田季节变化</td><td>收割、翻耕、灌水、作物生长</td><td>发生在耕地上，每年同期重复出现</td><td>—</td></tr><tr><td></td><td>林草物候</td><td>林地、草地随季节变绿变黄</td><td>大范围同步变化，往年同期也出现</td><td>—</td></tr><tr><td></td><td>水色变化</td><td>水变浑或变清，水面范围不变</td><td>水体内部颜色变化，水陆边界不动</td><td>—</td></tr><tr><td></td><td>成像造成的伪变化</td><td>雾、薄云、耀斑使影像变亮或变暗</td><td>整片同时变化，几天之内恢复</td><td>—</td></tr><tr><td></td><td>植被恢复（暂不算）</td><td>清过的地方重新长绿</td><td>全库只有 1 对，各测点补齐后再改回“变化”</td><td>—</td></tr><tr><td></td><td>说不清 / 这一对看不出</td><td>判读人员无法确定，或变化太小、在这一对影像上看不出</td><td>按“看不准就不算”处理</td><td>—</td></tr><tr><td><b>没变</b>（0）</td><td>经核查的稳定区域</td><td>判读人员看过、确认没有变化的区域</td><td>—</td><td>—</td></tr></tbody></table></div>
+<p>“持续的真变化”在本数据中包括以下几种具体形式（表 2-4、图 2-3）。它们在标签中统一记为“变化”，不再细分；表中的子类和片数根据标注员对每一片变化的文字记录归纳。需要说明的是，在本批三个测点、2021—2026 年的影像中<strong>没有标到滑坡</strong>；与之最接近的是韶关南的 1 处坡面冲沟。</p>
+<p class='tcap'><b>表 2-4</b>　“持续的真变化”的具体形式（片数、像元数根据标注员对每一片变化的文字记录归纳）</p><div class='tw'><table><thead><tr><th>子类</th><th>定义</th><th>在 10 米影像上的典型表现</th><th>片数</th><th>像元数</th></tr></thead><tbody><tr><td>施工清表</td><td>施工前清除地表植被，林地、灌草地或农田变为裸露地表；包括施工区向外扩大</td><td>植被指数大幅下降、地表变亮，边界较规则，之后持续裸露</td><td>22</td><td>7,517</td></tr><tr><td>开挖（含挖塘）</td><td>挖方形成路堑、基坑、取土坑，或挖出新的水塘</td><td>露出新鲜土石（变亮），或出现新水面且不再消失</td><td>2</td><td>639</td></tr><tr><td>新裸土</td><td>施工区内外新出现的裸露地块（堆土、弃土、场地平整），大小不限</td><td>新的亮斑，持续存在</td><td>77</td><td>3,336</td></tr><tr><td>新修道路</td><td>新出现的道路、施工便道</td><td>一到数个像元宽的连续线状亮带</td><td>21</td><td>925</td></tr><tr><td>新建</td><td>新建房屋、场地</td><td>规则的亮斑，持续存在</td><td>4</td><td>184</td></tr><tr><td>填平（填塘）</td><td>水塘、洼地被填平</td><td>水面消失，变为裸土或场地</td><td>1</td><td>116</td></tr><tr><td>山坡开垦（梯田）</td><td>成片开垦山坡、修梯田</td><td>沿等高线排列的条带状新裸土，可持续一年以上再复绿</td><td>14</td><td>2,438</td></tr><tr><td>林地采伐或退化</td><td>成片林木被砍伐或明显退化</td><td>植被指数从约 0.7 降到 0.2—0.5，一到两年才长回</td><td>49</td><td>975</td></tr><tr><td>坡面冲沟或滑坡</td><td>山坡上新出现冲沟，或坡体沿坡面滑移</td><td>树枝状亮线，或舌状、扇状的新裸露区</td><td>1</td><td>685</td></tr><tr><td>其余</td><td>同一事件的延续部分、施工区碎屑等，文字记录未单独说明类型</td><td>—</td><td>12</td><td>539</td></tr><tr><td><b>合计</b></td><td></td><td></td><td>203</td><td>17,354</td></tr></tbody></table></div>
+<p class='fcap'><b>图 2-3</b>　四类典型变化的实例（每组从左到右：前期影像、后期影像、人工标注；左下角为比例尺，点击可放大）</p><figure class=''><img src="media/r1010/f4fc0e50f86fc559.png" alt='新裸土：衡阳北 2023-06-11 → 2023-07-13，这一片 327 个像元。施工新裸土，持续。' loading='lazy'><figcaption><b>图 2-3a</b>　新裸土：衡阳北 2023-06-11 → 2023-07-13，这一片 327 个像元。施工新裸土，持续。</figcaption></figure><figure class=''><img src="media/r1010/7c2fcbeff5e3878d.png" alt='新修道路：衡阳北 2025-05-26 → 2025-06-07，这一片 93 个像元。新修路，持续。' loading='lazy'><figcaption><b>图 2-3b</b>　新修道路：衡阳北 2025-05-26 → 2025-06-07，这一片 93 个像元。新修路，持续。</figcaption></figure><figure class=''><img src="media/r1010/07f7818a23ea3a08.png" alt='山坡开垦（梯田）：韶关南 2023-10-01 → 2023-10-16，这一片 340 个像元。新开梯田，340 格，持续。' loading='lazy'><figcaption><b>图 2-3c</b>　山坡开垦（梯田）：韶关南 2023-10-01 → 2023-10-16，这一片 340 个像元。新开梯田，340 格，持续。</figcaption></figure><figure class=''><img src="media/r1010/de8215cb3d9f8bee.png" alt='水位变化（塘水位下降露滩）：衡阳北 2026-01-08 → 2026-01-11，这一片 155 个像元。塘水位下降露滩，一过。' loading='lazy'><figcaption><b>图 2-3d</b>　水位变化（塘水位下降露滩）：衡阳北 2026-01-08 → 2026-01-11，这一片 155 个像元。塘水位下降露滩，一过。</figcaption></figure>
+<p><strong>判定方法。</strong> 判定分三步完成（流程见 <a href="#s2-4">2.4</a> 节）：同学逐期对比前后两期影像，在发生变化的地方画框并选择变化类别；组长逐框确认；之后在确认过的框内逐像元精细标注，一个 10 米像元有一多半面积发生变化才记为“变化”。为了区分真变化与季节性、成像造成的假变化，判定时不只看前后两期，而是查看这一位置的整个时间序列：变化之后在后续清晰影像中持续存在的，记为“持续的真变化”；每年同期重复出现的（农田、林草物候）和几天之内恢复的（雾、耀斑），记为“不算”；水位变化和洪水本身是一过性的，不要求持续。对全部“持续的真变化”逐像元复核表明，91% 的像元在之后的清晰影像中保持变化后的状态。</p>
+<h3 id="s2-4">2.4 标注流程与标注平台</h3>
+<p>标注在我们自建的网页标注平台上完成，平台对团队成员开放，可以直接打开查看（下方链接）。流程分为四步：</p>
+<ol>
+<li><strong>逐期判读</strong>：同学在判读系统中逐期工作。第一步判断这一期影像能否看清（云、雾、阴影等）；第二步与前期影像并排同步缩放比较，在地面发生变化的地方画框，并选择变化类别（裸土或施工、建筑、道路、植被、水面的增加或减少）。</li>
+<li><strong>组长确认</strong>：组长逐框确认、修改或否决，并可为某个框指定更合适的前期影像。</li>
+<li><strong>逐像元精标</strong>：在确认过的框内逐格（10 米）标出“变化”和“拿不准”。先由 AI 按统一规则给出建议，再经多轮自动核查和组长复核。</li>
+<li><strong>生成标签</strong>：按统一规则把判读结果转成 0 / 1 / 255 的逐像元标签。</li>
+</ol>
+<p>三个测点共画出 432 个变化框。</p>
+<div class='desks'><a class='desk' href='https://kuncai0218.github.io/railway-s2/' target='_blank' rel='noopener'><b>三测点逐期判读系统</b><span>株洲南、衡阳北、韶关南 2021—2026 年全部 505 期：判断能否看清、与前期对比画框、组长确认；含学习页、实时看板和组长台</span><i>打开 ↗</i></a><a class='desk' href='https://kuncai0218.github.io/railway-s2/label.html' target='_blank' rel='noopener'><b>变化精标台</b><span>在确认过的框内逐格（10 米）标“变化”“拿不准”；组长可逐格修改（默认演示模式）</span><i>打开 ↗</i></a><a class='desk' href='https://kuncai0218.github.io/railway-s2/review.html' target='_blank' rel='noopener'><b>AI 复核台</b><span>组长复核 AI 提出的改框、换前期影像、改类别等建议</span><i>打开 ↗</i></a><a class='desk' href='https://kuncai0218.github.io/railway-s2/landcover.html' target='_blank' rel='noopener'><b>地物精标台</b><span>逐期五类地物标注（水体、植被、耕地、裸露地、建成区），为“先分割、后比较”路线准备</span><i>打开 ↗</i></a><a class='desk' href='https://kuncai0218.github.io/railway-ledger/' target='_blank' rel='noopener'><b>台账判读台</b><span>历史水害台账事件的判读：每个事件取发生前后最近的清晰影像，同学判读、组长裁定</span><i>打开 ↗</i></a></div>
+<h2 id="s3">3 评价方法</h2><p class='rel'>平台相关页面：<a href="1-5.html">1.5 评价协议</a></p><h3 id="s3-1">3.1 两种测试方式</h3>
+<p>变化检测模型将来要用在两种场景：一是用到没有标注过的新地点，二是在已标注的地点继续监测以后的影像。我们据此设计了两种测试方式（表 3-1）。</p>
+<ul>
+<li><strong>换测点</strong>（检验能否推广到新地点）：三个测点轮流留出一个作为测试，用另外两个测点训练，共做三轮，称为三“折”（留株洲南、留衡阳北、留韶关南）。验证集从两个训练测点中按时间分组抽取约 20%，只用于选择门槛和决定何时停止训练；测试测点的数据不参与任何训练和调参。最后把三轮测试的结果合并（三轮的 TP、FP、FN 分别相加）计算一个总的 F1，称为<strong>换测点总体 F1</strong>。第 <a href="#s4-3">4.3</a> 节及以前同时报告两种测试的结果；从 <a href="#s4-4">4.4</a> 节起，统一使用换测点总体 F1，因为它最能反映模型推广到新地点的能力。</li>
+<li><strong>同测点新时期</strong>（检验能否用于以后的监测）：三个测点使用同一组时间切点，后期影像日期在 2024 年 7 月 1 日之前的影像对用于训练，2024 年 7 月 1 日至 12 月 31 日的用于验证，2025 年 1 月 1 日及以后的用于测试。</li>
+</ul>
+<p><strong>防止信息泄漏。</strong> 同一处变化往往跨越多期影像，例如一个施工区会连续几个月扩大。如果它的前几期在训练集、后几期在测试集，模型等于“见过答案”。为此我们把影像对按季度和变化过程分组，同一组只能整体进入训练、验证或测试中的一个；与验证集或测试集共用同一景影像的训练对也一并剔除。</p>
+<p class='tcap'><b>表 3-1</b>　两种测试方式的数据划分（影像对数 / 其中标为变化的像元数）</p><div class='tw'><table><thead><tr><th>测试方式</th><th>训练</th><th>验证</th><th>测试</th></tr></thead><tbody><tr><td>换测点 · 留株洲南</td><td>249 对 / 15,623 像元</td><td>70 对 / 1,290 像元</td><td>182 对 / 1,752 像元</td></tr><tr><td>换测点 · 留衡阳北</td><td>231 对 / 5,737 像元</td><td>57 对 / 521 像元</td><td>215 对 / 12,407 像元</td></tr><tr><td>换测点 · 留韶关南</td><td>314 对 / 13,372 像元</td><td>75 对 / 787 像元</td><td>114 对 / 5,609 像元</td></tr><tr><td>同测点新时期</td><td>254 对 / 16,008 像元</td><td>70 对 / 1,549 像元</td><td>180 对 / 1,899 像元</td></tr></tbody></table></div>
+<h3 id="s3-2">3.2 评价指标</h3>
+<p>评价以像元为单位，标为“不算”（255）的像元不参与计算。记 TP 为模型报为变化、人工也标为变化的像元数，FP 为模型报为变化、但人工标为没变的像元数（误报），FN 为人工标为变化、但模型没有报出的像元数（漏报），则精确率 P、召回率 R 和 F1 为：</p>
+<p class='math'>P = TP / (TP + FP)　　　 R = TP / (TP + FN)　　　 F<sub>1</sub> = 2PR / (P + R)</p>
+<p>精确率回答“报出的变化里有多少是真的”，召回率回答“真实的变化有多少被找到”，F1 是两者的调和平均，取值 0—1，越高越好。模型对每个像元输出一个变化概率，需要一个门槛把概率转成“报”或“不报”。门槛只在验证集上选择（取使验证集 F1 最大的值），然后原样用于测试集，测试集不参与任何选择。全文的主要数字都按这一规范方式计算。</p>
+<p><strong>以事件为单位的指标。</strong> 上述精确率、召回率和 F1 都按像元计算，面积大的变化权重大。实际监测更关心“一处变化有没有被发现”“报出的一处变化是不是真的”，因此我们同时以事件为单位进行评价（<a href="#s6-2">6.2</a> 节）。具体做法是：把人工标为变化的像元按相邻关系（8 连通）划分成一片一片的变化，面积不小于 4 个像元（400 平方米）的每一片记为一个<strong>真实事件</strong>；若一个真实事件中至少 30% 的像元被模型报为变化，记为<strong>检出</strong>。同样，把模型报为变化的像元划分成一片一片的<strong>报出区域</strong>；若一个报出区域与人工标为变化的像元没有任何重叠，记为<strong>误报区域</strong>（落在“不算”范围内的部分不计，评价范围内不足 4 个像元的报出区域不统计）。由此定义：</p>
+<ul>
+<li>事件检出率 = 检出的真实事件数 ÷ 真实事件数；事件漏检率 = 1 − 事件检出率；</li>
+<li>误报区域占比 = 误报区域数 ÷ 报出区域数；事件精确率 = 1 − 误报区域占比；</li>
+<li>事件 F1 = 事件精确率与事件检出率的调和平均。</li>
+</ul>
+<h3 id="s3-3">3.3 如何区分真实差异与随机波动</h3>
+<p>深度学习模型的结果会随随机种子（参数初始化、样本顺序）而波动。最好的方案换 3 个随机种子，换测点合并 F1 为 0.615 ± 0.013；而有些不稳定的配置波动大得多，例如不加辅助信息的 OlmoEarth 在留衡阳北测试时，两个种子的 F1 分别为 0.072 和 0.218。受算力限制，多数实验只训练了一次，因此我们采用保守的判读规则：一个改动与参照相比，只有当<strong>三折合并的 F1 相差至少 0.03，并且三个测点各自的差值方向一致</strong>时，才判为“稳定更好”或“稳定更差”；否则判为“差异不显著”，即差别没有超出随机波动可能造成的范围。</p>
+<h2 id="s4">4 变化检测方法比较</h2><p class='rel'>平台相关页面：<a href="2-2-3.html">2.2.3 变化检测</a> · <a href="6-2.html">6.2 参考文献</a></p><h3 id="s4-1">4.1 候选方法</h3>
+<p>我们比较了四类、共 17 种方法（表 4-1）：（1）不需要训练的传统方法，作为下限参照；（2）经典卷积网络；（3）Transformer 与状态空间网络；（4）近两年发布、原生支持 Sentinel-2 多光谱输入的遥感大模型。第 2、3 类网络原本为 0.5 米左右的高分辨率 RGB 影像设计，我们把它们的第一层扩展为可以接收多个波段；遥感大模型在大量 Sentinel-2 影像上预训练过，原生支持多个波段，我们用 LoRA（低秩适配）的方式在本数据上微调。所有深度学习方法使用相同的数据划分、训练样本和评价程序，并采用“难负样本”训练：对“光谱明显变化、但人工判为没变”的像元加大采样比例，让模型学会区分伪变化。</p>
+<p class='tcap'><b>表 4-1</b>　参与比较的方法</p><div class='tw'><table><thead><tr><th>类别</th><th>方法</th><th>出处</th><th>原理（一句话）</th><th>原生支持的输入</th></tr></thead><tbody><tr><td>传统方法<br>（不训练）</td><td>CVA 变化向量分析</td><td>Malila，1980</td><td>两期多波段差值向量的长度作为变化强度，超过门槛判为变化</td><td>任意多光谱两期</td></tr><tr><td></td><td>IR-MAD</td><td>Nielsen，IEEE TIP，2007</td><td>迭代重加权的多元变化检测：用典型相关找出两期之间最不相关的波段组合，输出变化统计量</td><td>任意多光谱两期</td></tr><tr><td></td><td>ΔNDVI 植被指数差</td><td>经典做法</td><td>两期植被指数之差的绝对值，超过门槛判为变化</td><td>红光 + 近红外两期</td></tr><tr><td></td><td>红波段差</td><td>经典做法，作极简参照</td><td>两期红波段之差（或只取变亮部分）作变化分数</td><td>红波段两期</td></tr><tr><td>经典卷积网络</td><td>FC-EF</td><td>Daudt 等，ICIP，2018</td><td>早融合：两期影像按通道叠在一起，送进一个全卷积编码—解码网络</td><td>任意波段数（原文在 Sentinel-2 13 波段和 RGB 上都做过）</td></tr><tr><td></td><td>FC-Siam-conc</td><td>同上</td><td>孪生：两期分别过同一个编码器，解码时把两期特征拼接</td><td>同上</td></tr><tr><td></td><td>FC-Siam-diff</td><td>同上</td><td>孪生：同上，但解码时用两期特征之差</td><td>同上</td></tr><tr><td></td><td>U-Net</td><td>Ronneberger 等，MICCAI，2015</td><td>经典编码—解码分割网络；两期按通道叠在一起输入，编码器用 ImageNet 预训练的 ResNet-34</td><td>RGB（本项目把第一层扩到多波段）</td></tr><tr><td></td><td>SNUNet-CD</td><td>Fang 等，IEEE GRSL，2022</td><td>孪生 + 嵌套密集连接的 U-Net，再加通道注意力</td><td>高分 RGB（本项目扩到 6 波段）</td></tr><tr><td>Transformer 与<br>状态空间网络</td><td>BIT</td><td>Chen 等，IEEE TGRS，2022</td><td>卷积网络提特征后压缩成少量“语义单元”，用 Transformer 建模两期之间的关系</td><td>高分 RGB（本项目扩到 6 波段）</td></tr><tr><td></td><td>ChangeFormer</td><td>Bandara 与 Patel，IGARSS，2022</td><td>孪生的层级 Transformer 编码器 + 轻量解码头</td><td>高分 RGB（本项目扩到 6 波段）</td></tr><tr><td></td><td>Changer</td><td>Fang 等，IEEE TGRS，2023</td><td>编码过程中交换两期的部分特征（空间交换、通道交换），让两期充分交互</td><td>高分 RGB（本项目扩到 6 波段）</td></tr><tr><td></td><td>BAN</td><td>Li 等，IEEE TGRS，2024</td><td>冻结的 CLIP 视觉大模型 + 轻量变化检测网络，中间用桥接模块传递通用特征</td><td>只能用 RGB（CLIP 部分不支持多波段）</td></tr><tr><td></td><td>ChangeMamba</td><td>Chen 等，IEEE TGRS，2024</td><td>用状态空间模型（Mamba）建模长距离空间关系和两期的时空关系</td><td>高分 RGB（本项目扩到 6 波段）</td></tr><tr><td>遥感大模型<br>（原生支持 Sentinel-2）</td><td>TerraMind 1.0（base、large 两种大小）</td><td>IBM 与欧洲航天局等，Jakubik 等，2025</td><td>多模态遥感大模型，用 Sentinel-2、Sentinel-1、高程等多种数据预训练；本项目取它的编码器，两期特征相减或拼接后解码</td><td>Sentinel-2 L2A 12 波段（还支持雷达、高程等）；单期模型，两期靠外加时间包装</td></tr><tr><td></td><td>Prithvi-EO-2.0（3 亿、6 亿参数两种）</td><td>NASA 与 IBM，Szwarcman 等，2024</td><td>在 HLS（Landsat 与 Sentinel-2 协调数据）多时相数据上预训练的遥感大模型</td><td>HLS 6 波段（蓝、绿、红、窄近红外、两个短波红外），原生多时相</td></tr><tr><td></td><td>OlmoEarth v1.2 base</td><td>艾伦人工智能研究所（Ai2），2025</td><td>在 Sentinel-2、Sentinel-1、Landsat 多时相数据上预训练的遥感大模型；本项目把前后两期当作长度为 2 的时间序列直接输入</td><td>Sentinel-2 L2A 12 波段，原生多时相</td></tr></tbody></table></div>
+<h3 id="s4-2">4.2 输入：只用 RGB、多光谱、多光谱加辅助信息</h3>
+<p><strong>问题。</strong> 只用普通真彩色影像（RGB 三个波段）够不够？多光谱波段和辅助信息分别带来多少提升？<strong>做法。</strong> 对同一个模型分别用三种输入训练，其余条件完全相同。</p>
+<figure class='cf'><svg viewBox='0 0 1000 1056' class='chart' role='img' aria-label='只用 RGB、多光谱、多光谱+辅助（换测点 F1）'><text x='0' y='24' class='ct'>只用 RGB、多光谱、多光谱+辅助（换测点 F1）</text><rect x='0' y='40' width='16' height='16' rx='3' fill='#e08a2c'/><text x='22' y='54' class='lgd'>只用 RGB</text><rect x='140' y='40' width='16' height='16' rx='3' fill='#7a9a3a'/><text x='162' y='54' class='lgd'>多光谱、不加辅助</text><rect x='312' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='334' y='54' class='lgd'>多光谱 + 全部辅助</text><line x1='300.0' x2='300.0' y1='86' y2='1022' class='gd'/><text x='300.0' y='1042' text-anchor='middle' class='tk'>0.0</text><line x1='422.0' x2='422.0' y1='86' y2='1022' class='gd'/><text x='422.0' y='1042' text-anchor='middle' class='tk'>0.1</text><line x1='544.0' x2='544.0' y1='86' y2='1022' class='gd'/><text x='544.0' y='1042' text-anchor='middle' class='tk'>0.3</text><line x1='666.0' x2='666.0' y1='86' y2='1022' class='gd'/><text x='666.0' y='1042' text-anchor='middle' class='tk'>0.4</text><line x1='788.0' x2='788.0' y1='86' y2='1022' class='gd'/><text x='788.0' y='1042' text-anchor='middle' class='tk'>0.6</text><line x1='910.0' x2='910.0' y1='86' y2='1022' class='gd'/><text x='910.0' y='1042' text-anchor='middle' class='tk'>0.7</text><text x='288' y='130.0' text-anchor='end' class='cat'>FC-EF</text><rect x='300' y='92' width='204.3' height='20' rx='3' fill='#e08a2c'><title>FC-EF · 只用 RGB：0.234</title></rect><text x='510.3' y='107' class='vl'>0.234</text><rect x='300' y='115' width='186.6' height='20' rx='3' fill='#7a9a3a'><title>FC-EF · 多光谱、不加辅助：0.214</title></rect><text x='492.6' y='130' class='vl'>0.214</text><rect x='300' y='138' width='494.2' height='20' rx='3' fill='#1f5f8b'><title>FC-EF · 多光谱 + 全部辅助：0.567</title></rect><text x='800.2' y='153' class='vl'>0.567</text><text x='288' y='214.0' text-anchor='end' class='cat'>FC-Siam-diff</text><rect x='300' y='176' width='144.0' height='20' rx='3' fill='#e08a2c'><title>FC-Siam-diff · 只用 RGB：0.165</title></rect><text x='450.0' y='191' class='vl'>0.165</text><rect x='300' y='199' width='164.3' height='20' rx='3' fill='#7a9a3a'><title>FC-Siam-diff · 多光谱、不加辅助：0.189</title></rect><text x='470.3' y='214' class='vl'>0.189</text><rect x='300' y='222' width='502.6' height='20' rx='3' fill='#1f5f8b'><title>FC-Siam-diff · 多光谱 + 全部辅助：0.577</title></rect><text x='808.6' y='237' class='vl'>0.577</text><text x='288' y='298.0' text-anchor='end' class='cat'>FC-Siam-conc</text><rect x='300' y='260' width='178.6' height='20' rx='3' fill='#e08a2c'><title>FC-Siam-conc · 只用 RGB：0.205</title></rect><text x='484.6' y='275' class='vl'>0.205</text><rect x='300' y='283' width='111.7' height='20' rx='3' fill='#7a9a3a'><title>FC-Siam-conc · 多光谱、不加辅助：0.128</title></rect><text x='417.7' y='298' class='vl'>0.128</text><rect x='300' y='306' width='505.7' height='20' rx='3' fill='#1f5f8b'><title>FC-Siam-conc · 多光谱 + 全部辅助：0.580</title></rect><text x='811.7' y='321' class='vl'>0.580</text><text x='288' y='382.0' text-anchor='end' class='cat'>U-Net</text><rect x='300' y='344' width='257.5' height='20' rx='3' fill='#e08a2c'><title>U-Net · 只用 RGB：0.296</title></rect><text x='563.5' y='359' class='vl'>0.296</text><rect x='300' y='367' width='94.6' height='20' rx='3' fill='#7a9a3a'><title>U-Net · 多光谱、不加辅助：0.109</title></rect><text x='400.6' y='382' class='vl'>0.109</text><rect x='300' y='390' width='404.4' height='20' rx='3' fill='#1f5f8b'><title>U-Net · 多光谱 + 全部辅助：0.464</title></rect><text x='710.4' y='405' class='vl'>0.464</text><text x='288' y='466.0' text-anchor='end' class='cat'>ChangeMamba（tiny）</text><rect x='300' y='428' width='359.6' height='20' rx='3' fill='#e08a2c'><title>ChangeMamba（tiny） · 只用 RGB：0.413</title></rect><text x='665.6' y='443' class='vl'>0.413</text><text x='306' y='466' class='tk'>未跑</text><rect x='300' y='474' width='97.0' height='20' rx='3' fill='#1f5f8b'><title>ChangeMamba（tiny） · 多光谱 + 全部辅助：0.111</title></rect><text x='403.0' y='489' class='vl'>0.111</text><text x='288' y='550.0' text-anchor='end' class='cat'>Changer</text><rect x='300' y='512' width='222.2' height='20' rx='3' fill='#e08a2c'><title>Changer · 只用 RGB：0.255</title></rect><text x='528.2' y='527' class='vl'>0.255</text><text x='306' y='550' class='tk'>未跑</text><rect x='300' y='558' width='462.7' height='20' rx='3' fill='#1f5f8b'><title>Changer · 多光谱 + 全部辅助：0.531</title></rect><text x='768.7' y='573' class='vl'>0.531</text><text x='288' y='634.0' text-anchor='end' class='cat'>SNUNet-CD</text><rect x='300' y='596' width='146.0' height='20' rx='3' fill='#e08a2c'><title>SNUNet-CD · 只用 RGB：0.167</title></rect><text x='452.0' y='611' class='vl'>0.167</text><text x='306' y='634' class='tk'>未跑</text><rect x='300' y='642' width='472.1' height='20' rx='3' fill='#1f5f8b'><title>SNUNet-CD · 多光谱 + 全部辅助：0.542</title></rect><text x='778.1' y='657' class='vl'>0.542</text><text x='288' y='718.0' text-anchor='end' class='cat'>BIT</text><text x='306' y='695' class='tk'>未跑</text><text x='306' y='718' class='tk'>未跑</text><rect x='300' y='726' width='385.4' height='20' rx='3' fill='#1f5f8b'><title>BIT · 多光谱 + 全部辅助：0.442</title></rect><text x='691.4' y='741' class='vl'>0.442</text><text x='288' y='802.0' text-anchor='end' class='cat'>ChangeFormer</text><rect x='300' y='764' width='190.4' height='20' rx='3' fill='#e08a2c'><title>ChangeFormer · 只用 RGB：0.218</title></rect><text x='496.4' y='779' class='vl'>0.218</text><text x='306' y='802' class='tk'>未跑</text><rect x='300' y='810' width='104.2' height='20' rx='3' fill='#1f5f8b'><title>ChangeFormer · 多光谱 + 全部辅助：0.120</title></rect><text x='410.2' y='825' class='vl'>0.120</text><text x='288' y='886.0' text-anchor='end' class='cat'>BAN（原生只支持 RGB）</text><rect x='300' y='848' width='310.9' height='20' rx='3' fill='#e08a2c'><title>BAN（原生只支持 RGB） · 只用 RGB：0.357</title></rect><text x='616.9' y='863' class='vl'>0.357</text><text x='306' y='886' class='tk'>未跑</text><text x='306' y='909' class='tk'>未跑</text><text x='288' y='970.0' text-anchor='end' class='cat'>OlmoEarth v1.2 base</text><rect x='300' y='932' width='156.1' height='20' rx='3' fill='#e08a2c'><title>OlmoEarth v1.2 base · 只用 RGB：0.179</title></rect><text x='462.1' y='947' class='vl'>0.179</text><rect x='300' y='955' width='80.2' height='20' rx='3' fill='#7a9a3a'><title>OlmoEarth v1.2 base · 多光谱、不加辅助：0.092</title></rect><text x='386.2' y='970' class='vl'>0.092</text><rect x='300' y='978' width='523.0' height='20' rx='3' fill='#1f5f8b'><title>OlmoEarth v1.2 base · 多光谱 + 全部辅助：0.600</title></rect><text x='829.0' y='993' class='vl'>0.600</text></svg><figcaption><b>图 4-1</b>　三种输入下各模型的换测点 F1（“未跑”表示该组合没有实验）</figcaption></figure>
+<p class='tcap'><b>表 4-2</b>　三种输入下的 F1（每格为“换测点 / 同测点新时期”）</p><div class='tw'><table><thead><tr><th>模型</th><th>只用 RGB</th><th>多光谱、不加辅助</th><th>多光谱 + 全部辅助</th></tr></thead><tbody><tr><td>FC-EF</td><td>0.234 / 0.247</td><td>0.214 / 0.238</td><td>0.567 / 0.373</td></tr><tr><td>FC-Siam-diff</td><td>0.165 / 0.252</td><td>0.189 / 0.085</td><td>0.577 / 0.392</td></tr><tr><td>FC-Siam-conc</td><td>0.205 / 0.267</td><td>0.128 / 0.282</td><td>0.580 / 0.376</td></tr><tr><td>U-Net</td><td>0.296 / 0.391</td><td>0.109 / 0.374</td><td>0.464 / 0.315</td></tr><tr><td>ChangeMamba（tiny）</td><td>0.413 / 0.390</td><td>—</td><td>0.111 / 0.479</td></tr><tr><td>Changer</td><td>0.255 / 0.377</td><td>—</td><td>0.531 / 0.359</td></tr><tr><td>SNUNet-CD</td><td>0.167 / —</td><td>—</td><td>0.542 / 0.319</td></tr><tr><td>BIT</td><td>— / 0.292</td><td>—</td><td>0.442 / 0.279</td></tr><tr><td>ChangeFormer</td><td>0.218 / 0.403</td><td>—</td><td>0.120 / 0.438</td></tr><tr><td>BAN（原生只支持 RGB）</td><td>0.357 / 0.389</td><td>—</td><td>—</td></tr><tr><td>OlmoEarth v1.2 base</td><td>0.179 / 0.474</td><td>0.092 / 0.539</td><td>0.600 / 0.552</td></tr></tbody></table></div>
+<p><strong>结果。</strong> 只用 RGB 时，各模型的换测点 F1 为 0.17—0.41，OlmoEarth 只有 0.179；改用多光谱后多数模型提高，再加上辅助信息后普遍大幅提高，OlmoEarth 达到 0.600。原因在于，本研究关心的变化多数面积小、反差弱，例如林地采伐、山坡开垦、施工区边缘的新裸土，在 10 米真彩色影像上很难与季节变化和成像差异区分；近红外和短波红外波段对植被、水分和裸土敏感，辅助信息又提供了成像条件和历史背景（第 <a href="#s5">5</a> 节），两者都是不可缺少的判别依据。</p>
+<h3 id="s4-3">4.3 候选模型对比</h3>
+<p><strong>做法。</strong> 所有模型都使用多光谱波段（遥感大模型用其原生支持的波段，经典网络用 6 个波段）加全部 46 个辅助信息层，在两种测试下比较。</p>
+<figure class='cf'><svg viewBox='0 0 1000 864' class='chart' role='img' aria-label='简单融合（全部辅助）下各候选模型的 F1'><text x='0' y='24' class='ct'>简单融合（全部辅助）下各候选模型的 F1</text><rect x='0' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='22' y='54' class='lgd'>换测点</text><rect x='92' y='40' width='16' height='16' rx='3' fill='#e08a2c'/><text x='114' y='54' class='lgd'>同测点新时期</text><line x1='300.0' x2='300.0' y1='86' y2='830' class='gd'/><text x='300.0' y='850' text-anchor='middle' class='tk'>0.0</text><line x1='422.0' x2='422.0' y1='86' y2='830' class='gd'/><text x='422.0' y='850' text-anchor='middle' class='tk'>0.1</text><line x1='544.0' x2='544.0' y1='86' y2='830' class='gd'/><text x='544.0' y='850' text-anchor='middle' class='tk'>0.3</text><line x1='666.0' x2='666.0' y1='86' y2='830' class='gd'/><text x='666.0' y='850' text-anchor='middle' class='tk'>0.4</text><line x1='788.0' x2='788.0' y1='86' y2='830' class='gd'/><text x='788.0' y='850' text-anchor='middle' class='tk'>0.6</text><line x1='910.0' x2='910.0' y1='86' y2='830' class='gd'/><text x='910.0' y='850' text-anchor='middle' class='tk'>0.7</text><text x='288' y='118.5' text-anchor='end' class='cat'>OlmoEarth v1.2 base</text><rect x='300' y='92' width='523.0' height='20' rx='3' fill='#1f5f8b'><title>OlmoEarth v1.2 base · 换测点：0.600</title></rect><text x='829.0' y='107' class='vl'>0.600</text><rect x='300' y='115' width='481.0' height='20' rx='3' fill='#e08a2c'><title>OlmoEarth v1.2 base · 同测点新时期：0.552</title></rect><text x='787.0' y='130' class='vl'>0.552</text><text x='288' y='179.5' text-anchor='end' class='cat'>Prithvi-EO-2.0 300M</text><rect x='300' y='153' width='519.7' height='20' rx='3' fill='#1f5f8b'><title>Prithvi-EO-2.0 300M · 换测点：0.596</title></rect><text x='825.7' y='168' class='vl'>0.596</text><rect x='300' y='176' width='216.6' height='20' rx='3' fill='#e08a2c'><title>Prithvi-EO-2.0 300M · 同测点新时期：0.249</title></rect><text x='522.6' y='191' class='vl'>0.249</text><text x='288' y='240.5' text-anchor='end' class='cat'>Prithvi-EO-2.0 600M</text><rect x='300' y='214' width='419.2' height='20' rx='3' fill='#1f5f8b'><title>Prithvi-EO-2.0 600M · 换测点：0.481</title></rect><text x='725.2' y='229' class='vl'>0.481</text><rect x='300' y='237' width='374.5' height='20' rx='3' fill='#e08a2c'><title>Prithvi-EO-2.0 600M · 同测点新时期：0.430</title></rect><text x='680.5' y='252' class='vl'>0.430</text><text x='288' y='301.5' text-anchor='end' class='cat'>TerraMind 1.0 base</text><rect x='300' y='275' width='492.3' height='20' rx='3' fill='#1f5f8b'><title>TerraMind 1.0 base · 换测点：0.565</title></rect><text x='798.3' y='290' class='vl'>0.565</text><rect x='300' y='298' width='247.2' height='20' rx='3' fill='#e08a2c'><title>TerraMind 1.0 base · 同测点新时期：0.284</title></rect><text x='553.2' y='313' class='vl'>0.284</text><text x='288' y='362.5' text-anchor='end' class='cat'>TerraMind 1.0 large</text><rect x='300' y='336' width='375.7' height='20' rx='3' fill='#1f5f8b'><title>TerraMind 1.0 large · 换测点：0.431</title></rect><text x='681.7' y='351' class='vl'>0.431</text><rect x='300' y='359' width='232.3' height='20' rx='3' fill='#e08a2c'><title>TerraMind 1.0 large · 同测点新时期：0.267</title></rect><text x='538.3' y='374' class='vl'>0.267</text><text x='288' y='423.5' text-anchor='end' class='cat'>FC-EF</text><rect x='300' y='397' width='494.2' height='20' rx='3' fill='#1f5f8b'><title>FC-EF · 换测点：0.567</title></rect><text x='800.2' y='412' class='vl'>0.567</text><rect x='300' y='420' width='324.9' height='20' rx='3' fill='#e08a2c'><title>FC-EF · 同测点新时期：0.373</title></rect><text x='630.9' y='435' class='vl'>0.373</text><text x='288' y='484.5' text-anchor='end' class='cat'>FC-Siam-diff</text><rect x='300' y='458' width='502.6' height='20' rx='3' fill='#1f5f8b'><title>FC-Siam-diff · 换测点：0.577</title></rect><text x='808.6' y='473' class='vl'>0.577</text><rect x='300' y='481' width='341.4' height='20' rx='3' fill='#e08a2c'><title>FC-Siam-diff · 同测点新时期：0.392</title></rect><text x='647.4' y='496' class='vl'>0.392</text><text x='288' y='545.5' text-anchor='end' class='cat'>FC-Siam-conc</text><rect x='300' y='519' width='505.7' height='20' rx='3' fill='#1f5f8b'><title>FC-Siam-conc · 换测点：0.580</title></rect><text x='811.7' y='534' class='vl'>0.580</text><rect x='300' y='542' width='327.6' height='20' rx='3' fill='#e08a2c'><title>FC-Siam-conc · 同测点新时期：0.376</title></rect><text x='633.6' y='557' class='vl'>0.376</text><text x='288' y='606.5' text-anchor='end' class='cat'>U-Net（早融合）</text><rect x='300' y='580' width='404.4' height='20' rx='3' fill='#1f5f8b'><title>U-Net（早融合） · 换测点：0.464</title></rect><text x='710.4' y='595' class='vl'>0.464</text><rect x='300' y='603' width='274.5' height='20' rx='3' fill='#e08a2c'><title>U-Net（早融合） · 同测点新时期：0.315</title></rect><text x='580.5' y='618' class='vl'>0.315</text><text x='288' y='667.5' text-anchor='end' class='cat'>ChangeMamba（tiny，早融合）</text><rect x='300' y='641' width='97.0' height='20' rx='3' fill='#1f5f8b'><title>ChangeMamba（tiny，早融合） · 换测点：0.111</title></rect><text x='403.0' y='656' class='vl'>0.111</text><rect x='300' y='664' width='417.5' height='20' rx='3' fill='#e08a2c'><title>ChangeMamba（tiny，早融合） · 同测点新时期：0.479</title></rect><text x='723.5' y='679' class='vl'>0.479</text><text x='288' y='728.5' text-anchor='end' class='cat'>Changer（早融合）</text><rect x='300' y='702' width='462.7' height='20' rx='3' fill='#1f5f8b'><title>Changer（早融合） · 换测点：0.531</title></rect><text x='768.7' y='717' class='vl'>0.531</text><rect x='300' y='725' width='312.8' height='20' rx='3' fill='#e08a2c'><title>Changer（早融合） · 同测点新时期：0.359</title></rect><text x='618.8' y='740' class='vl'>0.359</text><text x='288' y='789.5' text-anchor='end' class='cat'>ChangeFormer（早融合）</text><rect x='300' y='763' width='104.2' height='20' rx='3' fill='#1f5f8b'><title>ChangeFormer（早融合） · 换测点：0.120</title></rect><text x='410.2' y='778' class='vl'>0.120</text><rect x='300' y='786' width='381.9' height='20' rx='3' fill='#e08a2c'><title>ChangeFormer（早融合） · 同测点新时期：0.438</title></rect><text x='687.9' y='801' class='vl'>0.438</text></svg><figcaption><b>图 4-2</b>　各候选模型加全部辅助信息后的 F1</figcaption></figure>
+<p class='tcap'><b>表 4-3</b>　各候选模型加全部辅助信息后的 F1（换测点按留出的测点分列；最后一列为不加辅助信息时的“换测点 / 同测点新时期”）</p><div class='tw'><table><thead><tr><th>候选模型</th><th>留株洲南</th><th>留衡阳北</th><th>留韶关南</th><th>换测点总体</th><th>同测点新时期</th><th>不加辅助信息</th></tr></thead><tbody><tr><td>OlmoEarth v1.2 base</td><td>0.482</td><td>0.577</td><td>0.718</td><td><b>0.600</b></td><td>0.552</td><td>0.092 / 0.539</td></tr><tr><td>Prithvi-EO-2.0 300M</td><td>0.071</td><td>0.620</td><td>0.634</td><td><b>0.596</b></td><td>0.249</td><td>—</td></tr><tr><td>Prithvi-EO-2.0 600M</td><td>0.149</td><td>0.464</td><td>0.637</td><td><b>0.481</b></td><td>0.430</td><td>—</td></tr><tr><td>TerraMind 1.0 base</td><td>0.149</td><td>0.598</td><td>0.578</td><td><b>0.565</b></td><td>0.284</td><td>—</td></tr><tr><td>TerraMind 1.0 large</td><td>0.075</td><td>0.407</td><td>0.609</td><td><b>0.431</b></td><td>0.267</td><td>—</td></tr><tr><td>FC-EF</td><td>0.112</td><td>0.589</td><td>0.603</td><td><b>0.567</b></td><td>0.373</td><td>0.214 / 0.238</td></tr><tr><td>FC-Siam-diff</td><td>0.284</td><td>0.584</td><td>0.626</td><td><b>0.577</b></td><td>0.392</td><td>0.189 / 0.085</td></tr><tr><td>FC-Siam-conc</td><td>0.112</td><td>0.617</td><td>0.552</td><td><b>0.580</b></td><td>0.376</td><td>0.128 / 0.282</td></tr><tr><td>U-Net（早融合）</td><td>0.057</td><td>0.485</td><td>0.495</td><td><b>0.464</b></td><td>0.315</td><td>0.109 / 0.374</td></tr><tr><td>ChangeMamba（tiny，早融合）</td><td>0.196</td><td>0.089</td><td>0.531</td><td><b>0.111</b></td><td>0.479</td><td>—</td></tr><tr><td>Changer（早融合）</td><td>0.136</td><td>0.579</td><td>0.485</td><td><b>0.531</b></td><td>0.359</td><td>—</td></tr><tr><td>ChangeFormer（早融合）</td><td>0.146</td><td>0.102</td><td>0.536</td><td><b>0.120</b></td><td>0.438</td><td>—</td></tr></tbody></table></div>
+<p><strong>结果。</strong> 只看换测点总体 F1，OlmoEarth（0.600）、FC-EF（0.567）和 Prithvi-300M（0.596）比较接近。但合并分数主要由变化像元最多的衡阳北决定（占全部变化的 63%），分测点看差别很大：除 OlmoEarth 外，所有模型在留株洲南测试时都表现很差（F1 只有 0.057—0.284），OlmoEarth 为 0.482；在同测点新时期测试中，OlmoEarth 也明显领先（0.552，其余模型不超过 0.479）。也就是说，OlmoEarth 是唯一在三个测点、两种测试下都表现稳定的模型，因此选作后续融合实验的主模型。</p>
+<p><strong>难负样本的作用。</strong> 难负样本训练对 OlmoEarth 很关键：同样的设置不用难负样本时，换测点总体 F1 只有 0.256（留衡阳北一折为 0.214）。对经典网络则作用不一，例如 FC-EF 不用难负样本时换测点为 0.607，用了反而为 0.567，但同测点新时期由 0.319 提高到 0.373。</p>
+<h3 id="s4-4">4.4 最终方案：模型结构与训练方法</h3>
+<p>综合 4.2、<a href="#s4-3">4.3</a> 节的模型比较和第 <a href="#s5">5</a> 节的融合实验，最终方案为：以 OlmoEarth v1.2 base 遥感基础模型为主干，前后两期影像作为时间序列输入，用 LoRA 做参数高效微调；46 个辅助信息层通过“后段旁支”接入；训练时专门加入“难负样本”。本节按方法论文的体例逐项说明，整体结构见图 4-3，全部训练设置见表 4-4。</p>
+<figure class='cf'><svg viewBox='0 0 1200 370' class='chart arch' role='img' aria-label='最终方案的模型结构'><defs><marker id="ah" viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' class='am'/></marker></defs><rect x='10' y='30' width='150' height='54' rx='8' class='ai'/><text x='85.0' y='52.0' text-anchor='middle' class='at'><tspan x='85.0' dy='0'>前期影像 x₁</tspan><tspan x='85.0' dy='20'>（12 个波段）</tspan></text><rect x='10' y='104' width='150' height='54' rx='8' class='ai'/><text x='85.0' y='126.0' text-anchor='middle' class='at'><tspan x='85.0' dy='0'>后期影像 x₂</tspan><tspan x='85.0' dy='20'>（12 个波段）</tspan></text><rect x='205' y='22' width='210' height='144' rx='8' class='ae'/><text x='310.0' y='59.0' text-anchor='middle' class='at'><tspan x='310.0' dy='0'>OlmoEarth 编码器</tspan><tspan x='310.0' dy='20'>12 层 Transformer</tspan><tspan x='310.0' dy='20'>原始参数冻结</tspan><tspan x='310.0' dy='20'>+ LoRA（q、v，秩 16）</tspan><tspan x='310.0' dy='20'>两期作为时间序列输入</tspan></text><rect x='460' y='47' width='165' height='94' rx='8' class='ab'/><text x='542.5' y='79.0' text-anchor='middle' class='at'><tspan x='542.5' dy='0'>逐时相特征 f₁、f₂</tspan><tspan x='542.5' dy='20'>每 40 米一个</tspan><tspan x='542.5' dy='20'>768 维</tspan></text><rect x='670' y='22' width='200' height='144' rx='8' class='ab'/><text x='770.0' y='59.0' text-anchor='middle' class='at'><tspan x='770.0' dy='0'>变化解码器</tspan><tspan x='770.0' dy='20'>拼接 [f₁, f₂, f₂ − f₁]</tspan><tspan x='770.0' dy='20'>1×1 卷积 → 两次</tspan><tspan x='770.0' dy='20'>上采样 + 3×3 卷积</tspan><tspan x='770.0' dy='20'>→ 10 米像元特征 h</tspan></text><rect x='915' y='57' width='110' height='74' rx='8' class='ab'/><text x='970.0' y='89.0' text-anchor='middle' class='at'><tspan x='970.0' dy='0'>输出层</tspan><tspan x='970.0' dy='20'>变化分数 y</tspan></text><circle cx='1068' cy='94' r='16' class='ab'/><text x='1068' y='100' text-anchor='middle' class='at'>+</text><rect x='1100' y='52' width='92' height='84' rx='8' class='ai'/><text x='1146.0' y='79.0' text-anchor='middle' class='at'><tspan x='1146.0' dy='0'>概率 p</tspan><tspan x='1146.0' dy='20'>→ 门槛</tspan><tspan x='1146.0' dy='20'>→ 变化图</tspan></text><rect x='10' y='252' width='300' height='90' rx='8' class='ai'/><text x='160.0' y='282.0' text-anchor='middle' class='at'><tspan x='160.0' dy='0'>46 个辅助信息层 a</tspan><tspan x='160.0' dy='20'>成像质量、指数差、往年同期、</tspan><tspan x='160.0' dy='20'>雷达、地形、用途历史</tspan></text><rect x='670' y='252' width='200' height='90' rx='8' class='ae'/><text x='770.0' y='282.0' text-anchor='middle' class='at'><tspan x='770.0' dy='0'>后段旁支 g([h, a])</tspan><tspan x='770.0' dy='20'>两层 3×3 卷积，宽 32</tspan><tspan x='770.0' dy='20'>末层零初始化</tspan></text><line x1='160' y1='57' x2='203' y2='70' class='al' marker-end='url(#ah)'/><line x1='160' y1='131' x2='203' y2='118' class='al' marker-end='url(#ah)'/><line x1='415' y1='94' x2='458' y2='94' class='al' marker-end='url(#ah)'/><line x1='625' y1='94' x2='668' y2='94' class='al' marker-end='url(#ah)'/><line x1='870' y1='94' x2='913' y2='94' class='al' marker-end='url(#ah)'/><line x1='1025' y1='94' x2='1050' y2='94' class='al' marker-end='url(#ah)'/><line x1='1084' y1='94' x2='1098' y2='94' class='al' marker-end='url(#ah)'/><line x1='770' y1='166' x2='770' y2='250' class='al' marker-end='url(#ah)'/><text x='770.0' y='202.0' text-anchor='middle' class='alb'>h</text><line x1='310' y1='297' x2='668' y2='297' class='al' marker-end='url(#ah)'/><polyline points='870,297 1068,297 1068,112' class='al' fill='none' marker-end='url(#ah)'/><text x='975' y='290' text-anchor='middle' class='alb'>修正量 Δ</text></svg><figcaption><b>图 4-3</b>　最终方案的模型结构。蓝色框为输入和输出，橙色框为可训练部分（编码器只训练 LoRA），其余为固定结构。</figcaption></figure>
+<h4>4.4.1 总体框架</h4>
+<p>给定同一地点前后两期 Sentinel-2 影像 x₁、x₂（各 12 个波段）和该影像对的 46 个辅助信息层 a，模型为每个 10 米像元输出“发生了需要报告的变化”的概率 p。框架由四部分组成：（1）<strong>OlmoEarth 编码器</strong>，把两期影像共同编码为逐时相的特征；（2）<strong>变化解码器</strong>，把两期特征及其差值逐级上采样回 10 米分辨率，输出变化分数 y；（3）<strong>后段旁支</strong>，结合辅助信息对变化分数做修正 Δ；（4）<strong>门槛</strong>，把概率 p 转成“报”或“不报”。</p>
+<h4>4.4.2 输入与预处理</h4>
+<p>影像使用 Sentinel-2 L2A 级地表反射率的 12 个波段（B1—B9、B8A、B11、B12），先按 OlmoEarth 预训练时的波段顺序重新排列，再用其预训练数据的统计量逐波段归一化：</p>
+<p class='math'>x' = (x − (μ − 2σ)) / (4σ)</p>
+<p>其中 μ、σ 为预训练数据中该波段的均值和标准差，这样输入的数值分布与预训练时一致。前期影像事先已精确配准到后期影像的网格上（<a href="#s2-2">2.2</a> 节）。训练时从每个 256 × 256 的影像对中随机裁出 128 × 128 的切片（OlmoEarth 官方建议输入边长不超过 128 像元），并做随机水平、垂直翻转和 90° 旋转。</p>
+<h4>4.4.3 主干网络：OlmoEarth 编码器</h4>
+<p><strong>原始工作。</strong> OlmoEarth 由艾伦人工智能研究所（Ai2）的 Herzog、Bastani、Zhang 等 26 位作者提出（arXiv:2511.13655，2025 年 11 月），是一个面向对地观测的多模态、时空基础模型。原作者的主要工作如下。</p>
+<ul>
+<li><strong>预训练数据。</strong> 在全球范围内，按 OpenStreetMap 的 120 类地物选取了 285,288 个样本，每个样本覆盖 <strong>2.56 km × 2.56 km</strong>、一年的时间范围（在 2016—2024 年之间随机选取），最多包含 12 个月度时相，全部重采样到 10 米分辨率。输入观测包括 Sentinel-2、Sentinel-1 和 Landsat-8；另有 WorldCover、WorldCereal、美国农田数据层、OpenStreetMap、SRTM 高程、树冠高度 6 种地图产品，只作为预训练的预测目标，不作为输入。</li>
+<li><strong>模型结构。</strong> 基于 ViT 的编码器—解码器 Transformer：影像按可变大小的补丁（训练时 1—8 个像元，评估时 4 个像元）切成特征单元，再加上空间、时间和模态编码。共有 Nano（140 万参数）、Tiny（620 万）、Base（9,000 万）、Large（3 亿）四种规模。</li>
+<li><strong>预训练方法。</strong> 提出“潜空间掩码图像建模”的改进版 Latent MIM Lite：按模态和时相把一部分输入遮住，让模型在潜空间中预测被遮住部分的表示；预测目标由随机初始化后冻结的线性投影得到，以避免表示坍塌。同时配合按模态的掩码策略、同一模态内的对比损失和样本级的对比损失。</li>
+<li><strong>实验与结果。</strong> 在 GEO-Bench（m-bigearthnet、m-so2sat、m-eurosat 等 7 个数据集）、BreizhCrops、CropHarvest、PASTIS、MADOS、Sen1Floods11 等研究基准上，以及与外部合作机构的真实任务（全球红树林监测、亚马孙森林损失驱动因素、肯尼亚土地覆盖、作物类型、船只检测、太阳能电站检测等）上，与 AnySat、Clay、CopernicusFM、CROMA、DINOv3、Galileo、Presto、Prithvi v2、Satlas、TerraMind 等 12 个基础模型比较：只用其特征直接评估（k 近邻、线性探针）时，24 个任务中 15 个最好；全量微调时，29 个任务中 19 个最好。在全球红树林监测任务上，把原有随机森林方法的 F1 从 95.3% 提高到 98.1%。</li>
+<li><strong>v1.2 版本。</strong> Tseng 等（arXiv:2605.20804，2026）在保持精度基本不变的前提下改进了训练和推理效率：Base 模型的训练 GPU 时长减少到约三分之一，Sentinel-2 任务的推理计算量减少到约 1/2.9。本研究使用的就是 v1.2 base。</li>
+</ul>
+<p>需要说明，原论文的评估任务以分类、分割和目标检测为主，其中没有 OSCD 这类标准的双时相变化检测基准；把它用于铁路沿线的变化检测，是本研究的新尝试。OlmoEarth 的预训练样本恰好也是 2.56 km × 2.56 km、10 米分辨率、以多时相 Sentinel-2 为主要输入，与本研究每个测点的数据形式高度一致，这可能是它在本研究中表现最稳定的原因之一（<a href="#s4-3">4.3</a> 节）。</p>
+<p><strong>本研究的用法。</strong> 我们使用 v1.2 base 版本：12 层 Transformer，特征维度 768；实际加载的编码器共有 113,987,776 个参数。</p>
+<p>与把两期影像分别输入同一个编码器的“孪生”做法不同，OlmoEarth 原生支持时间序列：我们把前后两期作为长度为 2 的时间序列一起送入编码器，Transformer 的注意力机制可以直接在两期之间交换信息。影像被切成 4 × 4 像元（40 米 × 40 米）的小块，每个小块在每个时相上得到一个 768 维的特征向量，记为 f₁、f₂。</p>
+<h4>4.4.4 参数高效微调：LoRA</h4>
+<p>OlmoEarth 编码器有 1 亿多个参数，而本研究每一折的训练集只有约 230—310 个影像对（表 3-1）。若更新全部参数，模型很容易过拟合，还会破坏预训练学到的通用特征。为此我们采用 LoRA（低秩适配，Hu 等，ICLR 2022）：<strong>冻结编码器的全部原始参数</strong>，只在每一层注意力的查询（q）和值（v）投影矩阵旁边各加一个可训练的低秩修正：</p>
+<p class='math'>W' = W + (α/r)BA</p>
+<p>其中 W 是冻结的原始权重（768 × 768），A（r × 768）和 B（768 × r）是可训练的低秩矩阵，秩 r = 16，缩放系数 α = 16。B 初始化为 0，因此训练开始时模型与预训练模型完全相同。12 层共新增 589,824 个可训练参数。连同解码器和旁支，整个模型的可训练参数为 1,627,972 个，只占全部 115,615,748 个参数的 1.4%。</p>
+<h4>4.4.5 变化解码器</h4>
+<p>在每个 40 米小块上，把两期特征及其差值拼接成 [f₁, f₂, f₂ − f₁]（3 × 768 = 2,304 维）。其中差值项 f₂ − f₁ 直接突出两期之间的差异，是变化检测中常用的做法。拼接后的特征先经 1 × 1 卷积压缩到 256 维，再经过两次“双线性上采样 2 倍 + 3 × 3 卷积”恢复到 10 米分辨率（通道数 256 → 128 → 64），再经一层 3 × 3 卷积，得到 64 维的像元特征 h；最后用 1 × 1 卷积输出“没变”“变化”两类分数 y。推理时，对整幅 256 × 256 影像按 128 × 128 的窗口、64 像元的步长滑动，重叠部分的特征取平均，以消除窗口边缘的接缝。</p>
+<h4>4.4.6 辅助信息的后段旁支</h4>
+<p>把像元特征 h 与 46 个辅助信息层 a 在每个像元上拼接，经过两层 3 × 3 卷积（宽度均为 32，第二层用 2 倍空洞卷积以扩大感受野）和一个 1 × 1 卷积，得到对两类分数的修正量 Δ，与主干的输出相加：</p>
+<p class='math'>ŷ = y + Δ　　　 Δ = g([h, a])</p>
+<p>g 的最后一层初始化为 0，因此训练开始时 Δ = 0，模型等价于只用影像；训练中只有当辅助信息确实有助于降低损失时，g 才会学到非零的修正。旁支共 41,154 个参数。之所以把辅助信息“后接”在输出端，而不是送进编码器，是因为这种方式完全不改动预训练特征，对训练数据量的要求最低；第 <a href="#s5">5</a> 节的对比实验证实，它优于在网络中间层注入的各种方式。</p>
+<h4>4.4.7 训练样本的组织与难负样本</h4>
+<p>在全部有效像元中，变化像元只占 0.11%，极不平衡；而模型最容易出错的，恰恰是那些光谱变化很明显、但并不属于需要报告的变化的地方。训练样本的组织因此包括三项设计。</p>
+<ol>
+<li><strong>有变化的影像对加权抽样。</strong> 每次从训练影像对中随机抽取，有变化的影像对被抽中的概率是没有变化的 3 倍。</li>
+<li><strong>以变化为中心的裁剪。</strong> 对有变化的影像对，有 50% 的概率让 128 × 128 的切片包含一个随机选取的变化像元，保证模型经常见到变化。</li>
+<li><strong>难负样本。</strong> 这是最终方案中作用最大的一项设计，下面详细说明。</li>
+</ol>
+<p><strong>什么是难负样本。</strong> 在机器学习中，“负样本”指不属于目标的样本，在本研究中就是标为“没变”的像元。绝大多数负样本很“容易”：两期之间几乎没有光谱差异，模型很容易判对。“难负样本”是指那些<strong>人工核查确认没有需要报告的变化、但两期之间光谱差异很大</strong>的像元。它们正是最容易被误报的地方：施工区内部已经裸露的地面颜色深浅变化、厂房屋顶的亮度变化、农田和林草的季节变化、水色变化和水面耀斑、薄雾使地表整体变亮等。如果按普通方式随机抽样，这类像元在训练中出现得很少，模型就学不会“光谱变了，但不算变化”。</p>
+<p><strong>如何找出难负样本。</strong> 对每个影像对，先计算 6 个光谱指数的前后差：植被指数 NDVI、两种水体指数 NDWI 和 MNDWI、裸土指数 BSI、短波红外与近红外之差、可见光亮度（定义见表 5-1）。不同影像对的整体亮度和季节差别很大，同样的差值在一对影像中很“大”，在另一对中可能很普通。因此，每个指数差都在该影像对内部做稳健标准化：</p>
+<p class='math'>z<sub>k</sub> = (d<sub>k</sub> − median(d<sub>k</sub>)) / (1.4826· MAD(d<sub>k</sub>))</p>
+<p>其中 d_k 为第 k 个指数的前后差，中位数和中位数绝对偏差 MAD 只在两期都无云、无缺测的像元上计算；系数 1.4826 使 MAD 在正态分布下与标准差相当。一个像元若同时满足以下三个条件，就记为难负样本：（1）6 个 z 值中绝对值最大者不小于 3，即至少有一个指数的变化超过该影像对“典型变化”的 3 倍；（2）两期都无云、无缺测；（3）人工标为“没变”。</p>
+<p><strong>规模。</strong> 按此标准，全库共有 1,588,547 个难负样本像元，占标为“没变”像元的 9.0%；511 个影像对中有 493 个含有难负样本（表 4-5）。也就是说，几乎每个影像对里都有一些“光谱明显变了、但不算变化”的地方。图 4-4 是衡阳北的一个例子。</p>
+<p class='tcap'><b>表 4-5</b>　难负样本的规模</p><div class='tw'><table><thead><tr><th>测点</th><th>影像对</th><th>含难负样本的影像对</th><th>难负样本像元</th><th>标为没变的像元</th><th>难负样本占比</th></tr></thead><tbody><tr><td>株洲南</td><td>182</td><td>174</td><td>323,952</td><td>3,931,914</td><td>8.2%</td></tr><tr><td>衡阳北</td><td>215</td><td>206</td><td>998,067</td><td>10,677,241</td><td>9.3%</td></tr><tr><td>韶关南</td><td>114</td><td>113</td><td>266,528</td><td>3,089,700</td><td>8.6%</td></tr><tr><td><b>合计</b></td><td>511</td><td>493</td><td>1,588,547</td><td>17,698,855</td><td>9.0%</td></tr></tbody></table></div>
+<figure class=''><img src="media/r1010/47ed00741b199e92.png" alt='难负样本示例：衡阳北 2023-11-28 → 2023-12-23。橙色为难负样本（5,260 个像元），红色为人工标为变化的像元（1,739 个）。难负样本主要分布在施工区内部原本已裸露的地面、厂区屋顶和右侧的农田上：这些地方两期之间的亮度和颜色变化明显，但经人工核查不属于需要报告的新变化。' loading='lazy'><figcaption><b>图 4-4</b>　难负样本示例：衡阳北 2023-11-28 → 2023-12-23。橙色为难负样本（5,260 个像元），红色为人工标为变化的像元（1,739 个）。难负样本主要分布在施工区内部原本已裸露的地面、厂区屋顶和右侧的农田上：这些地方两期之间的亮度和颜色变化明显，但经人工核查不属于需要报告的新变化。</figcaption></figure>
+<p><strong>如何使用。</strong> 难负样本在训练中有两种用法。一是<strong>抽样</strong>：对没有对准变化像元的切片，有 50% 的概率让切片包含一个随机选取的难负样本像元，使模型经常见到这类“陷阱”。二是<strong>加权</strong>：在损失函数中，难负样本像元仍按“没变”计算，但其交叉熵权重乘以 5，使模型在这些地方误报时受到更重的惩罚。</p>
+<p><strong>作用。</strong> 同样的模型和输入，不使用难负样本时换测点总体 F1 只有 0.256，使用后提高到 0.600（表 4-6）。提升主要来自衡阳北：该测点施工区和水体多，光谱变化剧烈的地方多，不加难负样本时模型在这里大量误报（留衡阳北一折只有 0.214）。</p>
+<p class='tcap'><b>表 4-6</b>　难负样本的作用（同一模型、同样输入，F1）</p><div class='tw'><table><thead><tr><th>设置</th><th>留株洲南</th><th>留衡阳北</th><th>留韶关南</th><th>换测点总体</th></tr></thead><tbody><tr><td>不使用难负样本</td><td>0.412</td><td>0.214</td><td>0.663</td><td>0.256</td></tr><tr><td>使用难负样本（最终方案）</td><td>0.482</td><td>0.577</td><td>0.718</td><td><b>0.600</b></td></tr></tbody></table></div>
+<h4>4.4.8 损失函数</h4>
+<p>损失函数为交叉熵损失与 Dice 损失之和（权重各为 1），标为“不算”（255）的像元不参与计算：</p>
+<p class='math'>ℒ = ℒ<sub>CE</sub> + ℒ<sub>Dice</sub></p>
+<p class='math'>ℒ<sub>CE</sub> = -(Σ<sub>i</sub> w<sub>i</sub> log  p<sub>i,y<sub>i</sub></sub>) / (Σ<sub>i</sub> w<sub>i</sub>)　　　 ℒ<sub>Dice</sub> = 1 − (2Σ<sub>i</sub> p<sub>i</sub> y<sub>i</sub> + 1) / (Σ<sub>i</sub> p<sub>i</sub> + Σ<sub>i</sub> y<sub>i</sub> + 1)</p>
+<p>其中 p_i 为像元 i 被判为变化的概率，y_i 为标签（1 为变化，0 为没变），p_{i,y_i} 为模型给真实类别的概率，w_i 为像元权重（难负样本为 5，其余为 1）。交叉熵逐像元约束分类结果；Dice 损失直接优化预测与标注的重叠程度，在变化像元占比极低时更稳健。</p>
+<h4>4.4.9 优化与训练设置</h4>
+<p>优化器为 AdamW，初始学习率 3 × 10⁻⁴，权重衰减 10⁻⁴；前 3 轮学习率线性预热，之后按余弦曲线衰减到初始值的 1%。批大小为 8，每轮 50 次迭代（即每轮看 400 个切片），最多训练 80 轮，使用混合精度计算和梯度裁剪（阈值 5）。每轮结束后在验证集上计算“最佳门槛下的 F1”，保存该值最高的模型；至少训练 20 轮，若连续 20 轮没有提升就提前停止。三折实际分别训练了 59、59、78 轮。</p>
+<h4>4.4.10 推理与门槛选择</h4>
+<p>测试时模型输出每个像元的变化概率 p。门槛取使验证集 F1 最大的值，三折分别为 0.218、0.677、0.702（依次为留株洲南、留衡阳北、留韶关南），然后原样用于测试测点，测试测点的数据不参与任何选择。门槛对结果的影响很大，详见 <a href="#s8-2">8.2</a> 节。</p>
+<p class='tcap'><b>表 4-4</b>　最终方案的全部设置</p><div class='tw'><table><thead><tr><th>项目</th><th>设置</th></tr></thead><tbody><tr><td>主干网络</td><td>OlmoEarth v1.2 base：12 层 Transformer，特征 768 维，补丁 4 × 4 像元（40 米）</td></tr><tr><td>输入</td><td>前后两期各 12 个波段，作为长度为 2 的时间序列；训练切片 128 × 128</td></tr><tr><td>微调方式</td><td>LoRA：秩 r = 16、缩放 α = 16，作用于每层注意力的 q、v 投影；编码器原始参数冻结</td></tr><tr><td>解码器</td><td>[f₁, f₂, f₂ − f₁] → 1 × 1 卷积（256）→ 两次“上采样 2 倍 + 3 × 3 卷积”（128、64）→ 3 × 3 卷积 → 1 × 1 输出</td></tr><tr><td>辅助信息</td><td>46 层，后段旁支：两层 3 × 3 卷积（宽 32，第二层空洞率 2）+ 1 × 1 输出，末层零初始化</td></tr><tr><td>可训练参数</td><td>1,627,972 个（LoRA 589,824，旁支 41,154，其余为解码器），占全部 115,615,748 个的 1.4%</td></tr><tr><td>训练样本组织</td><td>有变化的影像对抽样权重 3；有变化的影像对 50% 的切片对准变化像元；没对准变化的切片 50% 对准难负样本</td></tr><tr><td>难负样本</td><td>6 个指数差在影像对内稳健标准化后的最大绝对值 ≥ 3，两期都无云、无缺测，且人工标为没变；交叉熵权重 5</td></tr><tr><td>损失函数</td><td>交叉熵 + Dice（权重 1 : 1），标为“不算”的像元不参与计算</td></tr><tr><td>优化器与学习率</td><td>AdamW，初始学习率 3 × 10⁻⁴，权重衰减 10⁻⁴；预热 3 轮后余弦衰减至初始值的 1%</td></tr><tr><td>训练长度</td><td>批大小 8，每轮 50 次迭代；最多 80 轮，至少 20 轮，连续 20 轮验证 F1 不提升则停止；三折实际 59、59、78 轮</td></tr><tr><td>数据增强</td><td>随机水平、垂直翻转，90° 旋转</td></tr><tr><td>推理</td><td>128 × 128 滑动窗口、步长 64，重叠部分特征取平均；门槛取验证集 F1 最大的值</td></tr><tr><td>随机种子</td><td>0；最终方案另用 3 个种子复核，换测点总体 F1 为 0.615 ± 0.013</td></tr></tbody></table></div>
+<h2 id="s5">5 多源辅助信息融合</h2><p class='rel'>平台相关页面：<a href="2-2-3.html">2.2.3 变化检测</a> · <a href="2-2-4.html">2.2.4 伪变化抑制</a> · <a href="5.html">五、方法改进</a></p><h3 id="s5-1">5.1 动机</h3>
+<p>两期影像之间的光谱差异并不都来自地表的真实改变。云、雾、耀斑和配准误差会造成<strong>假的差异</strong>；农田、林草的季节变化会造成<strong>真实但不需要报告的差异</strong>；同样的光谱变化，发生在山坡上还是平地上、常年有水的地方还是旱地上，含义也不同。仅凭前后两期影像，模型很难区分这些情况。因此，我们为每个影像对额外准备了 46 个辅助信息层，向模型提供成像条件、地表的历史状态和地形背景等“上下文”，期望模型据此把真变化和伪变化区分开。</p>
+<h3 id="s5-2">5.2 辅助信息层的设计</h3>
+<p>46 个辅助信息层分为 6 组（表 5-1）。设计时遵循两条原则：一是每一组针对一类已知的伪变化来源或判别困难；二是所有历史类信息只使用前期影像日期及以前的数据，避免模型用到“未来”的信息。</p>
+<p class='tcap'><b>表 5-1</b>　46 个辅助信息层的设计</p><div class='tw'><table><thead><tr><th>组（层数）</th><th>包含的信息层</th><th>提供的信息</th><th>预期作用</th></tr></thead><tbody><tr><td>成像质量（15）</td><td>前后两期的厚云、薄云、云影、缺测分布；是否跨轨道、是否有雾、耀斑风险、两期间隔天数、配准位移</td><td>哪里的光谱差异可能来自成像条件</td><td>抑制云、雾、耀斑和错位造成的伪变化</td></tr><tr><td>指数差（6）</td><td>植被指数（NDVI）、两种水体指数（NDWI、MNDWI）、裸土指数（BSI）、短波红外与近红外之差、可见光亮度的前后差</td><td>直接刻画植被减少、水面变化、裸土增加</td><td>把领域知识中的变化特征显式提供给模型</td></tr><tr><td>往年同期（7）</td><td>前后两期的 NDVI、MNDWI、BSI 相对往年同期的偏离程度；往年同期可用观测数</td><td>当前状态是否“反常”</td><td>区分季节性变化（往年也如此）和真实变化</td></tr><tr><td>雷达（6）</td><td>Sentinel-1 雷达 VV、VH 极化的前后差、交叉极化比变化；雷达可用性标记</td><td>不受云雾影响的地表结构变化</td><td>有云雾时补充信息</td></tr><tr><td>地形（5）</td><td>相对高程、坡度、坡向（正弦、余弦）、局部起伏</td><td>地形背景</td><td>区分山坡与平地上的变化，识别山体阴影</td></tr><tr><td>用途历史（7）</td><td>历史有水比例；历史 NDVI 的 10%、50%、90% 分位；历史裸土指数中位数；农田轮作比例；历史观测次数</td><td>这里平常是什么地物</td><td>识别季节变化多发的耕地和常年水体</td></tr></tbody></table></div>
+<h3 id="s5-3">5.3 融合方式</h3>
+<p>辅助信息在网络中的接入位置和方式不同，作用也可能不同。我们实现并比较了以下六种方式（表 5-2）。记前后两期影像为 x₁、x₂，辅助信息为 a，主模型的中间特征为 h。</p>
+<p class='tcap'><b>表 5-2</b>　辅助信息的六种融合方式</p><div class='tw'><table><thead><tr><th>方式</th><th>接入位置</th><th>做法</th><th>设计意图</th></tr></thead><tbody><tr><td>早融合</td><td>输入端</td><td>把辅助信息层和两期影像拼在一起作为输入；新增通道的第一层权重从 0 开始</td><td>最简单，让网络从一开始就同时看到全部信息</td></tr><tr><td>后段旁支</td><td>输出端</td><td>主模型照常处理两期影像；在输出前把主模型最后一层特征 h 与辅助信息 a 拼接，经两层小卷积网络 g 得到修正量，与主模型输出相加：ŷ = f(x₁, x₂) + g([h, a])</td><td>不改动预训练特征，只做残差修正，对数据量要求低</td></tr><tr><td>多尺度注入</td><td>解码器各层</td><td>把辅助信息做成 5 个尺度的特征金字塔 Z(a)，在各层注入，有四种形式：相加 h + Z(a)；FiLM 调制 h·(1 + γ(a)) + β(a)；门控 h + σ(G([h, a]))·Z(a)；交叉注意力 h + Z(Attn(q = h, k = a, v = a))</td><td>让辅助信息在多个尺度上影响特征，表达能力最强</td></tr><tr><td>分组随机丢弃</td><td>训练过程</td><td>训练时随机把某些组的辅助信息置零</td><td>防止模型只依赖最强的一组，也模拟监测时部分数据缺失</td></tr><tr><td>分支辅助损失</td><td>训练过程</td><td>给辅助信息分支单独接一个变化输出并计算损失</td><td>迫使辅助分支学到有用的特征</td></tr><tr><td>原生多模态</td><td>输入端</td><td>把雷达、高程作为 OlmoEarth 自身支持的输入模态，而不是外加的辅助层</td><td>利用大模型预训练时已学到的多模态知识</td></tr></tbody></table></div>
+<p>其中，后段旁支和多尺度注入的新增部分最后一层都初始化为 0，训练开始时模型与只用影像完全相同，辅助信息只有在确实有帮助时才会被逐渐用上。</p>
+<h3 id="s5-4">5.4 实验设计</h3>
+<p>所有融合实验都以 OlmoEarth 为主模型，训练数据、标签、超参数和评价程序保持不变，每次只改变一个因素：</p>
+<ol>
+<li><strong>融合方式比较</strong>：固定使用全部 46 个辅助信息层，只改变接入方式；并在 FC-Siam-diff 上重复一遍，检验结论是否依赖于具体模型。</li>
+<li><strong>分组消融</strong>：用两种互补的做法衡量每一组信息的作用。“<strong>去掉一组</strong>”——从全部辅助信息中去掉某一组，看缺少它是否变差，衡量这组信息是否<strong>不可替代</strong>；“<strong>只用一组</strong>”——只给模型某一组辅助信息，看单靠它能恢复多少精度，衡量这组信息<strong>本身是否有用</strong>。</li>
+<li><strong>组内细分</strong>：对指数差组，再分别去掉植被、水体、土壤与亮度三个子组。</li>
+</ol>
+<h3 id="s5-5">5.5 结果</h3>
+<p><strong>（1）融合方式。</strong> 后段旁支最好（换测点总体 F1 为 0.600）。四种多尺度注入都<strong>稳定更差</strong>：相加 0.232、FiLM 0.515、门控 0.467、交叉注意力 0.290；分组随机丢弃（0.523）和分支辅助损失（0.049）与后段旁支差异不显著（图 5-1、表 5-3）。在 FC-Siam-diff 上重复，后段旁支同样是最好的接入方式之一：FiLM稳定更差，其余差异不显著（表 5-4）。我们认为原因在于：OlmoEarth 在大量影像上预训练过，多尺度注入在网络中间层改写了预训练好的特征，而本研究的训练数据只有约 250 个影像对，不足以把这些层重新学好；后段旁支不改动预训练特征，只在输出端加一个从零开始的修正量，对数据量的要求低得多。</p>
+<figure class='cf'><svg viewBox='0 0 1000 436' class='chart' role='img' aria-label='OlmoEarth 采用不同融合方式时的换测点总体 F1'><text x='0' y='24' class='ct'>OlmoEarth 采用不同融合方式时的换测点总体 F1</text><rect x='0' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='22' y='54' class='lgd'>换测点总体 F1</text><line x1='300.0' x2='300.0' y1='86' y2='402' class='gd'/><text x='300.0' y='422' text-anchor='middle' class='tk'>0.0</text><line x1='422.0' x2='422.0' y1='86' y2='402' class='gd'/><text x='422.0' y='422' text-anchor='middle' class='tk'>0.1</text><line x1='544.0' x2='544.0' y1='86' y2='402' class='gd'/><text x='544.0' y='422' text-anchor='middle' class='tk'>0.3</text><line x1='666.0' x2='666.0' y1='86' y2='402' class='gd'/><text x='666.0' y='422' text-anchor='middle' class='tk'>0.4</text><line x1='788.0' x2='788.0' y1='86' y2='402' class='gd'/><text x='788.0' y='422' text-anchor='middle' class='tk'>0.6</text><line x1='910.0' x2='910.0' y1='86' y2='402' class='gd'/><text x='910.0' y='422' text-anchor='middle' class='tk'>0.7</text><text x='288' y='107.0' text-anchor='end' class='cat'>后段旁支（参照）</text><rect x='300' y='92' width='523.0' height='20' rx='3' fill='#1f5f8b'><title>后段旁支（参照） · 换测点总体 F1：0.600</title></rect><text x='829.0' y='107' class='vl'>0.600</text><text x='288' y='145.0' text-anchor='end' class='cat'>注入：相加</text><rect x='300' y='130' width='201.8' height='20' rx='3' fill='#1f5f8b'><title>注入：相加 · 换测点总体 F1：0.232</title></rect><text x='507.8' y='145' class='vl'>0.232</text><text x='288' y='183.0' text-anchor='end' class='cat'>注入：FiLM</text><rect x='300' y='168' width='449.2' height='20' rx='3' fill='#1f5f8b'><title>注入：FiLM · 换测点总体 F1：0.515</title></rect><text x='755.2' y='183' class='vl'>0.515</text><text x='288' y='221.0' text-anchor='end' class='cat'>注入：门控</text><rect x='300' y='206' width='407.0' height='20' rx='3' fill='#1f5f8b'><title>注入：门控 · 换测点总体 F1：0.467</title></rect><text x='713.0' y='221' class='vl'>0.467</text><text x='288' y='259.0' text-anchor='end' class='cat'>注入：交叉注意力</text><rect x='300' y='244' width='252.8' height='20' rx='3' fill='#1f5f8b'><title>注入：交叉注意力 · 换测点总体 F1：0.290</title></rect><text x='558.8' y='259' class='vl'>0.290</text><text x='288' y='297.0' text-anchor='end' class='cat'>分组丢弃</text><rect x='300' y='282' width='455.5' height='20' rx='3' fill='#1f5f8b'><title>分组丢弃 · 换测点总体 F1：0.523</title></rect><text x='761.5' y='297' class='vl'>0.523</text><text x='288' y='335.0' text-anchor='end' class='cat'>分支损失</text><rect x='300' y='320' width='42.9' height='20' rx='3' fill='#1f5f8b'><title>分支损失 · 换测点总体 F1：0.049</title></rect><text x='348.9' y='335' class='vl'>0.049</text><text x='288' y='373.0' text-anchor='end' class='cat'>原生多模态</text><text x='306' y='373' class='tk'>未跑</text><line x1='823.0' x2='823.0' y1='80' y2='402' class='rf'/><text x='828.0' y='76' class='rft'>后段旁支 0.600</text></svg><figcaption><b>图 5-1</b>　OlmoEarth 采用不同融合方式时的换测点总体 F1（红色虚线为后段旁支的成绩；原生多模态有一折未跑完，无总体值）</figcaption></figure>
+<p class='tcap'><b>表 5-3</b>　OlmoEarth 采用不同融合方式的 F1（判读规则见 <a href="#s3-3">3.3</a> 节）</p><div class='tw'><table><thead><tr><th>融合方式</th><th>留株洲南</th><th>留衡阳北</th><th>留韶关南</th><th>换测点总体</th><th>比参照</th><th>判读</th></tr></thead><tbody><tr><td>后段旁支（参照）</td><td>0.482</td><td>0.577</td><td>0.718</td><td><b>0.600</b></td><td>—</td><td>参照</td></tr><tr><td>多尺度注入：相加</td><td>0.411</td><td>0.184</td><td>0.714</td><td><b>0.232</b></td><td>-0.369</td><td><span class='b bad'>稳定更差</span></td></tr><tr><td>多尺度注入：FiLM 调制</td><td>0.457</td><td>0.473</td><td>0.717</td><td><b>0.515</b></td><td>-0.085</td><td><span class='b bad'>稳定更差</span></td></tr><tr><td>多尺度注入：门控</td><td>0.450</td><td>0.434</td><td>0.660</td><td><b>0.467</b></td><td>-0.133</td><td><span class='b bad'>稳定更差</span></td></tr><tr><td>多尺度注入：交叉注意力</td><td>0.407</td><td>0.258</td><td>0.563</td><td><b>0.290</b></td><td>-0.310</td><td><span class='b bad'>稳定更差</span></td></tr><tr><td>分组随机丢弃</td><td>0.488</td><td>0.479</td><td>0.715</td><td><b>0.523</b></td><td>-0.077</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>分支辅助损失</td><td>0.322</td><td>0.037</td><td>0.722</td><td><b>0.049</b></td><td>-0.551</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>原生多模态（雷达、高程作为模型自身的输入）</td><td>0.387</td><td>0.555</td><td>—</td><td><b>—</b></td><td>—</td><td><span class='b na'>未跑齐</span></td></tr></tbody></table></div>
+<p class='tcap'><b>表 5-4</b>　在 FC-Siam-diff 上重复融合方式比较（参照为 FC-Siam-diff 加后段旁支）</p><div class='tw'><table><thead><tr><th>融合方式</th><th>留株洲南</th><th>留衡阳北</th><th>留韶关南</th><th>换测点总体</th><th>比参照</th><th>判读</th></tr></thead><tbody><tr><td>后段旁支（参照）</td><td>0.284</td><td>0.584</td><td>0.626</td><td><b>0.577</b></td><td>—</td><td>参照</td></tr><tr><td>早融合（拼进输入）</td><td>0.088</td><td>0.649</td><td>0.523</td><td><b>0.591</b></td><td>+0.014</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>多尺度注入：相加</td><td>0.081</td><td>0.597</td><td>0.673</td><td><b>0.592</b></td><td>+0.015</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>多尺度注入：FiLM 调制</td><td>0.072</td><td>0.532</td><td>0.615</td><td><b>0.528</b></td><td>-0.048</td><td><span class='b bad'>稳定更差</span></td></tr><tr><td>多尺度注入：门控</td><td>0.102</td><td>0.553</td><td>0.633</td><td><b>0.547</b></td><td>-0.030</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>多尺度注入：交叉注意力</td><td>0.071</td><td>0.383</td><td>0.631</td><td><b>0.408</b></td><td>-0.168</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>分组随机丢弃</td><td>—</td><td>—</td><td>—</td><td><b>—</b></td><td>—</td><td><span class='b na'>未跑齐</span></td></tr><tr><td>分支辅助损失</td><td>—</td><td>—</td><td>—</td><td><b>—</b></td><td>—</td><td><span class='b na'>未跑齐</span></td></tr><tr><td>不加辅助信息</td><td>0.048</td><td>0.247</td><td>0.142</td><td><b>0.189</b></td><td>-0.388</td><td><span class='b bad'>稳定更差</span></td></tr></tbody></table></div>
+<p><strong>（2）分组消融。</strong> 结果见图 5-2 和表 5-5，可以归纳为三点。</p>
+<ul>
+<li><strong>辅助信息整体不可缺少，主要作用是帮助推广到新测点。</strong> 全部去掉后，换测点总体 F1 从 0.600 降到 0.092。下降几乎全部发生在留衡阳北测试的那一折（0.577 → 0.072），另外两折变化较小（株洲南 0.482 → 0.383，韶关南 0.718 → 0.648）。衡阳北的地物和变化类型与另外两个测点差别最大（大片施工区、水塘多），这说明辅助信息的主要作用是帮助模型推广到与训练测点差别很大的新测点。</li>
+<li><strong>各组之间有很强的互相替代性。</strong> 只用任意一组，换测点总体 F1 就能恢复到 0.49—0.58，其中成像质量、指数差、地形三组单独使用都稳定优于不加；这说明各组提供的信息有相当大的重叠，主要作用都是帮模型在衡阳北站稳。</li>
+<li><strong>在全部信息的基础上单独去掉一组时，只有地形组不可替代。</strong> 去掉地形组后三个测点都下降（总体 -0.054），判为“稳定有用”，说明坡度、起伏等地形信息是其他组提供不了的。去掉指数差（-0.052）或往年同期（-0.021）后总体 F1 也下降，但三个测点方向不一致，作用不稳定；去掉成像质量（-0.006）、用途历史（-0.015）几乎没有影响；去掉雷达后总体 F1 反而上升 +0.030，但株洲南、韶关南是下降的，目前没有证据表明雷达有用。</li>
+</ul>
+<figure class='cf'><svg viewBox='0 0 1000 498' class='chart' role='img' aria-label='哪组辅助通道有用（换测点 F1；红虚线 = 全部加）'><text x='0' y='24' class='ct'>哪组辅助通道有用（换测点 F1；红虚线 = 全部加）</text><rect x='0' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='22' y='54' class='lgd'>去掉这一组</text><rect x='124' y='40' width='16' height='16' rx='3' fill='#e08a2c'/><text x='146' y='54' class='lgd'>只加这一组</text><line x1='300.0' x2='300.0' y1='86' y2='464' class='gd'/><text x='300.0' y='484' text-anchor='middle' class='tk'>0.0</text><line x1='422.0' x2='422.0' y1='86' y2='464' class='gd'/><text x='422.0' y='484' text-anchor='middle' class='tk'>0.1</text><line x1='544.0' x2='544.0' y1='86' y2='464' class='gd'/><text x='544.0' y='484' text-anchor='middle' class='tk'>0.3</text><line x1='666.0' x2='666.0' y1='86' y2='464' class='gd'/><text x='666.0' y='484' text-anchor='middle' class='tk'>0.4</text><line x1='788.0' x2='788.0' y1='86' y2='464' class='gd'/><text x='788.0' y='484' text-anchor='middle' class='tk'>0.6</text><line x1='910.0' x2='910.0' y1='86' y2='464' class='gd'/><text x='910.0' y='484' text-anchor='middle' class='tk'>0.7</text><text x='288' y='118.5' text-anchor='end' class='cat'>成像质量</text><rect x='300' y='92' width='517.6' height='20' rx='3' fill='#1f5f8b'><title>成像质量 · 去掉这一组：0.594</title></rect><text x='823.6' y='107' class='vl'>0.594</text><rect x='300' y='115' width='486.4' height='20' rx='3' fill='#e08a2c'><title>成像质量 · 只加这一组：0.558</title></rect><text x='792.4' y='130' class='vl'>0.558</text><text x='288' y='179.5' text-anchor='end' class='cat'>指数差</text><rect x='300' y='153' width='477.3' height='20' rx='3' fill='#1f5f8b'><title>指数差 · 去掉这一组：0.548</title></rect><text x='783.3' y='168' class='vl'>0.548</text><rect x='300' y='176' width='492.1' height='20' rx='3' fill='#e08a2c'><title>指数差 · 只加这一组：0.565</title></rect><text x='798.1' y='191' class='vl'>0.565</text><text x='288' y='240.5' text-anchor='end' class='cat'>往年同期偏离</text><rect x='300' y='214' width='505.1' height='20' rx='3' fill='#1f5f8b'><title>往年同期偏离 · 去掉这一组：0.580</title></rect><text x='811.1' y='229' class='vl'>0.580</text><rect x='300' y='237' width='426.0' height='20' rx='3' fill='#e08a2c'><title>往年同期偏离 · 只加这一组：0.489</title></rect><text x='732.0' y='252' class='vl'>0.489</text><text x='288' y='301.5' text-anchor='end' class='cat'>雷达 Sentinel-1</text><rect x='300' y='275' width='549.0' height='20' rx='3' fill='#1f5f8b'><title>雷达 Sentinel-1 · 去掉这一组：0.630</title></rect><text x='855.0' y='290' class='vl'>0.630</text><rect x='300' y='298' width='509.0' height='20' rx='3' fill='#e08a2c'><title>雷达 Sentinel-1 · 只加这一组：0.584</title></rect><text x='815.0' y='313' class='vl'>0.584</text><text x='288' y='362.5' text-anchor='end' class='cat'>地形</text><rect x='300' y='336' width='476.0' height='20' rx='3' fill='#1f5f8b'><title>地形 · 去掉这一组：0.546</title></rect><text x='782.0' y='351' class='vl'>0.546</text><rect x='300' y='359' width='509.4' height='20' rx='3' fill='#e08a2c'><title>地形 · 只加这一组：0.585</title></rect><text x='815.4' y='374' class='vl'>0.585</text><text x='288' y='423.5' text-anchor='end' class='cat'>用途历史</text><rect x='300' y='397' width='510.0' height='20' rx='3' fill='#1f5f8b'><title>用途历史 · 去掉这一组：0.585</title></rect><text x='816.0' y='412' class='vl'>0.585</text><rect x='300' y='420' width='432.3' height='20' rx='3' fill='#e08a2c'><title>用途历史 · 只加这一组：0.496</title></rect><text x='738.3' y='435' class='vl'>0.496</text><line x1='823.0' x2='823.0' y1='80' y2='464' class='rf'/><text x='828.0' y='76' class='rft'>全部加 0.600</text></svg><figcaption><b>图 5-2</b>　分组消融：去掉某一组、只用某一组时的换测点总体 F1（红色虚线为全部加入时的成绩）</figcaption></figure>
+<p class='tcap'><b>表 5-5</b>　分组消融结果。“去掉这一组”与全部加入（换测点总体 F1 0.600）比；“只用这一组”与全不加（换测点总体 F1 0.092）比</p><div class='tw'><table><thead><tr><th>辅助信息组</th><th>去掉：株洲南</th><th>去掉：衡阳北</th><th>去掉：韶关南</th><th>去掉：总体</th><th>判读</th><th>只用这一组：总体 F1</th><th>比全不加</th><th>判读</th></tr></thead><tbody><tr><td>成像质量</td><td>+0.027</td><td>-0.013</td><td>+0.017</td><td><b>-0.006</b></td><td><span class='b tie'>差异不显著</span></td><td>0.558</td><td>+0.466</td><td><span class='b good'>稳定更好</span></td></tr><tr><td>指数差</td><td>+0.012</td><td>-0.049</td><td>-0.078</td><td><b>-0.052</b></td><td><span class='b tie'>差异不显著</span></td><td>0.565</td><td>+0.473</td><td><span class='b good'>稳定更好</span></td></tr><tr><td>往年同期</td><td>-0.143</td><td>-0.018</td><td>-0.004</td><td><b>-0.021</b></td><td><span class='b tie'>差异不显著</span></td><td>0.489</td><td>+0.397</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>雷达</td><td>-0.021</td><td>+0.059</td><td>-0.059</td><td><b>+0.030</b></td><td><span class='b tie'>差异不显著</span></td><td>0.584</td><td>+0.492</td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>地形</td><td>-0.029</td><td>-0.056</td><td>-0.025</td><td><b>-0.054</b></td><td><span class='b bad'>稳定更差</span></td><td>0.585</td><td>+0.492</td><td><span class='b good'>稳定更好</span></td></tr><tr><td>用途历史</td><td>+0.005</td><td>-0.019</td><td>-0.002</td><td><b>-0.015</b></td><td><span class='b tie'>差异不显著</span></td><td>0.496</td><td>+0.404</td><td><span class='b tie'>差异不显著</span></td></tr></tbody></table></div>
+<p><strong>（3）指数差组内细分。</strong> 去掉土壤与亮度指数差，三个测点都下降（总体 -0.114），判为稳定有用；去掉水体指数差（-0.087）或植被指数差（-0.035），总体下降但方向不一致（表 5-6）。需要注意，只去掉一个子组（0.486）反而比去掉整个指数差组（0.548）还低，这提示单次训练的波动可能比预想的大，组内细分的结论需要用多个随机种子复核。</p>
+<p class='tcap'><b>表 5-6</b>　指数差组内细分（与全部加入比的差值）</p><div class='tw'><table><thead><tr><th>改动</th><th>株洲南</th><th>衡阳北</th><th>韶关南</th><th>总体 F1</th><th>总体差值</th><th>判读</th></tr></thead><tbody><tr><td>去掉植被指数差</td><td>+0.018</td><td>-0.027</td><td>-0.069</td><td>0.565</td><td><b>-0.035</b></td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>去掉水体指数差</td><td>+0.070</td><td>-0.092</td><td>-0.072</td><td>0.514</td><td><b>-0.087</b></td><td><span class='b tie'>差异不显著</span></td></tr><tr><td>去掉土壤与亮度指数差</td><td>-0.042</td><td>-0.125</td><td>-0.045</td><td>0.486</td><td><b>-0.114</b></td><td><span class='b bad'>稳定更差</span></td></tr><tr><td>去掉整个指数差组</td><td>+0.012</td><td>-0.049</td><td>-0.078</td><td>0.548</td><td><b>-0.052</b></td><td><span class='b tie'>差异不显著</span></td></tr></tbody></table></div>
+<p><strong>小结（表 5-7）。</strong> 推荐保留全部辅助信息并用后段旁支接入。“地形有用、雷达没有证据有用”这两点，下一步用多个随机种子复核；若复核后雷达仍然没有作用，可以去掉，以减少数据准备的工作量。</p>
+<p class='tcap'><b>表 5-7</b>　各组辅助信息的作用小结</p><div class='tw'><table><thead><tr><th>辅助信息组</th><th>结论</th></tr></thead><tbody><tr><td>成像质量</td><td>单独使用有用（稳定），但在全部信息中可被其他组替代</td></tr><tr><td>指数差</td><td>可能有用：去掉后合并下降，但各测点方向不一致</td></tr><tr><td>往年同期</td><td>可能有用：去掉后合并下降，但各测点方向不一致</td></tr><tr><td>雷达</td><td>没有证据表明有用：去掉后合并反而上升（各测点方向不一致）</td></tr><tr><td>地形</td><td><b>稳定有用，且不可替代</b></td></tr><tr><td>用途历史</td><td>单独使用有用（主要体现在衡阳北），但在全部信息中可被其他组替代</td></tr></tbody></table></div>
+<h2 id="s6">6 最好方案的结果</h2><p class='rel'>平台相关页面：<a href="4.html">四、精度评估与最优方案</a></p><p>本节分析最终方案（<a href="#s4-4">4.4</a> 节）在换测点测试中的结果，即模型在训练时没有见过测试测点。</p>
+<h3 id="s6-1">6.1 总体与分测点精度</h3>
+<p class='tcap'><b>表 6-1</b>　最终方案在各测点上的精度（换测点测试）</p><div class='tw'><table><thead><tr><th>测点</th><th>精确率</th><th>召回率</th><th>F1</th></tr></thead><tbody><tr><td>三站合并</td><td>0.503</td><td>0.744</td><td>0.600</td></tr><tr><td>株洲南</td><td>0.713</td><td>0.364</td><td>0.482</td></tr><tr><td>衡阳北</td><td>0.437</td><td>0.851</td><td>0.577</td></tr><tr><td>韶关南</td><td>0.843</td><td>0.625</td><td>0.718</td></tr></tbody></table></div>
+<p>韶关南最好（F1 0.718），衡阳北次之（0.577），株洲南最低（0.482）。株洲南的变化量最少（全部只有 1,752 个变化像元），而且多是零散的小块，少量的漏报和误报就会明显拉低 F1。三个测点合计，换测点总体 F1 为 0.600（精确率 0.50、召回率 0.74）。</p>
+<h3 id="s6-2">6.2 以事件为单位的结果</h3>
+<p>按 <a href="#s3-2">3.2</a> 节的定义，以事件为单位的结果见表 6-2。换测点测试中共有 236 个真实事件（面积 ≥ 4 个像元），检出 145 个，<strong>事件检出率 61%，漏检率 39%</strong>。分测点看，衡阳北的检出率最高（80%），韶关南 61%，株洲南只有 34%：株洲南的变化多是零散的小块，这与像元级的结果一致。</p>
+<p>误报方面，模型共报出 705 处变化区域，其中 536 处与人工标注的变化没有任何重叠，<strong>误报区域占比 76%</strong>（事件精确率 24%），事件 F1 为 0.345。误报区域高度集中在衡阳北（494 处），株洲南、韶关南分别只有 12 处和 30 处。从影像对的角度看，在人工判定没有任何变化的 411 个影像对中，有 139 个（34%）被模型报出了至少一处误报；其中衡阳北 156 个影像对中有 118 个。</p>
+<p class='tcap'><b>表 6-2</b>　以事件为单位的评价（换测点测试；真实事件为面积 ≥ 4 个像元的变化片，检出指至少 30% 的像元被报出；误报区域指与人工标注的变化没有任何重叠的报出区域）</p><div class='tw'><table><thead><tr><th>测点</th><th>真实事件</th><th>检出</th><th>事件检出率</th><th>漏检率</th><th>报出区域</th><th>误报区域</th><th>误报区域占比</th><th>事件精确率</th><th>事件 F1</th><th>无变化影像对中报出误报的</th></tr></thead><tbody><tr><td>株洲南</td><td>70</td><td>24</td><td>34.3%</td><td>65.7%</td><td>51</td><td>12</td><td>23.5%</td><td>76.5%</td><td>0.473</td><td>10 / 163（6%）</td></tr><tr><td>衡阳北</td><td>105</td><td>84</td><td>80.0%</td><td>20.0%</td><td>573</td><td>494</td><td>86.2%</td><td>13.8%</td><td>0.235</td><td>118 / 156（76%）</td></tr><tr><td>韶关南</td><td>61</td><td>37</td><td>60.7%</td><td>39.3%</td><td>81</td><td>30</td><td>37.0%</td><td>63.0%</td><td>0.618</td><td>11 / 92（12%）</td></tr><tr><td><b>总体</b></td><td>236</td><td>145</td><td>61.4%</td><td>38.6%</td><td>705</td><td>536</td><td>76.0%</td><td>24.0%</td><td>0.345</td><td>139 / 411（34%）</td></tr></tbody></table></div>
+<p>事件级 F1（0.345）明显低于像元级 F1（0.600）。原因在于两种指标的计票方式不同：像元级指标按面积计，大片施工区的正确检出贡献了大部分得分；事件级指标一处一票，衡阳北大量零散的误报区域（面积中位数只有 21 个像元，约 2,100 平方米）每一处都算一次误报。这说明，当前模型对<strong>成片的明显变化</strong>已经比较可靠，主要问题在于<strong>零散的误报</strong>；这也是下一步改进的重点（第 <a href="#s8">8</a> 节）。</p>
+<h3 id="s6-3">6.3 按变化类型、变化大小和成像条件</h3>
+<p><strong>变化类型（表 6-3）。</strong> 持续的真变化检出最好；水位变化召回较低，洪水几乎检不出来。洪水只在韶关南出现过 2 对，训练样本太少，而且多数在几周内退去。</p>
+<p class='tcap'><b>表 6-3</b>　按变化类型的检出情况（“片检出”指一片变化中至少三成像元被报出）</p><div class='tw'><table><thead><tr><th>变化类型</th><th>变化片数（≥4 像元）</th><th>检出片数</th><th>片检出率</th><th>像元召回率</th></tr></thead><tbody><tr><td>洪水（一过性涨水）</td><td>3</td><td>0</td><td>0.0%</td><td>3.7%</td></tr><tr><td>持续的真变化（清表、开挖、施工、新裸土、填挖塘、滑坡）</td><td>177</td><td>119</td><td>67.2%</td><td>79.3%</td></tr><tr><td>水位变化（塘库放水蓄水、岸边露滩）</td><td>56</td><td>26</td><td>46.4%</td><td>42.2%</td></tr></tbody></table></div>
+<p><strong>变化大小（表 6-4）。</strong> 一片变化越大，越容易被找到。面积在 4—19 个像元（400—1,900 平方米）的小变化检出率明显低于大片变化；1—3 个像元的碎屑在 10 米分辨率上基本无法可靠识别。</p>
+<p class='tcap'><b>表 6-4</b>　按变化大小的检出情况</p><div class='tw'><table><thead><tr><th>变化斑块大小（1 像元 = 100 平方米）</th><th>斑块数</th><th>检出数</th><th>检出率</th><th>像元召回率</th></tr></thead><tbody><tr><td>≥100 像元</td><td>35</td><td>29</td><td>82.9%</td><td>81.5%</td></tr><tr><td>20—99 像元</td><td>118</td><td>90</td><td>76.3%</td><td>65.1%</td></tr><tr><td>4—19 像元</td><td>83</td><td>26</td><td>31.3%</td><td>34.5%</td></tr><tr><td>1—3 像元</td><td>65</td><td>4</td><td>（太小，只看像元召回率）</td><td>7.9%</td></tr></tbody></table></div>
+<p><strong>成像条件（表 6-5）。</strong> 前期或后期影像有雾的影像对，F1 明显低于两期都无雾的影像对。雾使整幅影像变亮、反差下降，既会造成误报，也会掩盖真实变化。</p>
+<p class='tcap'><b>表 6-5</b>　有雾与无雾影像对的精度</p><div class='tw'><table><thead><tr><th>影像对</th><th>精确率</th><th>召回率</th><th>F1</th></tr></thead><tbody><tr><td>有雾</td><td>0.387</td><td>0.693</td><td>0.497</td></tr><tr><td>无雾</td><td>0.579</td><td>0.768</td><td>0.660</td></tr></tbody></table></div>
+<h3 id="s6-4">6.4 典型影像对</h3>
+<p>下面的例子都取自换测点测试，即模型在训练时没有见过这个测点。每个例子从左到右、从上到下依次为：前期影像、后期影像、人工标注（红色为变化，白色半透明为“不算”、不参与评价的区域），以及模型结果（绿色为报对，红色为误报，黄色为漏报）。图中只显示变化所在的局部，左下角为比例尺；点击图片可以放大查看。这里从全部测试影像对中挑出视觉上最清楚的 4 个：前两个是检出效果好的例子，第三个是有雾时只检出一部分的例子，第四个是误报最多的影像对。</p>
+<figure class='case4'><img src="media/r1010/7507bebb2dd45881.png" alt='检出效果好的例子：衡阳北 2023-09-01 → 2023-09-29，施工新裸土，后图有雾，持续。这一对的精确率 0.89、召回率 0.95、F1 0.92。' loading='lazy'><figcaption><b>图 6-1</b>　检出效果好的例子：衡阳北 2023-09-01 → 2023-09-29，施工新裸土，后图有雾，持续。这一对的精确率 0.89、召回率 0.95、F1 0.92。</figcaption></figure><figure class='case4'><img src="media/r1010/9badc1443bf62d87.png" alt='检出效果好的例子：韶关南 2023-10-01 → 2023-10-16，山坡林地采伐，植被指数 0.7→0.2，两年才长回。这一对的精确率 0.85、召回率 0.90、F1 0.88。' loading='lazy'><figcaption><b>图 6-2</b>　检出效果好的例子：韶关南 2023-10-01 → 2023-10-16，山坡林地采伐，植被指数 0.7→0.2，两年才长回。这一对的精确率 0.85、召回率 0.90、F1 0.88。</figcaption></figure><figure class='case4'><img src="media/r1010/932a99c54be92237.png" alt='有雾时只检出一部分的例子：韶关南 2023-03-10 → 2023-05-29，山坡上新出现树枝状亮线，坡面冲沟或林道，之后一直在。精确率 0.98，但召回率只有 0.49，黄色为漏报部分。' loading='lazy'><figcaption><b>图 6-3</b>　有雾时只检出一部分的例子：韶关南 2023-03-10 → 2023-05-29，山坡上新出现树枝状亮线，坡面冲沟或林道，之后一直在。精确率 0.98，但召回率只有 0.49，黄色为漏报部分。</figcaption></figure><figure class='case4'><img src="media/r1010/af477c717c5ef05f.png" alt='误报最多的影像对：衡阳北 2021-12-05 → 2022-03-03。人工判定这一对没有需要报告的变化，模型却报了 1,262 个像元；误报像元中 83% 落在植被上，前期或后期影像有雾。' loading='lazy'><figcaption><b>图 6-4</b>　误报最多的影像对：衡阳北 2021-12-05 → 2022-03-03。人工判定这一对没有需要报告的变化，模型却报了 1,262 个像元；误报像元中 83% 落在植被上，前期或后期影像有雾。</figcaption></figure>
+<h2 id="s7">7 与已有研究的比较</h2><p class='rel'>平台相关页面：<a href="6-2.html">6.2 参考文献</a></p><p>为了判断本研究的精度处在什么水平，我们与公开的 Sentinel-2 变化检测基准 OSCD（Onera Satellite Change Detection）上已发表的结果进行比较（表 7-1）。OSCD 由全球 24 个城市的 Sentinel-2 影像对组成，其中 14 对用于训练、10 对位于其他城市用于测试，这与本研究“换测点”的测试方式相近：测试地点在训练时都没有见过。</p>
+<p class='tcap'><b>表 7-1</b>　与 OSCD 基准上已发表结果的比较（F1）</p><div class='tw'><table><thead><tr><th>数据与测试方式</th><th>方法</th><th>输入</th><th>F1</th></tr></thead><tbody><tr><td>OSCD：14 对训练，10 对其他城市测试</td><td>FC-EF（Daudt 等，ICIP 2018）</td><td>Sentinel-2 RGB</td><td>0.489</td></tr><tr><td>同上</td><td>FC-Siam-diff（同上）</td><td>Sentinel-2 RGB</td><td>0.489</td></tr><tr><td>同上</td><td>FC-Siam-conc（同上）</td><td>Sentinel-2 13 波段</td><td>0.514</td></tr><tr><td>同上</td><td>FC-EF（同上）</td><td>Sentinel-2 13 波段</td><td>0.569</td></tr><tr><td>同上</td><td>FC-Siam-diff（同上）</td><td>Sentinel-2 13 波段</td><td>0.579</td></tr><tr><td>同上</td><td>SatMAE（遥感大模型，ViT-B）</td><td>多光谱</td><td>0.528</td></tr><tr><td>同上</td><td>SpectralGPT（遥感大模型，ViT-B）</td><td>多光谱</td><td>0.543</td></tr><tr><td>同上</td><td>SeaMo（遥感大模型，ViT-B）</td><td>多光谱</td><td>0.545</td></tr><tr><td><b>本研究：换测点总体</b></td><td><b>OlmoEarth + 后段旁支</b></td><td>12 波段 + 46 个辅助信息层</td><td><b>0.600</b></td></tr><tr><td>本研究：换测点总体</td><td>FC-EF + 全部辅助信息</td><td>6 波段 + 46 个辅助信息层</td><td>0.567</td></tr><tr><td>本研究：换测点总体</td><td>OlmoEarth 只用 RGB</td><td>RGB</td><td>0.179</td></tr></tbody></table></div><p class='note'>OSCD 的 FC 系列结果见 Daudt R C, Le Saux B, Boulch A. Fully convolutional siamese networks for change detection. ICIP 2018（arXiv:1810.08462，表 1）；遥感大模型的结果见 SeaMo 论文（arXiv:2412.19237，表 5）。</p>
+<p><strong>比较结论。</strong> 在 OSCD 上，经典卷积网络用 13 个波段时 F1 为 0.51—0.58，只用 RGB 时为 0.45—0.49；近年的遥感大模型（SatMAE、SpectralGPT、SeaMo）为 0.53—0.55。本研究最终方案的换测点总体 F1 为 0.600，与这些结果处在同一水平并略高。</p>
+<p><strong>需要注意的差别。</strong> 这一比较只能作为量级参考：（1）OSCD 的变化以城市建设为主，本研究是铁路沿线的乡村和山地环境，变化多为施工清表、山坡开垦、林地采伐等，面积更小、反差更弱；（2）两者对“变化”的定义和标注方式不同，本研究还把季节变化、雾等明确排除在外；（3）本研究的影像包含大量有雾、有薄云的时相。一个直接的旁证是：只用 RGB 时，OSCD 上的 FC-EF 为 0.489，而本研究 OlmoEarth 只用 RGB 时只有 0.179，说明本研究的目标在真彩色影像上更难识别，多光谱和辅助信息的作用也因此更大。</p>
+<h2 id="s8">8 误差来源与下一周的改进计划</h2><p class='rel'>平台相关页面：<a href="2-2-4.html">2.2.4 伪变化抑制</a> · <a href="5.html">五、方法改进</a></p><p>本节及以后的讨论统一使用<strong>换测点总体 F1</strong>（三个测点轮流留出测试、合并计算），因为它最能反映模型推广到没见过的新地点的能力，也是将来实际应用最关心的指标。</p>
+<h3 id="s8-1">8.1 当前结果的定位</h3>
+<p>最终方案的换测点总体 F1 为 0.600，精确率 0.50、召回率 0.74。通俗地说：模型报出的变化中，约一半确实是需要报告的变化；所有真实变化中，约四分之三能被找到。分测点看，韶关南 0.718、衡阳北 0.577、株洲南 0.482。与公开基准相比，这一精度已处在同类研究的上沿（第 <a href="#s7">7</a> 节），但要用于实际监测，还需要进一步减少误报。为了找准提高的方向，我们把误差拆成以下几个来源（表 8-1），并逐项分析其成因。</p>
+<p class='tcap'><b>表 8-1</b>　最好方案的误差拆解（换测点 F1；“最优门槛”在测试测点上选取，实际无法事先得到，只作上限）</p><div class='tw'><table><thead><tr><th>评价方式</th><th>株洲南</th><th>衡阳北</th><th>韶关南</th><th>换测点总体</th></tr></thead><tbody><tr><td>验证集门槛 · 全部影像对（正式成绩）</td><td>0.482</td><td>0.577</td><td>0.718</td><td><b>0.600</b></td></tr><tr><td>验证集门槛 · 只看无雾影像对</td><td>0.498</td><td>0.641</td><td>0.796</td><td>0.660</td></tr><tr><td>按训练集变化比例定门槛 · 全部影像对</td><td>0.396</td><td>0.723</td><td>0.649</td><td>0.647</td></tr><tr><td>最优门槛（上限）· 全部影像对</td><td>0.559</td><td>0.727</td><td>0.746</td><td>0.717</td></tr><tr><td>最优门槛（上限）· 只看无雾影像对</td><td>0.612</td><td>0.759</td><td>0.782</td><td>0.748</td></tr></tbody></table></div>
+<h3 id="s8-2">8.2 误差来源分析</h3>
+<p><strong>（1）门槛在不同测点之间不通用：最大的一项损失。</strong> 模型对每个像元输出一个变化概率，需要一个门槛来决定报不报。图 8-1 给出了三个留出测点上 F1 随门槛变化的曲线。三条曲线的最优门槛相差极大：株洲南的最优门槛约为 0.0078，韶关南约为 0.032，而衡阳北高达 0.998。验证集选出的门槛（0.218、0.677、0.702）对三个测点都不是最优。如果每个测点都用自己的最优门槛，株洲南可从 0.482 提高到 0.559，衡阳北从 0.577 提高到 0.727，韶关南从 0.718 提高到 0.746，总体从 0.600 提高到 0.717。当然，最优门槛要用测试测点的标注才能找到，实际做不到，这只是一个上限；但它说明，<strong>如果能让门槛自动适应新测点，F1 还有约 0.12 的提升空间</strong>。</p>
+<figure class='cf'><svg viewBox='0 0 1000 430' class='chart' role='img' aria-label='三个留出测点上 F1 随门槛的变化'><text x='0' y='24' class='ct'>三个留出测点上 F1 随门槛的变化</text><line x1='70' x2='970' y1='370.0' y2='370.0' class='gd'/><text x='62' y='374.0' text-anchor='end' class='tk'>0.0</text><line x1='70' x2='970' y1='295.0' y2='295.0' class='gd'/><text x='62' y='299.0' text-anchor='end' class='tk'>0.2</text><line x1='70' x2='970' y1='220.0' y2='220.0' class='gd'/><text x='62' y='224.0' text-anchor='end' class='tk'>0.4</text><line x1='70' x2='970' y1='145.0' y2='145.0' class='gd'/><text x='62' y='149.0' text-anchor='end' class='tk'>0.6</text><line x1='70' x2='970' y1='70.0' y2='70.0' class='gd'/><text x='62' y='74.0' text-anchor='end' class='tk'>0.8</text><line x1='131.5' x2='131.5' y1='70' y2='370' class='gd'/><text x='131.5' y='390' text-anchor='middle' class='tk'>0.001</text><line x1='261.5' x2='261.5' y1='70' y2='370' class='gd'/><text x='261.5' y='390' text-anchor='middle' class='tk'>0.01</text><line x1='396.4' x2='396.4' y1='70' y2='370' class='gd'/><text x='396.4' y='390' text-anchor='middle' class='tk'>0.1</text><line x1='520.0' x2='520.0' y1='70' y2='370' class='gd'/><text x='520.0' y='390' text-anchor='middle' class='tk'>0.5</text><line x1='643.6' x2='643.6' y1='70' y2='370' class='gd'/><text x='643.6' y='390' text-anchor='middle' class='tk'>0.9</text><line x1='778.5' x2='778.5' y1='70' y2='370' class='gd'/><text x='778.5' y='390' text-anchor='middle' class='tk'>0.99</text><line x1='908.5' x2='908.5' y1='70' y2='370' class='gd'/><text x='908.5' y='390' text-anchor='middle' class='tk'>0.999</text><text x='520.0' y='422' text-anchor='middle' class='tk'>门槛（模型输出的变化概率；横轴按对数几率等间距）</text><text transform='translate(16,220.0) rotate(-90)' text-anchor='middle' class='tk'>F1</text><polyline points='70.0,211.9 72.8,208.9 75.6,206.8 78.4,204.8 81.3,201.7 84.1,199.8 86.9,198.1 89.7,197.3 92.5,195.4 95.3,194.0 98.1,192.7 100.9,191.0 103.8,189.1 106.6,187.3 109.4,186.5 112.2,184.6 115.0,183.1 117.8,181.6 120.6,180.2 123.4,178.9 126.3,177.4 129.1,176.6 131.9,176.6 134.7,175.4 137.5,174.4 140.3,173.0 143.1,172.0 145.9,171.3 148.8,170.2 151.6,169.4 154.4,168.6 157.2,168.1 160.0,167.8 162.8,167.7 165.6,167.9 168.4,167.2 171.3,167.3 174.1,166.9 176.9,166.8 179.7,165.9 182.5,166.0 185.3,165.9 188.1,165.3 190.9,165.3 193.8,164.9 196.6,164.0 199.4,163.7 202.2,164.1 205.0,163.3 207.8,163.3 210.6,163.1 213.4,163.4 216.3,163.2 219.1,162.2 221.9,161.0 224.7,161.2 227.5,160.9 230.3,160.9 233.1,160.8 235.9,160.7 238.8,161.0 241.6,161.5 244.4,161.1 247.2,160.5 250.0,161.3 252.8,161.7 255.6,161.6 258.4,161.3 261.3,161.4 264.1,161.7 266.9,162.3 269.7,163.0 272.5,163.3 275.3,163.7 278.1,164.0 280.9,164.2 283.8,164.0 286.6,164.0 289.4,164.3 292.2,164.3 295.0,164.6 297.8,164.3 300.6,164.7 303.4,164.8 306.3,164.9 309.1,164.6 311.9,164.7 314.7,164.9 317.5,165.1 320.3,165.3 323.1,165.5 325.9,166.1 328.8,166.2 331.6,166.3 334.4,166.3 337.2,166.1 340.0,167.1 342.8,167.7 345.6,168.5 348.4,168.1 351.3,169.2 354.1,169.3 356.9,170.0 359.7,170.9 362.5,171.3 365.3,171.8 368.1,171.6 370.9,172.7 373.8,173.1 376.6,173.2 379.4,174.0 382.2,173.6 385.0,174.3 387.8,175.2 390.6,176.1 393.4,178.0 396.3,179.0 399.1,179.3 401.9,179.1 404.7,179.5 407.5,179.9 410.3,181.1 413.1,181.9 415.9,182.8 418.8,183.0 421.6,183.2 424.4,184.0 427.2,184.4 430.0,184.7 432.8,185.2 435.6,186.1 438.4,187.0 441.3,187.7 444.1,188.8 446.9,189.1 449.7,190.2 452.5,190.6 455.3,191.5 458.1,192.0 460.9,192.1 463.8,192.2 466.6,192.9 469.4,194.0 472.2,195.3 475.0,196.0 477.8,196.9 480.6,197.2 483.4,197.7 486.3,198.3 489.1,199.3 491.9,200.2 494.7,200.9 497.5,202.5 500.3,202.8 503.1,203.8 505.9,205.1 508.8,205.6 511.6,206.1 514.4,206.4 517.2,207.3 520.0,207.8 522.8,208.9 525.6,209.8 528.4,210.4 531.3,210.9 534.1,212.2 536.9,212.2 539.7,213.4 542.5,214.2 545.3,216.0 548.1,217.3 550.9,219.3 553.8,221.1 556.6,222.4 559.4,222.2 562.2,222.7 565.0,222.9 567.8,224.2 570.6,225.1 573.4,225.5 576.3,225.3 579.1,227.7 581.9,228.1 584.7,228.8 587.5,229.9 590.3,231.2 593.1,232.6 595.9,233.5 598.8,234.5 601.6,235.5 604.4,236.7 607.2,237.1 610.0,238.0 612.8,238.5 615.6,238.8 618.4,239.4 621.3,240.7 624.1,241.6 626.9,242.6 629.7,245.0 632.5,245.1 635.3,246.4 638.1,247.2 640.9,249.1 643.8,250.4 646.6,251.4 649.4,252.7 652.2,253.9 655.0,254.7 657.8,257.0 660.6,257.0 663.4,258.0 666.3,259.1 669.1,259.6 671.9,259.8 674.7,261.2 677.5,262.3 680.3,263.2 683.1,264.4 685.9,264.7 688.8,264.9 691.6,266.7 694.4,269.2 697.2,270.7 700.0,273.4 702.8,273.6 705.6,275.7 708.4,276.7 711.3,277.9 714.1,279.8 716.9,280.1 719.7,281.7 722.5,284.2 725.3,285.8 728.1,286.7 730.9,289.3 733.8,289.9 736.6,291.3 739.4,292.6 742.2,294.3 745.0,295.9 747.8,297.0 750.6,298.3 753.4,300.7 756.3,303.0 759.1,305.1 761.9,306.9 764.7,308.3 767.5,308.6 770.3,310.4 773.1,311.9 775.9,312.8 778.8,313.9 781.6,315.0 784.4,316.9 787.2,318.3 790.0,318.7 792.8,319.4 795.6,320.1 798.4,321.6 801.3,324.2 804.1,326.0 806.9,326.0 809.7,327.9 812.5,328.6 815.3,330.9 818.1,330.9 820.9,332.8 823.8,333.6 826.6,334.0 829.4,334.3 832.2,334.7 835.0,335.9 837.8,338.2 840.6,340.2 843.4,341.3 846.3,342.9 849.1,344.9 851.9,347.3 854.7,348.9 857.5,350.9 860.3,351.3 863.1,352.1 865.9,352.9 868.8,354.6 871.6,356.2 874.4,357.0 877.2,357.4 880.0,358.3 882.8,359.9 885.6,360.3 888.4,360.7 891.3,361.2 894.1,361.2 896.9,361.6 899.7,361.6 902.5,362.4 905.3,362.4 908.1,363.6 910.9,364.5 913.8,364.9 916.6,365.3 919.4,365.7 922.2,366.2 925.0,366.6 927.8,366.6 930.6,367.0 933.4,367.0 936.3,367.0 939.1,367.0 941.9,367.4 944.7,367.4 947.5,367.4 950.3,367.4 953.1,367.9 955.9,367.9 958.8,367.9 961.6,367.9 964.4,368.3 967.2,368.3' fill='none' stroke='#7a9a3a' stroke-width='2.5'/><circle cx='448.1' cy='189.1' r='7' fill='#7a9a3a' stroke='#fff' stroke-width='2'><title>留株洲南：验证集门槛 0.218，F1 0.482</title></circle><path d='M247.2,151.5 L256.2,160.5 L247.2,169.5 L238.2,160.5 Z' fill='#fff' stroke='#7a9a3a' stroke-width='2.5'><title>留株洲南：最优门槛 0.0078，F1 0.559</title></path><rect x='70' y='40' width='16' height='16' rx='3' fill='#7a9a3a'/><text x='92' y='54' class='lgd'>留株洲南</text><polyline points='70.0,258.8 72.8,258.1 75.6,257.4 78.4,256.7 81.3,256.0 84.1,255.3 86.9,254.6 89.7,253.9 92.5,253.3 95.3,252.6 98.1,251.9 100.9,251.3 103.8,250.7 106.6,250.0 109.4,249.3 112.2,248.7 115.0,248.0 117.8,247.3 120.6,246.7 123.4,246.0 126.3,245.3 129.1,244.7 131.9,244.0 134.7,243.3 137.5,242.7 140.3,241.9 143.1,241.3 145.9,240.6 148.8,240.0 151.6,239.3 154.4,238.7 157.2,238.1 160.0,237.4 162.8,236.8 165.6,236.1 168.4,235.4 171.3,234.9 174.1,234.4 176.9,233.7 179.7,233.1 182.5,232.5 185.3,231.9 188.1,231.4 190.9,230.8 193.8,230.3 196.6,229.7 199.4,229.1 202.2,228.6 205.0,228.0 207.8,227.3 210.6,226.7 213.4,226.2 216.3,225.6 219.1,225.0 221.9,224.5 224.7,223.9 227.5,223.3 230.3,222.8 233.1,222.1 235.9,221.6 238.8,221.1 241.6,220.5 244.4,219.9 247.2,219.3 250.0,218.8 252.8,218.3 255.6,217.7 258.4,217.2 261.3,216.6 264.1,216.0 266.9,215.5 269.7,214.9 272.5,214.4 275.3,213.8 278.1,213.2 280.9,212.6 283.8,212.1 286.6,211.4 289.4,210.9 292.2,210.3 295.0,209.8 297.8,209.3 300.6,208.7 303.4,208.1 306.3,207.6 309.1,207.0 311.9,206.5 314.7,205.9 317.5,205.4 320.3,204.9 323.1,204.3 325.9,203.8 328.8,203.2 331.6,202.6 334.4,202.1 337.2,201.5 340.0,201.0 342.8,200.4 345.6,199.8 348.4,199.2 351.3,198.7 354.1,198.1 356.9,197.6 359.7,197.0 362.5,196.5 365.3,195.9 368.1,195.4 370.9,194.9 373.8,194.3 376.6,193.8 379.4,193.3 382.2,192.7 385.0,192.1 387.8,191.5 390.6,191.1 393.4,190.5 396.3,189.9 399.1,189.3 401.9,188.6 404.7,188.1 407.5,187.5 410.3,187.0 413.1,186.4 415.9,185.8 418.8,185.1 421.6,184.6 424.4,183.9 427.2,183.3 430.0,182.6 432.8,182.1 435.6,181.4 438.4,180.8 441.3,180.3 444.1,179.6 446.9,179.0 449.7,178.4 452.5,177.8 455.3,177.2 458.1,176.7 460.9,176.1 463.8,175.6 466.6,174.9 469.4,174.3 472.2,173.7 475.0,173.1 477.8,172.5 480.6,171.9 483.4,171.5 486.3,170.8 489.1,170.3 491.9,169.7 494.7,169.0 497.5,168.3 500.3,167.6 503.1,166.9 505.9,166.4 508.8,165.7 511.6,165.1 514.4,164.6 517.2,163.9 520.0,163.3 522.8,162.7 525.6,161.9 528.4,161.3 531.3,160.6 534.1,160.0 536.9,159.2 539.7,158.7 542.5,158.1 545.3,157.4 548.1,156.6 550.9,156.0 553.8,155.4 556.6,154.7 559.4,154.0 562.2,153.3 565.0,152.5 567.8,152.0 570.6,151.3 573.4,150.6 576.3,149.9 579.1,149.3 581.9,148.7 584.7,147.9 587.5,147.4 590.3,146.7 593.1,146.1 595.9,145.3 598.8,144.7 601.6,144.1 604.4,143.3 607.2,142.8 610.0,142.1 612.8,141.3 615.6,140.6 618.4,140.0 621.3,139.4 624.1,138.8 626.9,138.1 629.7,137.5 632.5,136.7 635.3,136.1 638.1,135.4 640.9,134.7 643.8,134.0 646.6,133.3 649.4,132.9 652.2,132.3 655.0,131.7 657.8,131.1 660.6,130.4 663.4,129.8 666.3,129.1 669.1,128.6 671.9,128.1 674.7,127.4 677.5,126.7 680.3,126.2 683.1,125.4 685.9,124.7 688.8,124.0 691.6,123.5 694.4,122.7 697.2,122.1 700.0,121.6 702.8,121.1 705.6,120.6 708.4,120.0 711.3,119.4 714.1,118.8 716.9,118.2 719.7,117.5 722.5,117.1 725.3,116.7 728.1,116.1 730.9,115.4 733.8,114.9 736.6,114.4 739.4,113.8 742.2,113.3 745.0,112.9 747.8,112.3 750.6,111.7 753.4,111.2 756.3,110.6 759.1,110.1 761.9,109.5 764.7,108.9 767.5,108.3 770.3,108.0 773.1,107.3 775.9,106.7 778.8,106.0 781.6,105.6 784.4,105.2 787.2,104.9 790.0,104.7 792.8,104.3 795.6,104.1 798.4,103.8 801.3,103.3 804.1,103.2 806.9,102.6 809.7,101.7 812.5,101.4 815.3,101.0 818.1,100.5 820.9,100.3 823.8,100.0 826.6,99.8 829.4,99.4 832.2,99.3 835.0,99.0 837.8,98.7 840.6,98.5 843.4,98.1 846.3,98.3 849.1,97.9 851.9,97.8 854.7,97.7 857.5,97.5 860.3,97.2 863.1,97.2 865.9,97.5 868.8,97.4 871.6,97.5 874.4,97.8 877.2,98.2 880.0,98.3 882.8,98.6 885.6,98.7 888.4,98.6 891.3,98.7 894.1,99.0 896.9,99.6 899.7,99.9 902.5,100.3 905.3,100.6 908.1,101.2 910.9,101.6 913.8,101.9 916.6,102.6 919.4,102.8 922.2,103.4 925.0,104.1 927.8,104.7 930.6,105.6 933.4,106.0 936.3,106.6 939.1,107.2 941.9,108.1 944.7,108.4 947.5,109.1 950.3,109.8 953.1,110.6 955.9,111.3 958.8,112.3 961.6,113.4 964.4,114.5 967.2,115.2' fill='none' stroke='#1f5f8b' stroke-width='2.5'/><circle cx='561.6' cy='153.3' r='7' fill='#1f5f8b' stroke='#fff' stroke-width='2'><title>留衡阳北：验证集门槛 0.677，F1 0.578</title></circle><path d='M863.1,88.2 L872.1,97.2 L863.1,106.2 L854.1,97.2 Z' fill='#fff' stroke='#1f5f8b' stroke-width='2.5'><title>留衡阳北：最优门槛 0.998，F1 0.727</title></path><rect x='178' y='40' width='16' height='16' rx='3' fill='#1f5f8b'/><text x='200' y='54' class='lgd'>留衡阳北</text><polyline points='70.0,116.6 72.8,115.6 75.6,114.9 78.4,114.2 81.3,113.4 84.1,112.5 86.9,111.7 89.7,111.2 92.5,110.7 95.3,110.2 98.1,109.6 100.9,109.1 103.8,108.7 106.6,108.2 109.4,107.8 112.2,107.3 115.0,106.7 117.8,105.8 120.6,105.2 123.4,104.6 126.3,104.4 129.1,104.0 131.9,103.3 134.7,102.8 137.5,102.3 140.3,101.9 143.1,101.4 145.9,100.9 148.8,100.5 151.6,100.5 154.4,100.1 157.2,99.6 160.0,99.3 162.8,99.1 165.6,98.9 168.4,98.7 171.3,98.4 174.1,98.1 176.9,97.6 179.7,97.4 182.5,97.3 185.3,96.9 188.1,96.9 190.9,96.7 193.8,96.6 196.6,96.4 199.4,96.0 202.2,95.7 205.0,95.7 207.8,95.9 210.6,95.7 213.4,95.6 216.3,95.5 219.1,95.3 221.9,95.1 224.7,94.7 227.5,94.5 230.3,94.2 233.1,94.2 235.9,94.1 238.8,93.9 241.6,93.5 244.4,93.4 247.2,93.4 250.0,93.3 252.8,93.0 255.6,93.0 258.4,92.8 261.3,92.9 264.1,92.8 266.9,92.9 269.7,92.6 272.5,92.4 275.3,92.4 278.1,92.3 280.9,92.1 283.8,92.0 286.6,92.0 289.4,92.0 292.2,92.0 295.0,91.6 297.8,91.6 300.6,91.8 303.4,91.6 306.3,91.5 309.1,91.3 311.9,91.4 314.7,91.5 317.5,91.3 320.3,91.1 323.1,90.9 325.9,90.4 328.8,90.2 331.6,90.3 334.4,90.2 337.2,90.3 340.0,90.4 342.8,90.5 345.6,90.7 348.4,90.7 351.3,90.8 354.1,90.9 356.9,90.9 359.7,91.1 362.5,91.0 365.3,91.0 368.1,90.9 370.9,91.1 373.8,91.3 376.6,91.3 379.4,91.1 382.2,91.1 385.0,91.3 387.8,91.3 390.6,91.5 393.4,91.5 396.3,91.6 399.1,91.6 401.9,91.6 404.7,91.5 407.5,91.6 410.3,91.8 413.1,91.8 415.9,92.0 418.8,91.9 421.6,92.0 424.4,91.9 427.2,92.2 430.0,92.3 432.8,92.2 435.6,92.3 438.4,92.5 441.3,92.5 444.1,92.5 446.9,92.7 449.7,92.7 452.5,92.9 455.3,93.2 458.1,93.4 460.9,93.4 463.8,93.4 466.6,94.0 469.4,94.3 472.2,94.4 475.0,94.9 477.8,95.0 480.6,95.2 483.4,95.1 486.3,95.3 489.1,95.5 491.9,95.5 494.7,95.7 497.5,95.9 500.3,96.2 503.1,96.4 505.9,96.8 508.8,96.7 511.6,97.1 514.4,97.1 517.2,97.1 520.0,97.2 522.8,97.4 525.6,97.4 528.4,97.7 531.3,97.8 534.1,98.0 536.9,98.6 539.7,98.7 542.5,98.7 545.3,99.1 548.1,99.4 550.9,99.7 553.8,99.9 556.6,100.0 559.4,100.2 562.2,100.5 565.0,100.6 567.8,100.7 570.6,100.7 573.4,100.9 576.3,101.2 579.1,101.3 581.9,101.6 584.7,101.9 587.5,102.4 590.3,102.7 593.1,103.0 595.9,103.5 598.8,103.6 601.6,104.0 604.4,104.4 607.2,105.1 610.0,105.3 612.8,105.5 615.6,106.0 618.4,106.4 621.3,107.0 624.1,107.0 626.9,107.0 629.7,107.3 632.5,107.7 635.3,107.6 638.1,108.0 640.9,108.4 643.8,108.7 646.6,109.1 649.4,109.4 652.2,110.0 655.0,110.3 657.8,110.8 660.6,111.2 663.4,111.7 666.3,112.2 669.1,112.3 671.9,112.3 674.7,112.6 677.5,112.8 680.3,113.3 683.1,113.7 685.9,113.8 688.8,114.3 691.6,114.7 694.4,114.9 697.2,115.3 700.0,115.5 702.8,115.9 705.6,116.6 708.4,117.4 711.3,117.8 714.1,118.2 716.9,118.4 719.7,118.9 722.5,119.2 725.3,119.7 728.1,120.3 730.9,120.8 733.8,121.6 736.6,122.1 739.4,122.8 742.2,123.1 745.0,124.2 747.8,124.5 750.6,125.1 753.4,125.5 756.3,126.3 759.1,126.7 761.9,127.5 764.7,128.1 767.5,128.8 770.3,129.9 773.1,131.2 775.9,132.2 778.8,133.1 781.6,134.1 784.4,134.7 787.2,135.4 790.0,135.9 792.8,136.7 795.6,137.7 798.4,138.5 801.3,139.5 804.1,139.9 806.9,141.1 809.7,142.2 812.5,142.6 815.3,143.5 818.1,144.7 820.9,146.4 823.8,148.0 826.6,149.4 829.4,150.6 832.2,151.8 835.0,153.4 837.8,154.6 840.6,156.1 843.4,157.8 846.3,159.5 849.1,161.0 851.9,162.5 854.7,164.1 857.5,166.2 860.3,168.1 863.1,169.5 865.9,170.9 868.8,172.7 871.6,174.4 874.4,176.0 877.2,177.6 880.0,179.1 882.8,180.9 885.6,182.4 888.4,184.0 891.3,185.8 894.1,187.7 896.9,189.5 899.7,191.4 902.5,193.1 905.3,195.3 908.1,197.4 910.9,199.5 913.8,201.8 916.6,203.3 919.4,205.5 922.2,207.1 925.0,208.8 927.8,210.4 930.6,212.4 933.4,215.1 936.3,216.7 939.1,219.6 941.9,222.3 944.7,224.4 947.5,226.8 950.3,228.9 953.1,230.8 955.9,232.9 958.8,235.0 961.6,237.0 964.4,239.1 967.2,241.2' fill='none' stroke='#e08a2c' stroke-width='2.5'/><circle cx='568.2' cy='100.7' r='7' fill='#e08a2c' stroke='#fff' stroke-width='2'><title>留韶关南：验证集门槛 0.702，F1 0.718</title></circle><path d='M328.8,81.2 L337.8,90.2 L328.8,99.2 L319.8,90.2 Z' fill='#fff' stroke='#e08a2c' stroke-width='2.5'><title>留韶关南：最优门槛 0.032，F1 0.746</title></path><rect x='286' y='40' width='16' height='16' rx='3' fill='#e08a2c'/><text x='308' y='54' class='lgd'>留韶关南</text><circle cx='404' cy='48' r='6' fill='#888'/><text x='416' y='54' class='lgd'>验证集选的门槛</text><path d='M554,40 L562,48 L554,56 L546,48 Z' fill='#fff' stroke='#888' stroke-width='2'/><text x='568' y='54' class='lgd'>测试测点的最优门槛（上限）</text></svg><figcaption><b>图 8-1</b>　三个留出测点上 F1 随门槛的变化。圆点为验证集选出的门槛，菱形为测试测点上的最优门槛（只作上限，实际无法事先得到）。三个测点的最优门槛相差极大。</figcaption></figure>
+<p>这一现象说明，模型输出的概率在不同测点之间“刻度”不一致。在衡阳北，大量没有变化的像元（施工区内部、水体边缘等）也得到了很高的变化概率，只有把门槛提得很高才能压住误报；在株洲南和韶关南，真实变化得到的概率普遍偏低，需要降低门槛才能找到它们。根本原因在于三个测点的地物构成和变化类型差别很大：衡阳北以大片施工为主，株洲南和韶关南以山地上零散的小块变化为主；而在“换测点”测试中，模型只见过另外两个测点。</p>
+<p><strong>（2）有雾影像。</strong> 有雾的影像对 F1 只有 0.497，两期都无雾的影像对为 0.660。只看无雾影像对时，换测点总体 F1 为 0.660，比全部影像对高 0.060。雾使整幅影像变亮、对比度下降，一方面在没有变化的地方造成大片亮度差异（误报），另一方面又会掩盖真实变化（漏报）。有雾的影像对在数据中并不少见，不能简单剔除：保留下来的变化中，约三分之一位于有雾的影像对上。</p>
+<p><strong>（3）误报高度集中在衡阳北。</strong> 衡阳北的误报占三个测点全部误报的 94%。按这次重标的五类地物（后期影像）统计，这些误报落在水体上 30%、裸露地上 30%、建成区 24%、植被上 16%，几乎不在耕地上（农田季节变化在标注中已统一记为“不算”）；其中约一半（50%）发生在有雾的影像对上。结合影像判读，这些误报主要有三个来源：塘库水面的涨落、水色变化和耀斑；施工区内部频繁的地表翻动（其中一部分可能是漏标的真实变化）；以及雾。</p>
+<p><strong>（4）事件级的零散误报。</strong> 以事件为单位，报出的变化区域中有 76% 与人工标注没有任何重叠（<a href="#s6-2">6.2</a> 节），而且绝大多数在衡阳北。一个自然的想法是去掉面积很小的报出区域。表 8-2 是这一做法的诊断结果（只看趋势；正式取值需在验证集上选择）：去掉面积小于 25 个像元的报出区域后，事件 F1 从 0.345 提高到 0.381，像元级 F1 从 0.600 提高到 0.626，但事件检出率从 0.614 降到 0.487。误报区域的面积中位数为 21 个像元，只有约 25% 小于 10 个像元，说明误报区域多数并不是一两个像元的“噪点”，单靠去碎片只能小幅改善，主要还要靠门槛校准和对雾、水体伪变化的处理。</p>
+<p class='tcap'><b>表 8-2</b>　去掉面积小于 k 个像元的报出区域后的指标变化（诊断，只看趋势）</p><div class='tw'><table><thead><tr><th>去掉的报出区域</th><th>事件检出率</th><th>误报区域占比</th><th>事件 F1</th><th>像元级 F1</th></tr></thead><tbody><tr><td>不去（正式成绩）</td><td>61.4%</td><td>76.0%</td><td>0.345</td><td>0.600</td></tr><tr><td>小于 9 个像元</td><td>59.3%</td><td>74.6%</td><td>0.356</td><td>0.608</td></tr><tr><td>小于 16 个像元</td><td>53.8%</td><td>72.8%</td><td>0.361</td><td>0.615</td></tr><tr><td>小于 25 个像元</td><td>48.7%</td><td>68.7%</td><td>0.381</td><td>0.626</td></tr><tr><td>小于 36 个像元</td><td>43.2%</td><td>67.7%</td><td>0.370</td><td>0.625</td></tr></tbody></table></div>
+<p><strong>（5）小变化和一过性变化。</strong> 面积 4—19 个像元（400—1,900 平方米）的小变化，检出率只有 31.3%；水位变化的像元召回率为 42.2%，洪水只有 3.7%。前者受限于 10 米分辨率和编码器 40 米的小块尺度：一个小块内变化只占少数时，信号容易被平均掉；后者主要是训练样本太少（洪水全库只有 2 对），而且这类变化几周内就恢复，与“持续的真变化”的特征差别很大。</p>
+<p><strong>（6）方法本身的局限。</strong> 除上述数据层面的原因外，当前方法还有几点可以改进：① OlmoEarth 的时间编码目前使用固定的两个月份，没有传入真实的成像日期，模型因此无法利用“这是哪个季节、两期相隔多久”这类信息；② 全图使用同一个门槛，不随测点和成像条件调整；③ 多数实验只训练了一次，部分结论可能受随机波动影响（<a href="#s3-3">3.3</a> 节）。</p>
+<h3 id="s8-3">8.3 下一周的改进计划</h3>
+<p>针对上述误差来源，下一周计划按优先级开展以下工作（表 8-3），目标是在不改变评价方式的前提下，继续提高换测点总体 F1。</p>
+<p class='tcap'><b>表 8-3</b>　下一周的改进计划（依据均为换测点总体 F1）</p><div class='tw'><table><thead><tr><th>优先级</th><th>改进方向</th><th>针对的问题</th><th>依据与潜在收益</th><th>主要做法</th></tr></thead><tbody><tr><td>1</td><td>门槛自适应</td><td>门槛在不同测点之间不通用</td><td>最优门槛上限 0.717（+0.117）；按训练集变化比例定门槛已达 0.647</td><td>按变化比例定门槛；测点级概率校准；训练时缩小测点间差异</td></tr><tr><td>2</td><td>雾的处理</td><td>有雾影像误报、漏报</td><td>只看无雾影像对为 0.660（+0.060）</td><td>有雾时换用清晰前期影像；有雾样本加权；逐像元雾浓度</td></tr><tr><td>3</td><td>水体伪变化与标注复核</td><td>衡阳北误报占 94%，多在水体、裸露地、建成区</td><td>待实验</td><td>常年水体边缘单独建模；水色、耀斑作难负样本；逐片复核施工区</td></tr><tr><td>4</td><td>时序持续性检验</td><td>一过性伪变化</td><td>待实验</td><td>用后续 1—2 期清晰影像检验变化是否持续（水体类除外）</td></tr><tr><td>5</td><td>传入真实成像日期</td><td>时间编码使用固定月份</td><td>待实验</td><td>把真实日期传入 OlmoEarth 的时间编码</td></tr><tr><td>6</td><td>多种子与集成</td><td>单次训练的随机波动</td><td>最终方案 3 个种子 0.615 ± 0.013</td><td>关键结论补做 3 个种子；多模型集成</td></tr><tr><td>7</td><td>完善与“先分割、后比较”的对比</td><td>两条路线目前仍有不可比因素</td><td>—</td><td>统一标注口径后重新对比</td></tr></tbody></table></div>
+<p><strong>① 门槛自适应（优先级最高）。</strong> 目标是在不使用新测点标注的前提下，让门槛自动适应新测点。计划比较三种做法：（a）<strong>按变化比例定门槛</strong>——用新测点影像本身估计变化像元的大致比例（例如利用光谱变化强度和往年同期信息），再取模型输出概率的相应分位数作为门槛；（b）<strong>测点级概率校准</strong>——在新测点上，用全部影像的输出分布对概率做整体平移或缩放，使其与训练测点的分布一致；（c）<strong>训练时缩小测点差异</strong>——按测点均衡抽样，并在损失中加入使不同测点输出分布一致的约束。初步诊断显示，仅按训练集的变化比例定门槛，总体 F1 就从 0.600 提高到 0.647；理论上限为 0.717。</p>
+<p><strong>② 雾的处理。</strong> （a）对前期影像有雾的影像对，自动换用之前最近的一期清晰影像作前期（标注平台已支持为每个变化框指定前期影像）；（b）训练时对有雾的样本单独加权，并在辅助信息中加入逐像元的雾浓度估计，使模型在雾区给出更保守的输出；（c）评价时同时报告“全部影像对”和“无雾影像对”两个数。</p>
+<p><strong>③ 衡阳北的水体伪变化与标注复核。</strong> 水位涨落按规则应当报告，水色变化和耀斑不报告，两者需要区分。计划利用历史有水比例和耀斑角，对常年水体边缘单独建模，并把水色、耀斑造成的差异作为难负样本加大权重。同时，对模型报出、但人工标为没变的集中区域（主要在衡阳北施工区）逐片复看，确认是误报还是漏标；确认的漏标补进标签。</p>
+<p><strong>④ 时序持续性检验。</strong> 对植被、裸土、建筑类变化，用其后 1—2 期清晰影像检验变化是否持续存在，滤掉一过性的伪变化（例如雾、耀斑造成的假变化）；水位、洪水类变化本身是一过性的，不使用这一条。</p>
+<p><strong>⑤ 传入真实成像日期。</strong> 把每个影像对前后两期的真实日期传入 OlmoEarth 的时间编码，让模型知道两期分别处在什么季节、相隔多久，有助于区分季节变化和真实变化。</p>
+<p><strong>⑥ 结果稳定性。</strong> 对最好方案和关键的消融结论（地形组有用、雷达组没有证据有用）补做 3 个随机种子，并尝试多个模型的集成。</p>
+<p><strong>⑦ 完善与“先分割、后比较”路线的对比。</strong> 目前分割标注与变化标注之间仍有不可比的因素，下一周完善后再给出两条路线的对比结论。</p>
+<h2 id="s9">9 株洲南河岸线 10 米历史分析</h2><p class='rel'>平台相关页面：<a href="2-2-5.html">2.2.5 河岸线研究</a> · <a href="1-4-3.html">1.4.3 河岸线标注规范</a> · <a href="2-3-5.html">2.3.5 河岸线研究（高分辨率）</a></p><h3 id="s9-1">9.1 研究问题</h3>
+<p>株洲南测点的铁路紧贴湘江东北岸。铁路方关心的是：铁路一侧的岸线是否在逐渐逼近铁路。现有的高分辨率影像只有少数几期，回答不了多年变化的问题；Sentinel-2 虽然只有 10 米分辨率，但 2021—2026 年共有 181 景，可以提供连续的历史记录。本节利用这些影像回答三个问题：</p>
+<ol>
+<li>铁路一侧的水边线是否存在持续的移动；</li>
+<li>季节性的水面变化主要发生在哪一岸；</li>
+<li>哪些位置和日期需要用更高分辨率的同期影像进一步核实。</li>
+</ol>
+<p>需要说明，本节研究的是影像上可见的<strong>水边线</strong>（水与陆地的分界线），它会随水位涨落而移动，与工程意义上的岸坡、堤脚不是一回事。</p>
+<figure><img src="media/r1010/243f2df557e7e6ba.png" alt="株洲南的观察范围" loading='lazy'><figcaption><b>图 9-1</b>　株洲南的观察范围</figcaption></figure>
+<h3 id="s9-2">9.2 数据</h3>
+<p>使用株洲南 2.56 km × 2.56 km 范围内全部 181 景 Sentinel-2 L2A 影像。按云、雾和缺测程度分为 A 级 93 景、B 级 55 景、C 级 33 景，A、B 级用于主要分析。云和云影用 OmniCloudMask 自动识别，并向外扩 2 个像元；山体阴影由数字高程模型和太阳位置计算。季节定义为夏季 6—9 月、冬季 12 月至次年 2 月。多年夏季合成使用 52 景，多年冬季合成使用 33 景；合成时每个像元至少需要 3 次有效观测。</p>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>年度合成</th>
+<th style="text-align:right">可用景数</th>
+<th>年度合成</th>
+<th style="text-align:right">可用景数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021 年夏</td>
+<td style="text-align:right">8</td>
+<td>2022 年冬</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>2022 年夏</td>
+<td style="text-align:right">16</td>
+<td>2023 年冬</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>2023 年夏</td>
+<td style="text-align:right">9</td>
+<td>2024 年冬</td>
+<td style="text-align:right">11</td>
+</tr>
+<tr>
+<td>2024 年夏</td>
+<td style="text-align:right">6</td>
+<td>2025 年冬</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>2025 年夏</td>
+<td style="text-align:right">10</td>
+<td>多年冬季</td>
+<td style="text-align:right">33</td>
+</tr>
+<tr>
+<td>2026 年夏</td>
+<td style="text-align:right">3</td>
+<td>多年夏季</td>
+<td style="text-align:right">52</td>
+</tr>
+</tbody>
+</table></div>
+<p>注：“2024 年冬”指 2024 年 12 月至 2025 年 2 月，其余类推。</p>
+<h3 id="s9-3">9.3 方法</h3>
+<p>方法分为五步：逐景识别水体、确定河道与量测断面、季节合成并提取水边线、沿断面量测位移、评估精度。</p>
+<p><strong>（1）逐景识别水体。</strong> 采用三个互补的指标：</p>
+<p class='math'>MNDWI = (B3 − B11) / (B3 + B11)　　　 GS = B3 − B11　　　 GN = B3 − B8</p>
+<p>其中 B3 为绿光、B8 为近红外、B11 为短波红外波段。MNDWI（改进归一化水体指数，Xu，2006）利用水体在短波红外上反射极低的特点增强水体；GS 保留绿光与短波红外的差值，避免分母过小时放大噪声；GN 利用近红外区分水体与植被和部分阴影。每个指标在河道走廊内用 Otsu 方法（Otsu，1979）自动确定水陆分割阈值，即选择使水、陆两类之间方差最大的阈值 t：</p>
+<p class='math'>t<sup>*</sup> = argmax<sub>t</sub> {ω<sub>0</sub>(t) ω<sub>1</sub>(t) [μ<sub>0</sub>(t) − μ<sub>1</sub>(t)]<sup>2</sup>}</p>
+<p>其中 ω 为两类像元所占比例，μ 为两类的指标均值。三个指标投票决定每个像元是否为水。逐像元统计“被判为水的次数 / 有效观测次数”，得到水体出现频率。</p>
+<p><strong>（2）确定河道与量测断面。</strong> 取水体出现频率不低于 0.5 的最大连通水域作为主河道，沿河道中心线约每 100 米布设一条垂直于河道的断面，断面半长 750 米，正方向统一指向铁路一侧。</p>
+<p><strong>（3）季节合成与水边线提取。</strong> 先对 20 米分辨率的短波红外波段做锐化（用 10 米波段回归加残差的方法），并用稳定陆地上的植被指数做相位相关，估计每景相对于参考景的平移（181 景中 157 景得到估计）并加以校正。然后把同一季节的影像合成为一幅 GS 指标图，在合成图上提取水边线：取长期主河道内水体频率不低于 0.9 的像元的 GS 中位数作为“纯水”值 w，取走廊内水体频率不高于 0.05 的像元的中位数作为“纯陆地”值 l，以两者的中点为阈值：</p>
+<p class='math'>t = (w + l) / 2</p>
+<p>在线性光谱混合的假设下，该阈值大致对应一个像元一半是水、一半是陆地的位置，因而可以在像元内部定位水边线（亚像元提取，Bishop-Taylor 等，2019）。最后去掉周长小于 400 米的小闭合圈，只保留离主河道 120 米以内的曲线；铁路背河一侧 10 米以外强制视为陆地，以避免山体阴影被误判为水。</p>
+<p><strong>（4）沿断面量测位移。</strong> 把水边线与断面相交，得到水边线在断面上的位置 s，两个时期之差 Δs = s<sub>后</sub> − s<sub>前</sub>。正值表示水边线向铁路方向移动，负值表示远离铁路方向。</p>
+<p><strong>（5）评估精度。</strong> 一是重复性：用间隔不超过 10 天的 50 对 A 级影像，比较同一断面上水边线位置的差异（短时间内真实水位变化很小，差异主要反映方法误差）；二是与已有的 5 期高分辨率影像上半自动描绘的水边线比较。</p>
+<h3 id="s9-4">9.4 结果</h3>
+<p><strong>（1）季节与年际变化。</strong> 铁路一侧，多年冬季与夏季相比，水边线位置的中位数差为 −1.7 米；2025 年冬与 2022 年冬相比为 −0.2 米；2026 年夏与 2021 年夏相比为 −1.0 米（表 9-1）。三者都在数米以内，而且都是远离铁路的方向，<strong>没有发现水边线持续逼近铁路的迹象</strong>。对岸的差异更大，2026 年夏与 2021 年夏相比中位数差达 −11.4 米；但 2026 年夏只有 3 景，两个年度合成的观测日期、有效覆盖和水面状态都不同，这一差异只能作为复核线索，不能直接归因于岸线侵蚀或淤积。</p>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>比较</th>
+<th>岸别</th>
+<th style="text-align:right">有效断面数</th>
+<th style="text-align:right">位移中位数（米）</th>
+<th style="text-align:right">绝对位移中位数（米）</th>
+<th>5%—95% 分位（米）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多年冬 − 多年夏</td>
+<td>铁路侧</td>
+<td style="text-align:right">32</td>
+<td style="text-align:right">−1.7</td>
+<td style="text-align:right">1.7</td>
+<td>−3.6—1.3</td>
+</tr>
+<tr>
+<td>多年冬 − 多年夏</td>
+<td>对岸</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">−2.4</td>
+<td style="text-align:right">2.6</td>
+<td>−11.9—1.1</td>
+</tr>
+<tr>
+<td>2025 年冬 − 2022 年冬</td>
+<td>铁路侧</td>
+<td style="text-align:right">32</td>
+<td style="text-align:right">−0.2</td>
+<td style="text-align:right">0.6</td>
+<td>−2.5—3.0</td>
+</tr>
+<tr>
+<td>2025 年冬 − 2022 年冬</td>
+<td>对岸</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">−5.1</td>
+<td style="text-align:right">5.1</td>
+<td>−16.8—1.2</td>
+</tr>
+<tr>
+<td>2026 年夏 − 2021 年夏</td>
+<td>铁路侧</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">−1.0</td>
+<td style="text-align:right">1.1</td>
+<td>−4.2—1.0</td>
+</tr>
+<tr>
+<td>2026 年夏 − 2021 年夏</td>
+<td>对岸</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">−11.4</td>
+<td style="text-align:right">14.1</td>
+<td>−23.7—9.4</td>
+</tr>
+</tbody>
+</table></div>
+<figure><img src="media/r1010/3f51f27132ea1dd8.png" alt="多年夏季（橙色宽线）与冬季（蓝色细线）中值水边线，红色虚线为铁路参考线，白色短线为量测断面；底图为 2022-10-11 无云无雾的 Sentinel-2 真彩色影像" loading='lazy'><figcaption><b>图 9-2</b>　多年夏季（橙色宽线）与冬季（蓝色细线）中值水边线，红色虚线为铁路参考线，白色短线为量测断面；底图为 2022-10-11 无云无雾的 Sentinel-2 真彩色影像</figcaption></figure>
+<figure><img src="media/r1010/dcea999d252daea6.png" alt="各断面上的位移" loading='lazy'><figcaption><b>图 9-3</b>　各断面上的位移</figcaption></figure>
+<p>逐景分析给出了一致的结论：在水面宽度相近的影像之间，比较 2021 年 7 月—2022 年 12 月与 2025 年 1 月—2026 年 7 月两个时段，55 个“断面 × 岸别”组合中有 14 个的变化区间不跨零，绝对位移中位数为 1.4 米。</p>
+<p><strong>（2）季节性水面。</strong> 把冬、夏两季水体出现概率相差至少 0.3、且至少一季概率不低于 0.3 的像元记为季节性水面。在距河道 300 米以内，冬季更常有水的区域为 5.08 公顷，夏季更常有水的区域只有 0.18 公顷。</p>
+<figure><img src="media/r1010/eea4ebe301f5239d.png" alt="季节性水面的分布：蓝色为冬季更常是水，红色为夏季更常是水，黄色虚线为铁路；底图为 2022-10-11 无云无雾的 Sentinel-2 真彩色影像" loading='lazy'><figcaption><b>图 9-4</b>　季节性水面的分布：蓝色为冬季更常是水，红色为夏季更常是水，黄色虚线为铁路；底图为 2022-10-11 无云无雾的 Sentinel-2 真彩色影像</figcaption></figure>
+<p><strong>（3）水面宽度与降雨。</strong> 为了描述每一景的水面状态，我们定义水面宽度指标：以 A 级景中每个断面的河宽中位数为参考，计算每景各断面的河宽偏差，再取全河段的中位数，</p>
+<p class='math'>q<sub>t</sub> = median<sub>i</sub> [ W<sub>it</sub> − median<sub>u ∈ A</sub>(W<sub>iu</sub>) ]</p>
+<p>其中 W 为断面上两岸之间的距离（至少有 8 个有效断面时才计算）。q 的单位是水平方向的米，正值表示水面比常态宽，负值表示比常态窄；它不是垂直方向的水位。140 景有足够的断面，q 的 5%—95% 分位为 −5.2—8.5 米。q 与成像前累计降雨呈负相关（表 9-2），即近期降雨多时水面反而偏窄。月份、上游水利调度、局地降雨的代表性等因素都可能参与其中，现有数据还不能确定因果关系。</p>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>成像前累计降雨</th>
+<th style="text-align:right">Spearman 相关系数</th>
+<th style="text-align:right">p 值</th>
+<th style="text-align:right">景数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 天</td>
+<td style="text-align:right">−0.257</td>
+<td style="text-align:right">0.002</td>
+<td style="text-align:right">140</td>
+</tr>
+<tr>
+<td>7 天</td>
+<td style="text-align:right">−0.356</td>
+<td style="text-align:right">&lt; 0.001</td>
+<td style="text-align:right">140</td>
+</tr>
+<tr>
+<td>30 天</td>
+<td style="text-align:right">−0.565</td>
+<td style="text-align:right">&lt; 0.001</td>
+<td style="text-align:right">140</td>
+</tr>
+</tbody>
+</table></div>
+<figure><img src="media/r1010/5df16fd6a4c81035.png" alt="水面宽度指标与降雨" loading='lazy'><figcaption><b>图 9-5</b>　水面宽度指标与降雨</figcaption></figure>
+<p><strong>（4）精度。</strong> 重复性：间隔不超过 10 天的 50 对影像中，同一断面水边线位置之差的中位数为 1.4 米，95% 分位为 11.5 米；不做配准校正时中位数为 2.2 米，说明配准校正是必要的。与已有高分辨率影像相比（表 9-3），绝对差中位数为 1.0—2.3 米，90% 分位为 3.0—5.0 米。需要注意，这一核对用 Sentinel-2 的结果提供训练样本和搜索范围，不是独立的人工真值，只能说明方法内部的一致性。</p>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>高分影像期次</th>
+<th style="text-align:right">像元大小（米）</th>
+<th style="text-align:right">核对样本数</th>
+<th style="text-align:right">绝对差中位数（米）</th>
+<th style="text-align:right">90% 分位（米）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024 年第一期</td>
+<td style="text-align:right">0.75</td>
+<td style="text-align:right">103</td>
+<td style="text-align:right">2.3</td>
+<td style="text-align:right">5.0</td>
+</tr>
+<tr>
+<td>2024 年第二期</td>
+<td style="text-align:right">0.66</td>
+<td style="text-align:right">102</td>
+<td style="text-align:right">1.9</td>
+<td style="text-align:right">3.9</td>
+</tr>
+<tr>
+<td>2025 年第一期</td>
+<td style="text-align:right">0.62</td>
+<td style="text-align:right">102</td>
+<td style="text-align:right">1.4</td>
+<td style="text-align:right">3.3</td>
+</tr>
+<tr>
+<td>2025 年第二期</td>
+<td style="text-align:right">0.43</td>
+<td style="text-align:right">102</td>
+<td style="text-align:right">1.4</td>
+<td style="text-align:right">4.0</td>
+</tr>
+<tr>
+<td>2026 年</td>
+<td style="text-align:right">0.47</td>
+<td style="text-align:right">102</td>
+<td style="text-align:right">1.0</td>
+<td style="text-align:right">3.0</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="s9-5">9.5 讨论与局限</h3>
+<p>（1）10 米像元在水边往往是水陆混合像元，短波红外波段原始分辨率只有 20 米，锐化和配准都会引入误差；雾、耀斑、浑水和水边植被也会影响水体识别。（2）提取时假设“水不会越过铁路”，因此本方法不能用来证明洪水没有越过铁路。（3）铁路位置取自 OpenStreetMap，存在局部定位误差，本节的位移量不能直接换算为工程上的安全距离。（4）缺少同期的水位、流量和水库调度记录，目前还无法把季节性的水面变化与水位涨落一一对应。</p>
+<h3 id="s9-6">9.6 结论</h3>
+<p>株洲南铁路一侧的水边线在季节之间和年份之间的差异都在数米以内，没有发现持续逼近铁路的迹象；对岸局部差异较大，需要复核。10 米影像的结果适合用于水边线历史变化的<strong>筛查</strong>，并已能给出需要重点复核的位置和日期清单，但还不足以判断岸坡稳定性、安全距离或洪水是否越堤。下一步需要同日期的亚米级影像和人工描绘的水边线核实数米级的差异，并收集水位、流量和调度记录，检验水面宽度的季节规律（见第 <a href="#s10">10</a> 节）。</p>
+<p><strong>参考文献：</strong> Xu H. Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. International Journal of Remote Sensing, 2006, DOI: 10.1080/01431160600589179；Otsu N. A threshold selection method from gray-level histograms. IEEE Transactions on Systems, Man, and Cybernetics, 1979, 9(1): 62–66, DOI: 10.1109/TSMC.1979.4310076；Bishop-Taylor R 等. Sub-pixel waterline extraction: characterising accuracy and sensitivity to indices and spectra. Remote Sensing, 2019。</p>
+<h2 id="s10">10 下一步：高分辨率影像、河道补充影像与台账研究</h2><p class='rel'>平台相关页面：<a href="2-3.html">2.3 三个测点 · 高分辨率</a> · <a href="3-1.html">3.1 台账整理与核验</a> · <a href="3-4.html">3.4 灾前线索分析</a> · <a href="https://kuncai0218.github.io/railway-ledger/" target='_blank' rel='noopener'>台账判读台 ↗</a></p><h3 id="s10-1">10.1 高分辨率影像：要解决什么、买哪些日期</h3><h4>要解决的问题</h4>
+<p>10 米影像有两类标注只能靠亚米级影像核实：</p>
+<ol>
+<li><strong>标为变化、但在 10 米上看不清的地方</strong>：窄条、点状、边缘上的变化，人工判读时记为“这一对看不出”或“说不清”。</li>
+<li><strong>标为没变、但可能漏标的地方</strong>：逐片判读时发现的、标注框以外的持续性变化。</li>
+</ol>
+<p>高分<strong>前后两期</strong>才能分清清表、挖填、新修道路或建筑，与雾、阴影、作物物候；只有一张后期图，只能确认现在是什么地物，确认不了什么时候变的。洪水和水位变化还需要近同时的影像和水文记录。</p>
+<h4>日期怎么选</h4>
+<p>对每个影像对数“待核实片”：标为变化但判读为“看不出 / 说不清”的片，加上标为没变但判读为“疑似真实变化 / 说不清”的片。按这个数从多到少排，每个测点取前三个不同日期。这个排序衡量的是“这一对里有多少标注需要高分来核实”，并不代表模型一定在这里出错。</p>
+<p>排好之后再和最好模型的错漏图对照，避免只买模型做得好的案例：株洲南 2024-08-04、衡阳北 2024-03-29 都是最好模型漏检最多的影像对；韶关南 2023-10-16 是误报最多的影像对之一（见 2.6 节）。</p>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>测点 / 优先级</th>
+<th>前期 → 后期</th>
+<th>购买窗口（前期；后期）</th>
+<th style="text-align:right">标为变化但看不清的片</th>
+<th style="text-align:right">疑似漏标：判读为真变化</th>
+<th style="text-align:right">疑似漏标：说不清</th>
+<th style="text-align:right">疑似漏标片总数（含已判为农田、物候的）</th>
+<th style="text-align:right">人工框数</th>
+<th>排序分 / 涉及像元</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>株洲南 / 1</td>
+<td>2024-07-22 → 2024-08-04</td>
+<td>07-19—07-25；08-01—08-07</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">7</td>
+<td>22 / 256</td>
+</tr>
+<tr>
+<td>株洲南 / 2</td>
+<td>2025-08-04 → 2025-08-09</td>
+<td>08-01—08-07；08-06—08-12</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">0</td>
+<td>3 / 16</td>
+</tr>
+<tr>
+<td>株洲南 / 3</td>
+<td>2021-08-02 → 2021-08-22</td>
+<td>07-30—08-05；08-19—08-25</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">2</td>
+<td>2 / 22</td>
+</tr>
+<tr>
+<td>衡阳北 / 1</td>
+<td>2024-02-11 → 2024-03-29</td>
+<td>02-08—02-14；03-26—04-01</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+<td>19 / 295</td>
+</tr>
+<tr>
+<td>衡阳北 / 2</td>
+<td>2026-06-17 → 2026-07-10</td>
+<td>06-14—06-20；07-07—07-13</td>
+<td style="text-align:right">19</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">4</td>
+<td>19 / 217</td>
+</tr>
+<tr>
+<td>衡阳北 / 3</td>
+<td>2023-11-28 → 2023-12-23</td>
+<td>11-25—12-01；12-20—12-26</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">5</td>
+<td>12 / 82</td>
+</tr>
+<tr>
+<td>韶关南 / 1</td>
+<td>2023-10-01 → 2023-10-16</td>
+<td>09-28—10-04；10-13—10-19</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+<td>14 / 38</td>
+</tr>
+<tr>
+<td>韶关南 / 2</td>
+<td>2023-11-25 → 2023-12-25</td>
+<td>11-22—11-28；12-22—12-28</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">1</td>
+<td>8 / 28</td>
+</tr>
+<tr>
+<td>韶关南 / 3</td>
+<td>2023-07-23 → 2023-10-01</td>
+<td>07-20—07-26；09-28—10-04</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">2</td>
+<td>7 / 57</td>
+</tr>
+</tbody>
+</table></div>
+<p>说明：排序分 = 前三列数字之和；“片”是逐片判读时的最小判读单元。购买窗口是目标日期前后各 3 天；持续性的地表改变，在确认事件不跨窗口后可放宽到前后 7 天；水边线尽量同一天，优先 24 小时内；隔到 48 小时要有水位资料证明水位相近。前后两期必须各有一景，不能拿跨过事件的日期顶替。</p>
+<p><strong>首批建议买 6 期</strong>（每个测点优先级第一的一对）：株洲南 2024-07-22 和 2024-08-04；衡阳北 2024-02-11 和 2024-03-29；韶关南 2023-10-01 和 2023-10-16。</p>
+<h4>河岸线：窄水面、宽水面各补一期</h4>
+<p>“枯水 / 丰水”要靠真实的水位、流量或调度资料确认。目前先用 10 米影像算出的河宽指标（见 2.9 节，单位是水平方向的米，不是垂直水位），在每个测点取指标处在 10% 和 90% 分位附近的实际日期，避开孤立的最大值。</p>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>测点</th>
+<th>待核实的水面状态</th>
+<th>目标日期</th>
+<th>购买窗口</th>
+<th>河宽指标 / 有效断面数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>株洲南</td>
+<td>窄水面（指标偏低）</td>
+<td>2024-10-03</td>
+<td>09-30—10-06</td>
+<td>−3.85 米 / 22</td>
+</tr>
+<tr>
+<td>株洲南</td>
+<td>宽水面（指标偏高）</td>
+<td>2023-01-07</td>
+<td>01-04—01-10</td>
+<td>7.05 米 / 21</td>
+</tr>
+<tr>
+<td>韶关南</td>
+<td>窄水面（指标偏低）</td>
+<td>2024-11-29</td>
+<td>11-26—12-02</td>
+<td>−2.55 米 / 24</td>
+</tr>
+<tr>
+<td>韶关南</td>
+<td>宽水面（指标偏高）</td>
+<td>2022-10-26</td>
+<td>10-23—10-29</td>
+<td>2.70 米 / 24</td>
+</tr>
+</tbody>
+</table></div>
+<p>株洲南两期先用，检验铁路一侧几米的位移、对岸局部的进退；韶关南两期作为下一批。挑出的日期和传统枯丰水月份不完全一致，这正是要用水文资料核实的原因。手头已有的高分资料只标了“某年第一期 / 第二期”，应先向提供方要准确成像日期和定位资料，可能可以少买几期。</p>
+<h4>询价和验收时要对方逐期给出</h4>
+<p>成像的准确日期和时刻、卫星和传感器、云和阴影覆盖图、产品级别、全色和多光谱的原生分辨率、正射和定位资料（含有理多项式系数）、太阳和观测角度、授权范围、含税总价。目标是亚米全色加真实配套的多光谱；标称 0.5 米的融合真彩色或插值产品要写明各波段的原生分辨率，AI 超分辨率的图不能当原生细节用。</p>
+<p>验收时：每个事件保留发生前、发生后两期；逐个核对目标框里没有云和阴影遮挡，不能只看整景的云量。河岸线核对另外需要近同时的水文记录、独立的人工描线和统一的配准基准，描线的人事先不看 10 米岸线结果。</p>
+<p>目前只做了需求分析，还没有联系供应商、下单或付款。</p>
+<h3 id="s10-2">10.2 河道补充影像</h3><p>河道需要补充的窄水面、宽水面日期见 <a href="#s10-1">10.1</a> 节。补齐后，在高分辨率影像上逐期人工勾画水边线，核对 10 米水边线（第 <a href="#s9">9</a> 节）的位置误差和季节涨落幅度，再判断 10 米结果能否直接用于岸线监测。</p><h3 id="s10-3">10.3 台账研究</h3><p>台账研究使用铁路方提供的历史水害台账，其明细按平台公开范围只在内部版提供。研究问题和做法见 <a href="3-1.html">3.1 台账整理与核验</a>、<a href="3-4.html">3.4 灾前线索分析</a>；台账事件的判读在 <a href="https://kuncai0218.github.io/railway-ledger/" target='_blank' rel='noopener'>台账判读台</a> 上进行。</p><h2 id="s11">11 具体安排</h2><p class='rel'>平台相关页面：<a href="https://kuncai0218.github.io/railway-ledger/" target='_blank' rel='noopener'>台账判读台 ↗</a> · <a href="https://kuncai0218.github.io/railway-s2/" target='_blank' rel='noopener'>三测点判读系统 ↗</a> · <a href="6-3.html">6.3 汇报记录</a></p><h3>1 马上可以接着做：三个测点的亚米级实验</h3>
+<ul>
+<li><strong>选哪些期次</strong>
+<ul>
+<li>只买“真正有迟疑”的期次：10 米上看不清、标注说不清、这一对看不出、疑似漏标的事件，以及河岸线需要枯水期、丰水期核对的日期。</li>
+<li>清单和优先级见第 <a href="#s3-1">3.1</a> 节“高分影像需求清单”。</li>
+
+</ul>
+</li>
+<li><strong>标注方式</strong>：和这次一样，三步走。
+<ol>
+<li><strong>AI 建议</strong>：沿用这次的 AI 预标流程。变化检测用 AI 精标；分割用对齐规则，按段定类、三成规则、云独立判定。</li>
+<li><strong>同学自行标注、修改</strong>：在标注台上做。</li>
+<li><strong>组长精调</strong>：变化标注和分割标注都要按这次定下的对齐规则逐像元核对，至少两遍全量。</li>
+</ol>
+<ul>
+<li>标注台就用现有的变化精标台、地物精标台和 AI 复核台，换成亚米影像。</li>
+</ul>
+</li>
+<li><strong>实验</strong>
+<ul>
+<li>跑的实验和这次完全相同：同样的候选模型、融合方式、四种划分、验证集选阈值。这样 10 米和亚米的结果可以直接对比。</li>
+</ul>
+</li>
+<li><strong>算力</strong>
+<ul>
+<li>今晚三块卡（RTX 4090、RTX 5090、RTX 3090）连续满载约 10 小时，才跑完单种子的主要对比。</li>
+<li>亚米影像数据量大得多，还要补多种子。想请老师问问能否申请学校超算中心的 GPU。</li>
+</ul>
+</li>
+</ul>
+<h3>2 台账事件</h3>
+<ul>
+<li>我这边尽快出一个和变化精标台类似的<strong>台账标注台</strong>，加上<strong>标准说明</strong>：
+<ul>
+<li>每个事件取发生前、后最近的能看清的影像；</li>
+<li>标出事件范围、类型，以及“这一对是否看得出”。</li>
+</ul>
+</li>
+<li>台账记录较多，涉及几千景影像，量大，不让同学标。标注台和标准说明完整搭好、我自己试标验收后，交给标注公司。</li>
+<li>拿到反馈后，跑和这次相同的实验，再做第 <a href="#s3-3">3.3</a> 节的四个研究问题：
+<ul>
+<li>能否检出；</li>
+<li>持续性和预测预防；</li>
+<li>触发的临界点；</li>
+<li>10 米对亚米。</li>
+</ul>
+</li>
+</ul>
+<h3>3 时间（建议）</h3>
+<div class='tw'><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本周</td>
+<td>定高分采购清单和预算；亚米标注台改造</td>
+</tr>
+<tr>
+<td>下周</td>
+<td>同学标注 + 组长精调；台账标注台和标准说明交付标注公司</td>
+</tr>
+<tr>
+<td>之后</td>
+<td>亚米实验；台账反馈回来后做检出、持续性和临界点分析</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sa">附录</h2><h3>数字复核</h3><p>本报告每个数字都由生成程序直接从实验结果文件计算，来源文件清单存在本机，供复核。</p><h3>完整工作底稿</h3><p>全部原始表格和过程记录在本机工作目录，不放到平台上。</p><div id='lb' class='lb' hidden><div class='lbbar'><span id='lbcap'></span><span class='lbtip'>滚轮缩放 · 拖动平移 · 双击复原 · Esc 关闭</span><button id='lbx' type='button'>关闭 ✕</button></div><div id='lbstage' class='lbstage'><div id='lbbox' class='lbbox'></div></div></div>
+<script>(function(){var lb=document.getElementById('lb'),st=document.getElementById('lbstage'),bx=document.getElementById('lbbox'),cap=document.getElementById('lbcap');var s=1,x=0,y=0,dr=null;
+function ap(){bx.style.transform='translate('+x+'px,'+y+'px) scale('+s+')';}
+function op(node,c){bx.innerHTML='';bx.appendChild(node);cap.textContent=c||'';s=1;x=0;y=0;ap();lb.hidden=false;document.documentElement.style.overflow='hidden';}
+function cl(){lb.hidden=true;bx.innerHTML='';document.documentElement.style.overflow='';}
+document.addEventListener('click',function(e){if(lb.contains(e.target)){if(e.target===st||e.target.id==='lbx')cl();return;}
+var im=e.target.closest('img');if(im&&(im.closest('nav')||im.closest('.lb')))im=null;if(im){e.preventDefault();var n=new Image();n.src=im.currentSrc||im.src;n.className='lbimg';var f=im.closest('figure'),fc=f&&f.querySelector('figcaption');op(n,fc?fc.textContent:im.alt);return;}
+var sv=e.target.closest('svg.chart');if(sv){var c=sv.cloneNode(true);c.classList.add('lbsvg');var f2=sv.closest('figure'),fc2=f2&&f2.querySelector('figcaption');op(c,fc2?fc2.textContent:'');}});
+document.addEventListener('keydown',function(e){if(!lb.hidden&&e.key==='Escape')cl();});
+st.addEventListener('wheel',function(e){e.preventDefault();var k=e.deltaY<0?1.15:1/1.15;s=Math.min(12,Math.max(0.5,s*k));ap();},{passive:false});
+st.addEventListener('pointerdown',function(e){if(e.target===st)return;dr={x:e.clientX-x,y:e.clientY-y};st.setPointerCapture(e.pointerId);});
+st.addEventListener('pointermove',function(e){if(dr){x=e.clientX-dr.x;y=e.clientY-dr.y;ap();}});
+st.addEventListener('pointerup',function(){dr=null;});st.addEventListener('dblclick',function(){s=1;x=0;y=0;ap();});})();</script></div></article>
 <nav class="pager"><a class="prev" href="6-4.html">‹ 6.4 名词解释</a><span></span></nav>
 <footer>铁路沿线多时相遥感研究平台 · 公开版 · 生成于 2026-10-10</footer></main></div>
 <script src="assets/platform.js"></script></body></html>
