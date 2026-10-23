@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610" role="img" aria-labelledby="title desc"><title id="title">直接变化检测：两期联合看，辅助信息作修正</title><desc id="desc">两期Sentinel-2的12波段影像转为补丁，进入同一个OlmoEarth v1.2-Base联合编码器，通过LoRA适配。比较两期特征及有符号差，变化解码器输出变化图。18层指数历史地形信息在后段作残差修正；可选输入辅助相加只在影像补丁嵌入后、位置时间编码前加入一次。</desc>
+<defs><marker id="a-navy" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#184a78"/></marker><marker id="a-teal" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#0a8694"/></marker><marker id="a-orange" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#d86614"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",Arial,sans-serif;font-size:24px;fill:#353b40}.title{font-size:32px;font-weight:750;fill:#184a78}.bold{font-weight:700}</style>
+<rect width="1200" height="610" fill="#fbfcfe"/>
+<text x="35" y="47" text-anchor="start" style="font-size:32px;fill:#184a78;font-weight:700">直接变化检测：两期联合看，辅助信息作修正</text>
+<text x="35" y="91" text-anchor="start" style="font-size:24px;fill:#353b40;font-weight:400">影像给出变化证据；指数、往年同期和地形帮助区分背景差异。</text>
+<rect x="35" y="190" width="220" height="150" rx="10" fill="#f1f6fb" stroke="#184a78" stroke-width="2"/>
+<text x="145" y="228" text-anchor="middle" style="font-size:25px;fill:#184a78;font-weight:700">两期12波段影像</text>
+<text x="145" y="268" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">前期影像＋后期影像</text>
+<text x="145" y="302" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">转为4×4像元补丁</text>
+<rect x="315" y="170" width="300" height="190" rx="10" fill="#fef8f3" stroke="#d86614" stroke-width="2"/>
+<text x="465" y="208" text-anchor="middle" style="font-size:24px;fill:#d86614;font-weight:700">OlmoEarth v1.2-Base</text>
+<text x="465" y="248" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">同一编码器联合看两期</text>
+<text x="465" y="282" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">LoRA：少量参数适配</text>
+<text x="465" y="316" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">12层 · 每个特征768维</text>
+<rect x="665" y="190" width="250" height="150" rx="10" fill="#fef8f3" stroke="#d86614" stroke-width="2"/>
+<text x="790" y="228" text-anchor="middle" style="font-size:25px;fill:#d86614;font-weight:700">两期特征比较</text>
+<text x="790" y="268" text-anchor="middle" style="font-size:22px;fill:#353b40;font-weight:400">前期、后期、有符号差</text>
+<text x="790" y="302" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">轻量变化解码器</text>
+<rect x="975" y="190" width="190" height="150" rx="10" fill="#fef8f3" stroke="#d86614" stroke-width="2"/>
+<text x="1070" y="228" text-anchor="middle" style="font-size:27px;fill:#d86614;font-weight:700">变化图</text>
+<text x="1070" y="268" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">哪里发生变化</text>
+<text x="1070" y="302" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">验证集定门槛</text>
+<circle cx="285" cy="265" r="15" fill="white" stroke="#d86614" stroke-width="2"/>
+<text x="285" y="273" text-anchor="middle" style="font-size:24px;fill:#d86614;font-weight:700">＋</text>
+<circle cx="945" cy="265" r="15" fill="white" stroke="#0a8694" stroke-width="2"/>
+<text x="945" y="273" text-anchor="middle" style="font-size:24px;fill:#0a8694;font-weight:700">＋</text>
+<path d="M 255,265 L 270,265" fill="none" stroke="#184a78" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<path d="M 300,265 L 315,265" fill="none" stroke="#184a78" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<path d="M 615,265 L 665,265" fill="none" stroke="#d86614" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<path d="M 915,265 L 930,265" fill="none" stroke="#d86614" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<path d="M 960,265 L 975,265" fill="none" stroke="#d86614" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<rect x="50" y="455" width="550" height="115" rx="10" fill="#f3f9fa" stroke="#0a8694" stroke-width="2"/>
+<text x="325" y="493" text-anchor="middle" style="font-size:27px;fill:#0a8694;font-weight:700">18层辅助信息</text>
+<text x="325" y="533" text-anchor="middle" style="font-size:24px;fill:#353b40;font-weight:400">指数变化6＋往年同期7＋地形5</text>
+<path d="M 600,512 L 945,512 L 945,280" fill="none" stroke="#0a8694" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="760" y="489" text-anchor="middle" style="font-size:25px;fill:#0a8694;font-weight:700">后段辅助修正</text>
+<path d="M 50,510 L 18,510 L 18,145 L 285,145 L 285,250" fill="none" stroke="#0a8694" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)" stroke-dasharray="8 7"/>
+<text x="365" y="133" text-anchor="middle" style="font-size:22px;fill:#0a8694;font-weight:700">可选改进：补丁嵌入后相加，只加一次</text>
+</svg>
