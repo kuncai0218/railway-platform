@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1020" viewBox="0 0 1600 1020" role="img" aria-labelledby="title desc">
+<title id="title">双路线总览：先分割后检测为主推，直接检测作对照</title><desc id="desc">同一套滚动三折，左侧相同双时相影像进入两条独立方法。上方D2LS RGB语义分割经过交叉拟合后接直方图梯度提升树；下方OlmoEarth直接变化检测使用12波段和18层辅助图。两路线均仅在验证集选阈值，独立测试。复杂模型集成不作为主推方案。</desc>
+<defs><marker id="a-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#70839a"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#225bdc"/></marker><marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#087d84"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7654bc"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ae6910"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",Arial,sans-serif;fill:#183047} .muted{fill:#52677d} .small{font-size:20px} .body{font-size:24px} .label{font-size:25px;font-weight:650} .title{font-size:37px;font-weight:750} .subtitle{font-size:22px;fill:#52677d}</style>
+<rect width="1600" height="1020" fill="#fff"/>
+<text x="48" y="61" class="title" text-anchor="start">双路线总览：先分割后检测为主推，直接检测作对照</text>
+<text x="48" y="104" class="subtitle" text-anchor="start">两条路线分别比较；本次主推一套分割—树判别设置，复杂结果集成仅作附录探索。</text>
+<rect x="390" y="160" width="1120" height="320" rx="22" fill="#e9f7f5" fill-opacity=".42" stroke="#d2dce8" stroke-width="1.5"/>
+<text x="414" y="196" class="label" text-anchor="start" style="fill:#087d84">主推 · 语义分割 → 概率特征 → 树变化判别</text>
+<rect x="390" y="545" width="1120" height="260" rx="22" fill="#edf3ff" fill-opacity=".42" stroke="#d2dce8" stroke-width="1.5"/>
+<text x="414" y="581" class="label" text-anchor="start" style="fill:#225bdc">直接检测 · 联合时序编码 → 变化解码</text>
+<rect x="48" y="320" width="290" height="240" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="193.0" y="357" class="label" text-anchor="middle">配准双时相影像</text>
+<text x="193.0" y="396" class="body" text-anchor="middle">同一测点、前后两期</text>
+<text x="193.0" y="427" class="body" text-anchor="middle">Sentinel-2 L2A</text>
+<text x="193.0" y="458" class="body" text-anchor="middle">每期 12 波段</text>
+<text x="193.0" y="489" class="body" text-anchor="middle">256 × 256，10米网格</text>
+<rect x="420" y="235" width="300" height="180" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="570.0" y="272" class="label" text-anchor="middle">D2LS–ConvNeXt-Base</text>
+<text x="570.0" y="311" class="body" text-anchor="middle">B4 / B3 / B2（RGB）</text>
+<text x="570.0" y="342" class="body" text-anchor="middle">五类概率，保留不确定性</text>
+<text x="570.0" y="373" class="body" text-anchor="middle">动态字典＋三层交互</text>
+<rect x="780" y="235" width="295" height="180" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="927.5" y="272" class="label" text-anchor="middle">开发期交叉拟合</text>
+<text x="927.5" y="311" class="body" text-anchor="middle">A训练 → 预测B</text>
+<text x="927.5" y="342" class="body" text-anchor="middle">B训练 → 预测A</text>
+<text x="927.5" y="373" class="body" text-anchor="middle">全开发期训练 → 测试</text>
+<rect x="1135" y="235" width="345" height="180" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="1307.5" y="272" class="label" text-anchor="middle">直方图梯度提升树</text>
+<text x="1307.5" y="311" class="body" text-anchor="middle">语义＋光谱＋空间特征</text>
+<text x="1307.5" y="342" class="body" text-anchor="middle">HistGradientBoosting</text>
+<text x="1307.5" y="373" class="body" text-anchor="middle">候选区域内判断变化</text>
+<path d="M 338,385 L 370,385 L 370,325 L 420,325" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 720,325 L 780,325" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 1075,325 L 1135,325" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<rect x="420" y="610" width="365" height="145" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="602.5" y="647" class="label" text-anchor="middle">OlmoEarth v1.2-Base</text>
+<text x="602.5" y="686" class="body" text-anchor="middle">双时相联合编码＋LoRA</text>
+<text x="602.5" y="717" class="body" text-anchor="middle">轻量变化解码器</text>
+<rect x="845" y="610" width="290" height="145" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="990.0" y="647" class="label" text-anchor="middle">18层辅助信息</text>
+<text x="990.0" y="686" class="body" text-anchor="middle">指数6＋历史7＋地形5</text>
+<text x="990.0" y="717" class="body" text-anchor="middle">后段零初始化残差</text>
+<rect x="1195" y="610" width="285" height="145" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1337.5" y="647" class="label" text-anchor="middle">直接变化分数</text>
+<text x="1337.5" y="686" class="body" text-anchor="middle">变化类减未变类logit</text>
+<text x="1337.5" y="717" class="body" text-anchor="middle">令牌辅助相加为改进臂</text>
+<path d="M 338,485 L 370,485 L 370,683 L 420,683" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 785,683 L 845,683" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 1135,683 L 1195,683" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="420" y="865" width="1060" height="85" rx="17" fill="#f3effc" stroke="#7654bc" stroke-width="2"/>
+<text x="950.0" y="902" class="label" text-anchor="middle">统一评测：仅验证集选阈值 → 测试期一次评价</text>
+<path d="M 1480,325 L 1545,325 L 1545,907 L 1480,907" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 1480,683 L 1518,683 L 1518,865 L 1480,865" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<text x="48" y="978" class="small" text-anchor="start" style="fill:#52677d">三折F1等权平均为主要视角，并列各折/合并像元F1、事件检出与误报；所有路线使用同一变化参考标签。</text>
+</svg>

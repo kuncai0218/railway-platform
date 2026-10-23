@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1090" viewBox="0 0 1700 1090" role="img" aria-labelledby="title desc">
+<title id="title">OlmoEarth直接变化网络：后段旁支与令牌相加分开比较</title><desc id="desc">两期12波段影像先做4乘4补丁嵌入，位置时间编码后进入12层768维联合编码器。query和value的LoRA秩16。两期特征和有符号差拼接，轻量解码恢复64通道像元特征。18层辅助图与像元特征进入零初始化残差旁支并加到主分数。虚线改进分支将18层图嵌入为两期各768维，仅在补丁嵌入之后位置时间编码之前相加一次。</desc>
+<defs><marker id="a-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#70839a"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#225bdc"/></marker><marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#087d84"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7654bc"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ae6910"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",Arial,sans-serif;fill:#183047} .muted{fill:#52677d} .small{font-size:20px} .body{font-size:24px} .label{font-size:25px;font-weight:650} .title{font-size:37px;font-weight:750} .subtitle{font-size:22px;fill:#52677d}</style>
+<rect width="1700" height="1090" fill="#fff"/>
+<text x="48" y="61" class="title" text-anchor="start">OlmoEarth直接变化网络：后段旁支与令牌相加分开比较</text>
+<text x="48" y="104" class="subtitle" text-anchor="start">实线为后段辅助参照；紫色虚线为输入令牌相加改进，仍保留后段旁支。</text>
+<rect x="325" y="140" width="510" height="125" rx="17" fill="#f3effc" stroke="#7654bc" stroke-width="2" stroke-dasharray="10 7"/>
+<text x="580.0" y="177" class="label" text-anchor="middle">可选改进：18层辅助令牌嵌入</text>
+<text x="580.0" y="216" class="body" text-anchor="middle">4×4 / 步长4 → 192 → GELU → 1536</text>
+<text x="580.0" y="247" class="body" text-anchor="middle">拆为两期各768维；末层零初始化</text>
+<rect x="45" y="360" width="180" height="150" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="135.0" y="397" class="label" text-anchor="middle">两期12波段</text>
+<text x="135.0" y="436" class="body" text-anchor="middle">恢复反射率</text>
+<text x="135.0" y="467" class="body" text-anchor="middle">预训练归一化</text>
+<rect x="265" y="360" width="190" height="150" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="360.0" y="397" class="label" text-anchor="middle">补丁嵌入</text>
+<text x="360.0" y="436" class="body" text-anchor="middle">每块 4 × 4 像元</text>
+<text x="360.0" y="467" class="body" text-anchor="middle">两期作为 T=2</text>
+<circle cx="495" cy="435" r="22" fill="white" stroke="#7654bc" stroke-width="3"/>
+<text x="495" y="444" class="label" text-anchor="middle" style="fill:#7654bc">＋</text>
+<rect x="540" y="360" width="175" height="150" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="627.5" y="397" class="label" text-anchor="middle">位置/时间编码</text>
+<text x="627.5" y="436" class="body" text-anchor="middle">补丁嵌入之后</text>
+<text x="627.5" y="467" class="body" text-anchor="middle">编码器之前</text>
+<rect x="755" y="330" width="250" height="210" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="880.0" y="367" class="label" text-anchor="middle">OlmoEarth Base</text>
+<text x="880.0" y="406" class="body" text-anchor="middle">12层 Transformer</text>
+<text x="880.0" y="437" class="body" text-anchor="middle">隐藏维度 768</text>
+<text x="880.0" y="468" class="body" text-anchor="middle">query / value LoRA</text>
+<text x="880.0" y="499" class="body" text-anchor="middle">秩16，α=16</text>
+<rect x="1045" y="360" width="235" height="150" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1162.5" y="397" class="label" text-anchor="middle">变化特征拼接</text>
+<text x="1162.5" y="436" class="body" text-anchor="middle">F₁，F₂，F₂−F₁</text>
+<text x="1162.5" y="467" class="body" text-anchor="middle">3 × 768 = 2304</text>
+<rect x="1320" y="330" width="330" height="210" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1485.0" y="367" class="label" text-anchor="middle">轻量变化解码器</text>
+<text x="1485.0" y="406" class="body" text-anchor="middle">1×1投影 → 256通道</text>
+<text x="1485.0" y="437" class="body" text-anchor="middle">两次双线性上采样×2</text>
+<text x="1485.0" y="468" class="body" text-anchor="middle">3×3卷积：256→128→64</text>
+<text x="1485.0" y="499" class="body" text-anchor="middle">输出64通道像元特征 h</text>
+<path d="M 225,435 L 265,435" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 455,435 L 473,435" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 517,435 L 540,435" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 715,435 L 755,435" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 1005,435 L 1045,435" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 1280,435 L 1320,435" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 580,265 L 580,300 L 495,300 L 495,413" fill="none" stroke="#7654bc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-purple)" stroke-dasharray="10 7"/>
+<rect x="70" y="700" width="330" height="170" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="235.0" y="737" class="label" text-anchor="middle">辅助信息 a：18层</text>
+<text x="235.0" y="776" class="body" text-anchor="middle">指数差 6</text>
+<text x="235.0" y="807" class="body" text-anchor="middle">历史同期偏离 7</text>
+<text x="235.0" y="838" class="body" text-anchor="middle">相对高程/坡度等地形 5</text>
+<rect x="745" y="700" width="470" height="170" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="980.0" y="737" class="label" text-anchor="middle">后段零初始化残差旁支</text>
+<text x="980.0" y="776" class="body" text-anchor="middle">[h, a] → 3×3卷积32通道</text>
+<text x="980.0" y="807" class="body" text-anchor="middle">膨胀3×3卷积（dilation=2）</text>
+<text x="980.0" y="838" class="body" text-anchor="middle">1×1 → 两类残差；末层置零</text>
+<path d="M 400,785 L 745,785" fill="none" stroke="#ae6910" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-gold)"/>
+<path d="M 70,755 L 20,755 L 20,202 L 325,202" fill="none" stroke="#7654bc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-purple)" stroke-dasharray="10 7"/>
+<text x="38" y="660" class="small" text-anchor="start" style="fill:#7654bc">同一份18层图</text>
+<path d="M 1445,540 L 1445,600 L 1185,600 L 1185,700" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="1205" y="590" class="small" text-anchor="start" style="fill:#087d84">64通道 h</text>
+<rect x="1335" y="610" width="300" height="105" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1485.0" y="647" class="label" text-anchor="middle">主输出头</text>
+<text x="1485.0" y="686" class="body" text-anchor="middle">1×1卷积 → 两类logit</text>
+<path d="M 1530,540 L 1530,610" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<circle cx="1490" cy="825" r="24" fill="white" stroke="#087d84" stroke-width="3"/>
+<text x="1490" y="834" class="label" text-anchor="middle" style="fill:#087d84">＋</text>
+<path d="M 1490,715 L 1490,801" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 1215,785 L 1320,785 L 1320,825 L 1466,825" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<rect x="1315" y="905" width="335" height="100" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="1482.5" y="942" class="label" text-anchor="middle">最终变化分数</text>
+<text x="1482.5" y="981" class="body" text-anchor="middle">z变化 − z未变；验证集选阈值</text>
+<path d="M 1490,849 L 1490,905" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="48" y="1048" class="small" text-anchor="start" style="fill:#52677d">关键位置：令牌相加只插入一次；FiLM解码器调制是另一项对照。128窗口、64步长；原模型重叠区平均解码特征。</text>
+</svg>

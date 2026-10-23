@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200" role="img" aria-labelledby="title desc">
+<title id="title">交叉拟合概率 → 语义/光谱候选 → 直方图梯度提升树</title><desc id="desc">每一折中开发期按季度分A B，两模型互相预测未训练半期。full模型用全部开发期训练只预测测试期。开发期交叉拟合概率供第二阶段训练和验证，测试概率由full产生。候选是地类转移和光谱稳健异常并集。主配置85维特征，加入20层历史用途地形铁路背景得到105维对照。树仅在训练影像对标签上拟合，验证选门槛，测试不选规则。</desc>
+<defs><marker id="a-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#70839a"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#225bdc"/></marker><marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#087d84"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7654bc"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ae6910"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",Arial,sans-serif;fill:#183047} .muted{fill:#52677d} .small{font-size:20px} .body{font-size:24px} .label{font-size:25px;font-weight:650} .title{font-size:37px;font-weight:750} .subtitle{font-size:22px;fill:#52677d}</style>
+<rect width="1700" height="1200" fill="#fff"/>
+<text x="48" y="61" class="title" text-anchor="start">交叉拟合概率 → 语义/光谱候选 → 直方图梯度提升树</text>
+<text x="48" y="104" class="subtitle" text-anchor="start">每折训练full / A / B三部分；这是交叉拟合协议，三棵树随机种子另计。</text>
+<rect x="45" y="140" width="1120" height="510" rx="22" fill="#e9f7f5" fill-opacity=".42" stroke="#d2dce8" stroke-width="1.5"/>
+<text x="69" y="176" class="label" text-anchor="start" style="fill:#087d84">开发期：避免分割器给自己训练过的期输出过于理想的概率</text>
+<rect x="1200" y="140" width="450" height="510" rx="22" fill="#edf3ff" fill-opacity=".42" stroke="#d2dce8" stroke-width="1.5"/>
+<text x="1224" y="176" class="label" text-anchor="start" style="fill:#225bdc">测试期：只用full分割器</text>
+<rect x="70" y="210" width="280" height="115" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="210.0" y="247" class="label" text-anchor="middle">开发期 A</text>
+<text x="210.0" y="286" class="body" text-anchor="middle">按日历季度分半</text>
+<rect x="420" y="210" width="300" height="115" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="570.0" y="247" class="label" text-anchor="middle">分割模型 A</text>
+<text x="570.0" y="286" class="body" text-anchor="middle">仅A的语义标签训练</text>
+<rect x="790" y="210" width="345" height="115" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="962.5" y="247" class="label" text-anchor="middle">预测开发期 B</text>
+<text x="962.5" y="286" class="body" text-anchor="middle">模型A未见B标签</text>
+<rect x="70" y="390" width="280" height="115" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="210.0" y="427" class="label" text-anchor="middle">开发期 B</text>
+<text x="210.0" y="466" class="body" text-anchor="middle">与A时间块分开</text>
+<rect x="420" y="390" width="300" height="115" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="570.0" y="427" class="label" text-anchor="middle">分割模型 B</text>
+<text x="570.0" y="466" class="body" text-anchor="middle">仅B的语义标签训练</text>
+<rect x="790" y="390" width="345" height="115" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="962.5" y="427" class="label" text-anchor="middle">预测开发期 A</text>
+<text x="962.5" y="466" class="body" text-anchor="middle">模型B未见A标签</text>
+<path d="M 350,267 L 420,267" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 720,267 L 790,267" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 350,447 L 420,447" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 720,447 L 790,447" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<rect x="790" y="550" width="345" height="80" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="962.5" y="587" class="label" text-anchor="middle">拼合开发期交叉拟合概率</text>
+<path d="M 1135,267 L 1150,267 L 1150,530 L 1060,530 L 1060,550" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 960,505 L 960,550" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<rect x="1230" y="210" width="390" height="100" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="1425.0" y="247" class="label" text-anchor="middle">全开发期 A∪B</text>
+<rect x="1230" y="355" width="390" height="100" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1425.0" y="392" class="label" text-anchor="middle">full分割模型</text>
+<text x="1425.0" y="431" class="body" text-anchor="middle">使用全部开发期训练</text>
+<rect x="1230" y="520" width="390" height="100" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1425.0" y="557" class="label" text-anchor="middle">预测测试期概率</text>
+<text x="1425.0" y="596" class="body" text-anchor="middle">不使用测试期语义标签训练</text>
+<path d="M 1425,310 L 1425,355" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 1425,455 L 1425,520" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="55" y="760" width="320" height="170" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="215.0" y="797" class="label" text-anchor="middle">变化候选 C</text>
+<text x="215.0" y="836" class="body" text-anchor="middle">地类转移（排除植被↔耕地）</text>
+<text x="215.0" y="867" class="body" text-anchor="middle">∪ 稳健光谱异常</text>
+<text x="215.0" y="898" class="body" text-anchor="middle">覆盖阈值仅按训练正样本定</text>
+<rect x="440" y="760" width="640" height="170" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="760.0" y="797" class="label" text-anchor="middle">主配置85维特征 → 对照完整配置105维</text>
+<text x="760.0" y="836" class="body" text-anchor="middle">主配置：光谱24＋稳健差7＋邻域22＋上下文6</text>
+<text x="760.0" y="867" class="body" text-anchor="middle">两期语义概率/转移23＋连通域3 = 85</text>
+<text x="760.0" y="898" class="body" text-anchor="middle">完整配置再加：历史7＋用途7＋地形5＋铁路1</text>
+<rect x="1145" y="760" width="465" height="170" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="1377.5" y="797" class="label" text-anchor="middle">HistGradientBoostingClassifier</text>
+<text x="1377.5" y="836" class="body" text-anchor="middle">直方图梯度提升树；仅训练对标签拟合</text>
+<text x="1377.5" y="867" class="body" text-anchor="middle">候选内分类＋3×3概率轻平滑</text>
+<text x="1377.5" y="898" class="body" text-anchor="middle">验证选门槛 → 测试预测</text>
+<path d="M 375,845 L 440,845" fill="none" stroke="#ae6910" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-gold)"/>
+<path d="M 1080,845 L 1145,845" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 960,630 L 960,700 L 720,700 L 720,760" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 1425,620 L 1425,680 L 1060,680 L 1060,760" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<text x="75" y="710" class="small" text-anchor="start" style="fill:#ae6910">候选来自影像与概率，不以测试变化标签圈定。</text>
+<rect x="55" y="990" width="1555" height="90" rx="17" fill="#f3effc" stroke="#7654bc" stroke-width="2"/>
+<text x="832.5" y="1027" class="label" text-anchor="middle">树训练：全部正候选＋每对至多8000负候选；最大15叶、叶最少300像元、L2=5</text>
+<text x="48" y="1130" class="small" text-anchor="start" style="fill:#52677d">只用验证集选择最终变化门槛；85维配置仍保留测点、季节和间隔，不能称“仅分割概率”。</text>
+<text x="48" y="1158" class="small" text-anchor="start" style="fill:#52677d">full/A/B控制模型拟合的信息边界；参考标签制备中的全期时序信息使用另行披露，不能由交叉拟合消除。</text>
+</svg>

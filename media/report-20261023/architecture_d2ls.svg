@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+<title id="title">D2LS五类分割：影像调制的动态类别字典</title><desc id="desc">ConvNeXt Base提取四级128、256、512、1024通道特征，统一投影到256维并聚合为四分之一分辨率影像特征。最深层特征调制每类四候选字典向量的组合权重，生成五个256维动态令牌。三层双向交叉注意力共同更新类别令牌和像元特征，令牌MLP分类向量与上采样影像特征相乘输出五类概率。训练保留静态令牌辅助交叉熵和字典类内类间对比损失。</desc>
+<defs><marker id="a-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#70839a"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#225bdc"/></marker><marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#087d84"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7654bc"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ae6910"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",Arial,sans-serif;fill:#183047} .muted{fill:#52677d} .small{font-size:20px} .body{font-size:24px} .label{font-size:25px;font-weight:650} .title{font-size:37px;font-weight:750} .subtitle{font-size:22px;fill:#52677d}</style>
+<rect width="1600" height="1240" fill="#fff"/>
+<text x="48" y="61" class="title" text-anchor="start">D2LS五类分割：影像调制的动态类别字典</text>
+<text x="48" y="104" class="subtitle" text-anchor="start">保留作者动态字典机制；项目修改五类任务、RGB输入及full/A/B训练组织。</text>
+<rect x="50" y="175" width="205" height="180" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="152.5" y="212" class="label" text-anchor="middle">当期RGB影像</text>
+<text x="152.5" y="251" class="body" text-anchor="middle">B4 / B3 / B2</text>
+<text x="152.5" y="282" class="body" text-anchor="middle">ImageNet归一化</text>
+<text x="152.5" y="313" class="body" text-anchor="middle">五类语义任务</text>
+<rect x="310" y="155" width="280" height="220" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="450.0" y="192" class="label" text-anchor="middle">ConvNeXt-Base</text>
+<text x="450.0" y="231" class="body" text-anchor="middle">1/4：128通道</text>
+<text x="450.0" y="262" class="body" text-anchor="middle">1/8：256通道</text>
+<text x="450.0" y="293" class="body" text-anchor="middle">1/16：512通道</text>
+<text x="450.0" y="324" class="body" text-anchor="middle">1/32：1024通道</text>
+<rect x="650" y="175" width="285" height="180" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="792.5" y="212" class="label" text-anchor="middle">四级特征对齐</text>
+<text x="792.5" y="251" class="body" text-anchor="middle">各自线性投影到256维</text>
+<text x="792.5" y="282" class="body" text-anchor="middle">插值到 1/4 分辨率</text>
+<text x="792.5" y="313" class="body" text-anchor="middle">拼接：4 × 256通道</text>
+<rect x="1000" y="175" width="500" height="180" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1250.0" y="212" class="label" text-anchor="middle">像元表征 F</text>
+<text x="1250.0" y="251" class="body" text-anchor="middle">1×1卷积聚合为256维</text>
+<text x="1250.0" y="282" class="body" text-anchor="middle">保留空间位置编码</text>
+<text x="1250.0" y="313" class="body" text-anchor="middle">供字典与像元双向交互</text>
+<path d="M 255,265 L 310,265" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 590,265 L 650,265" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M 935,265 L 1000,265" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="50" y="490" width="350" height="160" rx="17" fill="#fff5e5" stroke="#ae6910" stroke-width="2"/>
+<text x="225.0" y="527" class="label" text-anchor="middle">图像调制器</text>
+<text x="225.0" y="566" class="body" text-anchor="middle">最深层影像特征</text>
+<text x="225.0" y="597" class="body" text-anchor="middle">最大/平均池化＋MLP</text>
+<text x="225.0" y="628" class="body" text-anchor="middle">每类4个softmax组合权重</text>
+<rect x="465" y="490" width="350" height="160" rx="17" fill="#f3effc" stroke="#7654bc" stroke-width="2"/>
+<text x="640.0" y="527" class="label" text-anchor="middle">可学习基础字典</text>
+<text x="640.0" y="566" class="body" text-anchor="middle">5个类别基础令牌</text>
+<text x="640.0" y="597" class="body" text-anchor="middle">线性展开：每类4个候选</text>
+<text x="640.0" y="628" class="body" text-anchor="middle">每个候选256维</text>
+<rect x="880" y="490" width="310" height="160" rx="17" fill="#f3effc" stroke="#7654bc" stroke-width="2"/>
+<text x="1035.0" y="527" class="label" text-anchor="middle">动态类别令牌 Q</text>
+<text x="1035.0" y="566" class="body" text-anchor="middle">按本幅影像权重组合</text>
+<text x="1035.0" y="597" class="body" text-anchor="middle">5个令牌 × 256维</text>
+<text x="1035.0" y="628" class="body" text-anchor="middle">静态令牌另作训练辅助</text>
+<rect x="1260" y="460" width="290" height="225" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="1405.0" y="497" class="label" text-anchor="middle">三层双向交互</text>
+<text x="1405.0" y="536" class="body" text-anchor="middle">Q从F汇聚类别证据</text>
+<text x="1405.0" y="567" class="body" text-anchor="middle">F从Q取回语义上下文</text>
+<text x="1405.0" y="598" class="body" text-anchor="middle">交叉注意力＋残差/LN</text>
+<text x="1405.0" y="629" class="body" text-anchor="middle">同时更新 Q 与 F</text>
+<path d="M 450,375 L 450,425 L 225,425 L 225,490" fill="none" stroke="#ae6910" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-gold)"/>
+<path d="M 400,535 L 435,535 L 435,450 L 1035,450 L 1035,490" fill="none" stroke="#ae6910" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-gold)"/>
+<path d="M 815,570 L 880,570" fill="none" stroke="#7654bc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<path d="M 1190,570 L 1260,570" fill="none" stroke="#7654bc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<path d="M 1380,355 L 1380,460" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="420" y="800" width="360" height="145" rx="17" fill="#f3effc" stroke="#7654bc" stroke-width="2"/>
+<text x="600.0" y="837" class="label" text-anchor="middle">类别专属分类向量</text>
+<text x="600.0" y="876" class="body" text-anchor="middle">更新后的5个动态令牌</text>
+<text x="600.0" y="907" class="body" text-anchor="middle">三层MLP → 每类权重</text>
+<rect x="960" y="800" width="360" height="145" rx="17" fill="#edf3ff" stroke="#225bdc" stroke-width="2"/>
+<text x="1140.0" y="837" class="label" text-anchor="middle">恢复高分辨率像元特征</text>
+<text x="1140.0" y="876" class="body" text-anchor="middle">更新后的256维像元表征</text>
+<text x="1140.0" y="907" class="body" text-anchor="middle">两级 PixelShuffle ×2</text>
+<path d="M 1380,685 L 1380,735 L 600,735 L 600,800" fill="none" stroke="#7654bc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<path d="M 1550,570 L 1580,570 L 1580,760 L 1140,760 L 1140,800" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<circle cx="865" cy="1000" r="25" fill="white" stroke="#087d84" stroke-width="3"/>
+<text x="865" y="1009" class="label" text-anchor="middle" style="fill:#087d84">×</text>
+<path d="M 600,945 L 600,1000 L 840,1000" fill="none" stroke="#7654bc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<path d="M 1140,945 L 1140,1000 L 890,1000" fill="none" stroke="#225bdc" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="650" y="1050" width="430" height="85" rx="17" fill="#e9f7f5" stroke="#087d84" stroke-width="2"/>
+<text x="865.0" y="1087" class="label" text-anchor="middle">五类logit → softmax概率 P</text>
+<path d="M 865,1025 L 865,1050" fill="none" stroke="#087d84" stroke-width="3" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="48" y="1170" class="small" text-anchor="start" style="fill:#52677d">训练：主交叉熵 ＋ 0.4 × 静态字典辅助交叉熵 ＋ 0.1 × 动态字典类内/类间对比项。</text>
+<text x="48" y="1198" class="small" text-anchor="start" style="fill:#52677d">原方法：Dynamic Dictionary Learning for Remote Sensing Image Segmentation，ICCV 2025；示意图按项目实际使用的作者实现重绘。</text>
+</svg>
