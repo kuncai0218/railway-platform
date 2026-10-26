@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">铁路沿线多时相遥感风险识别总体技术路线</title>
+<desc id="desc">原首页总体技术路线（2026-09-28）的版式、节点位置与配色不变；2026-10-26 按实验结果调整：SAR 影像、DEM 地形数据与多期历史影像改为可选输入（目前实验中没有带来稳定增益），路线A写明候选像元与判别器。</desc>
+<defs><marker id="a-navy" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M0 0 L8 4 L0 8 Z" fill="#184a78"/></marker><marker id="a-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M0 0 L8 4 L0 8 Z" fill="#0a8694"/></marker><marker id="a-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M0 0 L8 4 L0 8 Z" fill="#d86614"/></marker><marker id="a-grey" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M0 0 L8 4 L0 8 Z" fill="#9aa6b2"/></marker></defs>
+<rect width="1600" height="900" fill="#fbfcfe"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",Arial,sans-serif} .h1{font-size:46px;font-weight:750}.h2{font-size:25px;font-weight:700}.h3{font-size:24px;font-weight:700}.body{font-size:19px}.note{font-size:17px}.opt{font-size:15px;font-weight:600}</style>
+<text x="800" y="60" class="h1" fill="#184a78" text-anchor="middle">铁路沿线多时相遥感风险识别总体技术路线</text>
+<text x="800" y="98" class="body" fill="#707983" text-anchor="middle">两个实验层次共用技术流程，分别组织样本、实验划分与结果</text>
+<line x1="60" y1="112" x2="800" y2="112" stroke="#184a78" stroke-width="4"/>
+<line x1="800" y1="112" x2="1172" y2="112" stroke="#0a8694" stroke-width="4"/>
+<line x1="1172" y1="112" x2="1540" y2="112" stroke="#d86614" stroke-width="4"/>
+<text x="60" y="142" class="h2" fill="#184a78" text-anchor="start">01 实验层次</text>
+<rect x="60" y="154" width="550" height="80" rx="9" fill="#f1f6fb" stroke="#bfd4e6" stroke-width="1.5"/>
+<text x="80" y="183" class="h3" fill="#184a78" text-anchor="start">层次一 三个测点初步探究</text>
+<text x="80" y="216" class="body" fill="#353b40" text-anchor="start">株洲南、衡阳北、韶关南：建立流程并比较方法</text>
+<rect x="920" y="154" width="620" height="80" rx="9" fill="#f1f6fb" stroke="#bfd4e6" stroke-width="1.5"/>
+<text x="940" y="183" class="h3" fill="#184a78" text-anchor="start">层次二 全量台账事件研究</text>
+<text x="940" y="216" class="body" fill="#353b40" text-anchor="start">依台账组织多地点样本，检验不同事件中的适用性</text>
+<path d="M 610,194 L 920,194" fill="none" stroke="#184a78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-navy)" stroke-dasharray="8 9"/>
+<text x="765" y="181" class="note" fill="#184a78" text-anchor="middle">标注规范与研究方法推广</text>
+<text x="800" y="261" class="body" fill="#707983" text-anchor="middle">两个层次均包含Sentinel-2与高分辨率影像研究</text>
+<text x="60" y="295" class="h2" fill="#184a78" text-anchor="start">02 共用数据与样本准备</text>
+<rect x="60" y="306.3" width="555" height="50" rx="9" fill="white" stroke="#bfd4e6" stroke-width="1.5"/>
+<text x="337.5" y="328" class="h3" fill="#184a78" text-anchor="middle" style="font-size:21px">光学：Sentinel-2（10 m）与亚米级影像</text>
+<text x="337.5" y="348" class="opt" fill="#707983" text-anchor="middle">主要输入；更早的历史影像（往年同期等）可选</text>
+<rect x="635" y="306.3" width="265" height="50" rx="9" fill="white" stroke="#9fcfd6" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="767.5" y="328" class="h3" fill="#0a8694" text-anchor="middle" style="font-size:20px">辅助（可选）：SAR影像</text>
+<text x="767.5" y="348" class="opt" fill="#707983" text-anchor="middle">目前实验中无稳定增益</text>
+<rect x="920" y="306.3" width="295" height="50" rx="9" fill="white" stroke="#efbf9b" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="1067.5" y="328" class="h3" fill="#d86614" text-anchor="middle" style="font-size:20px">辅助（可选）：DEM地形数据</text>
+<text x="1067.5" y="348" class="opt" fill="#707983" text-anchor="middle">目前实验中无稳定增益</text>
+<path d="M 337.5,356.3 L 337.5,387.5" fill="none" stroke="#184a78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<path d="M 767.5,356.3 L 767.5,387.5" fill="none" stroke="#0a8694" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-teal)" stroke-dasharray="5 5"/>
+<path d="M 1067.5,356.3 L 1067.5,387.5" fill="none" stroke="#d86614" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)" stroke-dasharray="5 5"/>
+<rect x="60" y="387.5" width="1155" height="62.5" rx="9" fill="white" stroke="#bfd4e6" stroke-width="1.5"/>
+<line x1="443.7" y1="397" x2="443.7" y2="442" stroke="#d8e3ed" stroke-width="1.5"/>
+<line x1="830" y1="397" x2="830" y2="442" stroke="#d8e3ed" stroke-width="1.5"/>
+<text x="78" y="414" class="h3" fill="#184a78" text-anchor="start" style="font-size:22px">质量检查与时相匹配</text>
+<text x="78" y="438" class="note" fill="#707983" text-anchor="start">质量记录、成像条件与辅助时相</text>
+<text x="462" y="414" class="h3" fill="#184a78" text-anchor="start" style="font-size:22px">空间对齐与误差检查</text>
+<text x="462" y="438" class="note" fill="#707983" text-anchor="start">统一坐标与网格，核查残余误差</text>
+<text x="849" y="414" class="h3" fill="#184a78" text-anchor="start" style="font-size:22px">人工判读与数据标注</text>
+<text x="849" y="438" class="note" fill="#707983" text-anchor="start">分割标签、变化标签与质量记录</text>
+<path d="M 637.5,450 L 637.5,472" fill="none" stroke="#184a78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<path d="M 637.5,472 L 335,472 L 335,495" fill="none" stroke="#0a8694" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<path d="M 637.5,472 L 940,472 L 940,495" fill="none" stroke="#d86614" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<rect x="60" y="495" width="550" height="173.7" rx="9" fill="#f3f9fa" stroke="#b6dfe4" stroke-width="1.5"/>
+<rect x="60" y="495" width="550" height="38.5" rx="9" fill="#0a8694" stroke="#0a8694" stroke-width="1.5"/>
+<text x="335" y="523" class="h2" fill="white" text-anchor="middle" style="font-size:26px">路线A 地物分割</text>
+<text x="335" y="559" class="h3" fill="#0a8694" text-anchor="middle" style="font-size:22px">前后两期地物语义分割</text>
+<path d="M 335,567 L 335,589" fill="none" stroke="#0a8694" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="335" y="612" class="body" fill="#353b40" text-anchor="middle" style="font-size:21px">比较地物状态，生成初始变化结果</text>
+<text x="335" y="633" class="opt" fill="#0a8694" text-anchor="middle">再由候选像元与判别器区分真假变化</text>
+<line x1="80" y1="642" x2="590" y2="642" stroke="#c3dde1" stroke-width="1.2"/>
+<text x="335" y="661" class="h3" fill="#0a8694" text-anchor="middle" style="font-size:20px">已有方法试验｜自研新方法</text>
+<rect x="665" y="495" width="550" height="173.7" rx="9" fill="#fef8f3" stroke="#f4c8a7" stroke-width="1.5"/>
+<rect x="665" y="495" width="550" height="38.5" rx="9" fill="#d86614" stroke="#d86614" stroke-width="1.5"/>
+<text x="940" y="523" class="h2" fill="white" text-anchor="middle" style="font-size:26px">路线B 直接变化检测</text>
+<text x="940" y="559" class="h3" fill="#d86614" text-anchor="middle" style="font-size:22px">输入前后两期影像</text>
+<path d="M 940,567 L 940,589" fill="none" stroke="#d86614" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="940" y="612" class="body" fill="#353b40" text-anchor="middle" style="font-size:21px">直接识别变化区域与范围</text>
+<text x="940" y="633" class="opt" fill="#d86614" text-anchor="middle">更早的多期历史影像：可选输入</text>
+<line x1="685" y1="642" x2="1195" y2="642" stroke="#f0d5c1" stroke-width="1.2"/>
+<text x="940" y="661" class="h3" fill="#d86614" text-anchor="middle" style="font-size:20px">已有方法试验｜自研新方法</text>
+<line x1="335" y1="668.7" x2="335" y2="691.7" stroke="#0a8694" stroke-width="2.5"/>
+<line x1="335" y1="691.7" x2="637.5" y2="691.7" stroke="#0a8694" stroke-width="2.5"/>
+<line x1="940" y1="668.7" x2="940" y2="691.7" stroke="#d86614" stroke-width="2.5"/>
+<line x1="940" y1="691.7" x2="637.5" y2="691.7" stroke="#d86614" stroke-width="2.5"/>
+<path d="M 637.5,691.7 L 637.5,713.3" fill="none" stroke="#184a78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<rect x="161.25" y="713.3" width="952.5" height="82.5" rx="9" fill="#f1f6fb" stroke="#94b9d8" stroke-width="1.7"/>
+<text x="637.5" y="746" class="h2" fill="#184a78" text-anchor="middle" style="font-size:26px">共同开展伪变化抑制</text>
+<text x="637.5" y="778" class="body" fill="#353b40" text-anchor="middle" style="font-size:18px">云与云影、配准错位、成像差异与边界误差；保留真实季节性变化并说明周期性</text>
+<path d="M 637.5,795.8 L 637.5,817.5" fill="none" stroke="#184a78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<rect x="161.25" y="817.5" width="952.5" height="66.7" rx="9" fill="#eff5fc" stroke="#4287bc" stroke-width="1.5"/>
+<text x="637.5" y="846" class="h2" fill="#184a78" text-anchor="middle" style="font-size:25px">精度评估与最优方案</text>
+<text x="637.5" y="871" class="note" fill="#707983" text-anchor="middle" style="font-size:17px">识别精度、误报/漏报、边界质量与跨地区适用性</text>
+<path d="M 1113.75,850.85 L 1247.5,850.85" fill="none" stroke="#184a78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-navy)"/>
+<rect x="1247.5" y="817.5" width="292.5" height="66.7" rx="9" fill="#eff5fc" stroke="#4287bc" stroke-width="1.5"/>
+<text x="1393.75" y="845" class="h3" fill="#184a78" text-anchor="middle" style="font-size:19px">已有方法比较</text>
+<text x="1393.75" y="870" class="h3" fill="#184a78" text-anchor="middle" style="font-size:19px">主要问题分析与方法改进</text>
+<text x="1247.5" y="295" class="h2" fill="#184a78" text-anchor="start">专题拓展</text>
+<rect x="1247.5" y="306.3" width="292.5" height="231.2" rx="9" fill="#f3f9fa" stroke="#b6dfe4" stroke-width="1.5"/>
+<text x="1265" y="343" class="h2" fill="#0a8694" text-anchor="start" style="font-size:26px">河岸线研究</text>
+<text x="1265" y="371" class="body" fill="#353b40" text-anchor="start" style="font-size:18px">衔接路线A的水体分割</text>
+<text x="1265" y="411" class="body" fill="#353b40" text-anchor="start" style="font-size:19px">水域范围、水边线与河宽</text>
+<text x="1265" y="434" class="body" fill="#353b40" text-anchor="start" style="font-size:19px">季节性与持续变化分析</text>
+<text x="1265" y="457" class="body" fill="#353b40" text-anchor="start" style="font-size:19px">两个层次中的适用河段</text>
+<line x1="1265" y1="490" x2="1522" y2="490" stroke="#c3dde1" stroke-width="1.2"/>
+<text x="1393.75" y="518" class="h3" fill="#0a8694" text-anchor="middle" style="font-size:18px">已有方法试验｜自研新方法</text>
+<path d="M 1215,418.75 L 1247.5,418.75" fill="none" stroke="#0a8694" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<rect x="1247.5" y="537.5" width="292.5" height="203.7" rx="9" fill="#f1f6fb" stroke="#bfd4e6" stroke-width="1.5"/>
+<text x="1265" y="568" class="h2" fill="#184a78" text-anchor="start" style="font-size:26px">灾前线索分析</text>
+<text x="1265" y="594" class="h3" fill="#184a78" text-anchor="start" style="font-size:20px">台账事件的深入研究</text>
+<text x="1265" y="632" class="body" fill="#353b40" text-anchor="start" style="font-size:19px">事件发生前的多期影像</text>
+<text x="1265" y="654" class="body" fill="#353b40" text-anchor="start" style="font-size:19px">识别持续地表变化线索</text>
+<text x="1265" y="676" class="body" fill="#353b40" text-anchor="start" style="font-size:19px">结合对照样本检验关联</text>
+<line x1="1247.5" y1="770" x2="1282" y2="770" stroke="#9aa6b2" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="1290" y="776" class="opt" fill="#707983" text-anchor="start">虚线：可选输入</text>
+</svg>
