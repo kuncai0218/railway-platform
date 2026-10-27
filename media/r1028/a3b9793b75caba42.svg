@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="938.88pt" height="542.88pt" viewBox="0 0 938.88 542.88" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 542.88 
+L 938.88 542.88 
+L 938.88 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 26.64 173.52 
+L 302.64 173.52 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 331.44 173.52 
+L 607.44 173.52 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 636.24 173.52 
+L 912.24 173.52 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 26.64 421.92 
+L 226.44 421.92 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 255.24 421.92 
+L 455.04 421.92 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 483.84 421.92 
+L 683.64 421.92 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 712.44 421.92 
+L 912.24 421.92 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 26.64 300.24 
+L 912.24 300.24 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 299.04 124.56 
+Q 311.28 124.56 322.346064 124.56 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #285778; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 318.746064 122.76 
+L 322.346064 124.56 
+L 318.746064 126.36 
+z
+" clip-path="url(#p4530971175)" style="fill: #285778; stroke: #285778; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 603.84 124.56 
+Q 616.08 124.56 627.146064 124.56 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #285778; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 623.546064 122.76 
+L 627.146064 124.56 
+L 623.546064 126.36 
+z
+" clip-path="url(#p4530971175)" style="fill: #285778; stroke: #285778; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 222.84 372.96 
+Q 235.08 372.96 246.146064 372.96 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #248476; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 242.546064 371.16 
+L 246.146064 372.96 
+L 242.546064 374.76 
+z
+" clip-path="url(#p4530971175)" style="fill: #248476; stroke: #248476; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 451.44 372.96 
+Q 463.68 372.96 474.746064 372.96 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #248476; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 471.146064 371.16 
+L 474.746064 372.96 
+L 471.146064 374.76 
+z
+" clip-path="url(#p4530971175)" style="fill: #248476; stroke: #248476; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 680.04 372.96 
+Q 692.28 372.96 703.346064 372.96 
+" clip-path="url(#p4530971175)" style="fill: none; stroke: #248476; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 699.746064 371.16 
+L 703.346064 372.96 
+L 699.746064 374.76 
+z
+" clip-path="url(#p4530971175)" style="fill: #248476; stroke: #248476; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="23.04" y="38.915156" transform="rotate(-0 23.04 38.915156)">a</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 12.1px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="46.08" y="38.612227" transform="rotate(-0 46.08 38.612227)">直接变化检测</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="23.04" y="265.715156" transform="rotate(-0 23.04 265.715156)">b</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 12.1px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="46.08" y="265.412227" transform="rotate(-0 46.08 265.412227)">先分割后检测</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="28.08" y="86.584453" transform="rotate(-0 28.08 86.584453)">01</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="28.08" y="121.715156" transform="rotate(-0 28.08 121.715156)">基础模型</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="28.08" y="151.826953" transform="rotate(-0 28.08 151.826953)">仅输入两期影像</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="28.08" y="199.346953" transform="rotate(-0 28.08 199.346953)">选基础模型</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="332.88" y="86.584453" transform="rotate(-0 332.88 86.584453)">02</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="332.88" y="121.715156" transform="rotate(-0 332.88 121.715156)">数据贡献</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="332.88" y="151.826953" transform="rotate(-0 332.88 151.826953)">逐项加入，再做组合</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="332.88" y="199.346953" transform="rotate(-0 332.88 199.346953)">选有效数据</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="637.68" y="86.584453" transform="rotate(-0 637.68 86.584453)">03</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="637.68" y="121.715156" transform="rotate(-0 637.68 121.715156)">融合方式</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="637.68" y="151.826953" transform="rotate(-0 637.68 151.826953)">保持输入相同，更换接法</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="637.68" y="199.346953" transform="rotate(-0 637.68 199.346953)">选直接检测方案</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="28.08" y="334.984453" transform="rotate(-0 28.08 334.984453)">01</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="28.08" y="370.115156" transform="rotate(-0 28.08 370.115156)">分割模型</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="28.08" y="400.226953" transform="rotate(-0 28.08 400.226953)">12 波段 / RGB</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="28.08" y="447.746953" transform="rotate(-0 28.08 447.746953)">选分割骨干</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="256.68" y="334.984453" transform="rotate(-0 256.68 334.984453)">02</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="256.68" y="370.115156" transform="rotate(-0 256.68 370.115156)">数据贡献</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="256.68" y="400.226953" transform="rotate(-0 256.68 400.226953)">辅助数据逐项与组合</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="256.68" y="447.746953" transform="rotate(-0 256.68 447.746953)">选分割输入</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="485.28" y="334.984453" transform="rotate(-0 485.28 334.984453)">03</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="485.28" y="370.115156" transform="rotate(-0 485.28 370.115156)">融合方式</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="485.28" y="400.226953" transform="rotate(-0 485.28 400.226953)">固定输入，更换接法</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="485.28" y="447.746953" transform="rotate(-0 485.28 447.746953)">确定分割方案 B</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 24.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="713.88" y="334.984453" transform="rotate(-0 713.88 334.984453)">04</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="713.88" y="370.115156" transform="rotate(-0 713.88 370.115156)">判别器</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="713.88" y="400.226953" transform="rotate(-0 713.88 400.226953)">同候选、同特征比较</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="713.88" y="447.746953" transform="rotate(-0 713.88 447.746953)">选先分割后检测方案</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="30.24" y="512.486367" transform="rotate(-0 30.24 512.486367)">比较原则</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 10.12px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23333f" x="113.04" y="512.546953" transform="rotate(-0 113.04 512.546953)">检测：F1（阈值 0.5）   分割：mIoU   ·   差距 &lt; 0.005 时选更简单方案</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4530971175">
+   <rect x="8.64" y="8.64" width="921.6" height="525.6"/>
+  </clipPath>
+ </defs>
+</svg>

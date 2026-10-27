@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="938.88pt" height="506.88pt" viewBox="0 0 938.88 506.88" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 506.88 
+L 938.88 506.88 
+L 938.88 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 384.106667 141.328696 
+L 452.373333 141.328696 
+L 452.373333 95.916522 
+L 384.106667 95.916522 
+z
+" clip-path="url(#p7804237c3b)" style="fill: #f8efe7"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 111.04 118.622609 
+L 793.706667 118.622609 
+" clip-path="url(#p7804237c3b)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 111.04 260.535652 
+L 793.706667 260.535652 
+" clip-path="url(#p7804237c3b)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 111.04 402.448696 
+L 793.706667 402.448696 
+" clip-path="url(#p7804237c3b)" style="fill: none; stroke: #d6dfe4; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 213.44 402.448696 
+L 623.04 402.448696 
+" clip-path="url(#p7804237c3b)" style="fill: none; stroke: #248476; stroke-opacity: 0.4; stroke-width: 3; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="mccecbebc84" d="M -0 4.743416 
+L 4.743416 -4.743416 
+L -4.743416 -4.743416 
+z
+" style="stroke: #285778"/>
+    </defs>
+    <g clip-path="url(#p7804237c3b)">
+     <use xlink:href="#mccecbebc84" x="247.573333" y="118.622609" style="fill: #285778; stroke: #285778"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#p7804237c3b)">
+     <use xlink:href="#mccecbebc84" x="418.24" y="118.622609" style="fill: #285778; stroke: #285778"/>
+    </g>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="m2078bd4874" d="M -4.031129 4.031129 
+L 4.031129 4.031129 
+L 4.031129 -4.031129 
+L -4.031129 -4.031129 
+z
+" style="stroke: #bd7649"/>
+    </defs>
+    <g clip-path="url(#p7804237c3b)">
+     <use xlink:href="#m2078bd4874" x="213.44" y="260.535652" style="fill: #bd7649; stroke: #bd7649"/>
+    </g>
+   </g>
+   <g id="PathCollection_4">
+    <defs>
+     <path id="m2115ae5010" d="M -4.031129 4.031129 
+L 4.031129 4.031129 
+L 4.031129 -4.031129 
+L -4.031129 -4.031129 
+z
+" style="stroke: #63727d"/>
+    </defs>
+    <g clip-path="url(#p7804237c3b)">
+     <use xlink:href="#m2115ae5010" x="349.973333" y="260.535652" style="fill: #63727d; stroke: #63727d"/>
+    </g>
+   </g>
+   <g id="PathCollection_5">
+    <defs>
+     <path id="m3d1245d18b" d="M -4.031129 4.031129 
+L 4.031129 4.031129 
+L 4.031129 -4.031129 
+L -4.031129 -4.031129 
+z
+" style="stroke: #248476"/>
+    </defs>
+    <g clip-path="url(#p7804237c3b)">
+     <use xlink:href="#m3d1245d18b" x="213.44" y="402.448696" style="fill: #248476; stroke: #248476"/>
+    </g>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#p7804237c3b)">
+     <use xlink:href="#m3d1245d18b" x="623.04" y="402.448696" style="fill: #248476; stroke: #248476"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="18.88" y="59.816026" transform="rotate(-0 18.88 59.816026)">a</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 12.1px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #285778" x="42.773333" y="59.513096" transform="rotate(-0 42.773333 59.513096)">光学观测与短暂变化</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #b65852" x="18.88" y="201.729069" transform="rotate(-0 18.88 201.729069)">b</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 12.1px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #b65852" x="42.773333" y="201.42614" transform="rotate(-0 42.773333 201.42614)">按最近日期匹配</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="18.88" y="343.642113" transform="rotate(-0 18.88 343.642113)">c</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 12.1px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #248476" x="42.773333" y="343.339183" transform="rotate(-0 42.773333 343.339183)">前后包夹、同一轨道</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #285778" transform="translate(227.773333 75.098314)">前期光学</text>
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #285778" transform="translate(236.750622 90.617183)">9/24</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #285778" transform="translate(398.44 75.098314)">后期光学</text>
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #285778" transform="translate(407.417289 90.617183)">9/29</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9.35px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #bd7649" x="384.106667" y="165.190555" transform="rotate(-0 384.106667 165.190555)">9/28 出现</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.35px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #bd7649" x="459.2" y="165.190555" transform="rotate(-0 459.2 165.190555)">9/30 恢复</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.68px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #bd7649" x="213.44" y="288.850993" transform="rotate(-0 213.44 288.850993)">9/23 · 轨道 A</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.68px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #63727d" x="349.973333" y="288.850993" transform="rotate(-0 349.973333 288.850993)">9/27 · 轨道 B</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.68px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #248476" x="213.44" y="430.764037" transform="rotate(-0 213.44 430.764037)">9/23 · 轨道 A</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.68px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #248476" x="623.04" y="430.764037" transform="rotate(-0 623.04 430.764037)">10/5 · 轨道 A</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #b65852" transform="translate(657.173333 244.859107)">后景早于变化</text>
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #b65852" transform="translate(657.173333 260.377975)">且前后跨轨道</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #248476" transform="translate(657.173333 385.35302)">同轨覆盖光学时段</text>
+    <text style="font-size: 9.9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #248476" transform="translate(657.173333 400.871889)">两端间隔各 ≤ 12 天</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.68px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #63727d" x="42.773333" y="479.618825" transform="rotate(-0 42.773333 479.618825)">短暂变化若在雷达后景前恢复，仍可能漏观测；额外等待时间作为输入，缺配对明确标记。</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7804237c3b">
+   <rect x="8.64" y="8.64" width="921.6" height="489.6"/>
+  </clipPath>
+ </defs>
+</svg>
