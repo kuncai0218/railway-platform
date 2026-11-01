@@ -59,7 +59,7 @@ var s=document.querySelector('.side');var r=row.getBoundingClientRect(),rs=s.get
 if(r.top<rs.top+80||r.bottom>rs.bottom-40)s.scrollTop+=r.top-rs.top-rs.height/3}
 window.addEventListener('scroll',upd,{passive:true});upd()});
 </script></head><body><aside class="side"><h1>铁路沿线 Sentinel-2<br>地表变化检测研究</h1><p class="sub">2026 年 11 月 1 日</p><div class="navhead">导航<span class="sidebtn"><button onclick="tocAll(true)">全部展开</button><button onclick="tocAll(false)">全部收起</button></span></div><ul class="nav"><li class="nv2 has"><div class="row"><span class="tg"></span><a href="#s2">1 研究概述</a></div><ul class="nav"><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s3">1.1 研究问题与工作内容</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s4">1.2 公开遥感变化检测数据集</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s5">1.3 两条技术路线</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s6">1.4 数据与预处理</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s7">1.5 评价方法</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s8">1.6 实验安排</a></div></li></ul></li><li class="nv2 has"><div class="row"><span class="tg"></span><a href="#s9">2 直接变化检测</a></div><ul class="nav"><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s10">2.1 方法谱系</a></div></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s11">2.2 基础模型怎样用于变化检测：OlmoEarth 变化检测网络</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s12">2.2.1 基础模型在这里做什么</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s13">2.2.2 输入、token 与 batch</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s14">2.2.3 OlmoEarth 编码器：注意力怎样比较两期</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s15">2.2.4 低秩适配（LoRA）</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s16">2.2.5 变化解码器</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s17">2.2.6 损失函数与训练设置</a></div></li></ul></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s18">2.3 方法比较：只用 12 个波段，还是另加光谱指数差</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s19">2.4 结果图</a></div></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s20">2.5 辅助数据</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s21">2.5.1 尝试了哪些辅助数据、怎样处理</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s22">2.5.2 加入前后的精度对比</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s23">2.5.3 为什么没有起作用</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s24">2.5.4 在什么情况下可能起作用</a></div></li></ul></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s25">2.6 融合方式</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s26">2.6.1 文献中的融合方式</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s27">2.6.2 多尺度相加是怎样接入的</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s28">2.6.3 结果</a></div></li></ul></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s29">2.7 小结</a></div></li></ul></li><li class="nv2 has"><div class="row"><span class="tg"></span><a href="#s30">3 先分类后比较</a></div><ul class="nav"><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s31">3.1 文献中的先分类后比较</a></div></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s32">3.2 本研究的流程与依据</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s33">3.2.1 三步流程</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s34">3.2.2 为什么分类之后不能直接比较</a></div></li></ul></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s35">3.3 分割模型</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s36">3.3.1 D2LS 分割网络</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s37">3.3.2 分割模型比较</a></div></li></ul></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s38">3.4 分割中的辅助数据</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s39">3.4.1 逐项加入</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s40">3.4.2 融合方式</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s41">3.4.3 多年地表统计为什么有用</a></div></li></ul></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s42">3.5 变化检测头</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s43">3.5.1 文献中的变化检测头</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s44">3.5.2 本研究的 42 项特征是怎样形成的</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s45">3.5.3 比较结果</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s46">3.5.4 变化检测头删掉了多少误报</a></div></li></ul></li><li class="nv3 has"><div class="row"><span class="tg"></span><a href="#s47">3.6 最终方案的结果与两条路线的比较</a></div><ul class="nav"><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s48">3.6.1 最终方案</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s49">3.6.2 分割精度与检测成绩</a></div></li><li class="nv4"><div class="row"><span class="tg0"></span><a href="#s50">3.6.3 两条路线的比较</a></div></li></ul></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s51">3.7 小结</a></div></li></ul></li><li class="nv2 has"><div class="row"><span class="tg"></span><a href="#s52">4 不足与误差分析</a></div><ul class="nav"><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s53">4.1 精度受什么限制</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s54">4.2 误报从哪里来</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s55">4.3 困难的变化类型与区域</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s56">4.4 方法与评价中值得改进的地方</a></div></li></ul></li><li class="nv2 has"><div class="row"><span class="tg"></span><a href="#s57">5 接下来要做的事情</a></div><ul class="nav"><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s58">5.1 高分辨率影像：独立核对与小目标</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s59">5.2 台账事件：从测点推广到全线</a></div></li></ul></li><li class="nv2"><div class="row"><span class="tg0"></span><a href="#s60">6 结论</a></div></li><li class="nv2"><div class="row"><span class="tg0"></span><a href="#s61">参考文献</a></div></li><li class="nv2 has"><div class="row"><span class="tg"></span><a href="#s62">附录</a></div><ul class="nav"><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s63">附录 A　验证集选阈值的成绩</a></div></li><li class="nv3"><div class="row"><span class="tg0"></span><a href="#s64">附录 B　各类辅助数据的作用汇总</a></div></li></ul></li></ul><div class="btn"><button onclick="setTheme('light')">浅色</button><button onclick="setTheme('dark')">深色</button></div></aside><main><article><h1 id="s1">铁路沿线 Sentinel-2 地表变化检测研究</h1>
-<p>株洲南、衡阳北、韶关南三个测点　｜　2026 年 11 月 1 日（实验结果更新至 11 月 1 日 15:05）</p>
+<p>株洲南、衡阳北、韶关南三个测点　｜　2026 年 11 月 1 日（实验结果更新至 11 月 1 日 15:20）</p>
 <nav class="toctop"><div class="tt">目　录</div><ul><li class="t2"><a href="#s2"><span>1 研究概述</span></a></li><li class="t3"><a href="#s3"><span>1.1 研究问题与工作内容</span></a></li><li class="t3"><a href="#s4"><span>1.2 公开遥感变化检测数据集</span></a></li><li class="t3"><a href="#s5"><span>1.3 两条技术路线</span></a></li><li class="t3"><a href="#s6"><span>1.4 数据与预处理</span></a></li><li class="t3"><a href="#s7"><span>1.5 评价方法</span></a></li><li class="t3"><a href="#s8"><span>1.6 实验安排</span></a></li><li class="t2"><a href="#s9"><span>2 直接变化检测</span></a></li><li class="t3"><a href="#s10"><span>2.1 方法谱系</span></a></li><li class="t3"><a href="#s11"><span>2.2 基础模型怎样用于变化检测：OlmoEarth 变化检测网络</span></a></li><li class="t3"><a href="#s18"><span>2.3 方法比较：只用 12 个波段，还是另加光谱指数差</span></a></li><li class="t3"><a href="#s19"><span>2.4 结果图</span></a></li><li class="t3"><a href="#s20"><span>2.5 辅助数据</span></a></li><li class="t3"><a href="#s25"><span>2.6 融合方式</span></a></li><li class="t3"><a href="#s29"><span>2.7 小结</span></a></li><li class="t2"><a href="#s30"><span>3 先分类后比较</span></a></li><li class="t3"><a href="#s31"><span>3.1 文献中的先分类后比较</span></a></li><li class="t3"><a href="#s32"><span>3.2 本研究的流程与依据</span></a></li><li class="t3"><a href="#s35"><span>3.3 分割模型</span></a></li><li class="t3"><a href="#s38"><span>3.4 分割中的辅助数据</span></a></li><li class="t3"><a href="#s42"><span>3.5 变化检测头</span></a></li><li class="t3"><a href="#s47"><span>3.6 最终方案的结果与两条路线的比较</span></a></li><li class="t3"><a href="#s51"><span>3.7 小结</span></a></li><li class="t2"><a href="#s52"><span>4 不足与误差分析</span></a></li><li class="t3"><a href="#s53"><span>4.1 精度受什么限制</span></a></li><li class="t3"><a href="#s54"><span>4.2 误报从哪里来</span></a></li><li class="t3"><a href="#s55"><span>4.3 困难的变化类型与区域</span></a></li><li class="t3"><a href="#s56"><span>4.4 方法与评价中值得改进的地方</span></a></li><li class="t2"><a href="#s57"><span>5 接下来要做的事情</span></a></li><li class="t3"><a href="#s58"><span>5.1 高分辨率影像：独立核对与小目标</span></a></li><li class="t3"><a href="#s59"><span>5.2 台账事件：从测点推广到全线</span></a></li><li class="t2"><a href="#s60"><span>6 结论</span></a></li><li class="t2"><a href="#s61"><span>参考文献</span></a></li><li class="t2"><a href="#s62"><span>附录</span></a></li><li class="t3"><a href="#s63"><span>附录 A　验证集选阈值的成绩</span></a></li><li class="t3"><a href="#s64"><span>附录 B　各类辅助数据的作用汇总</span></a></li></ul></nav><h2 id="s2">1 研究概述</h2>
 <h3 id="s3">1.1 研究问题与工作内容</h3>
 <p>本研究要回答的问题是：给定同一地点前后两期 Sentinel-2 影像，逐个 10 米像元判断两期之间是否发生了需要报告的地表变化，例如施工清表（清除地表植被和表土）、取土弃土、道路修建、林地砍伐和水域变化。Sentinel-2 每 5 天重访一次，提供 12 个波段的地表反射率，适合对铁路沿线做周期性的变化筛查。这一任务有三个特点：变化极其稀少（测试期变化像元只占参评像元的 0.053%），伪变化来源多（雾、耕作、物候、水位、阴影、几何错位），目标尺度小（施工便道、清表区边缘常只有 1—3 个像元宽）。</p>
@@ -275,7 +275,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <p><strong>指标。</strong>只在标注为 0（没变）或 1（变化）的像元上统计正确报出的变化像元数 TP、误报数 FP、漏报数 FN：</p>
 <p>$$P=\frac{TP}{TP+FP},\quad R=\frac{TP}{TP+FN},\quad F1=\frac{2PR}{P+R},\quad \mathrm{IoU}_{\text{变化}}=\frac{TP}{TP+FP+FN}$$</p>
 <p>精确率 P 是报出的变化中真实变化所占比例，召回率 R 是真实变化中被报出的比例，F1 是二者的调和平均，为主要指标。平均精度 AP 不依赖阈值：把像元按变化概率从高到低排序，逐一作为阈值计算精确率和召回率，按召回率的增量对精确率加权求和，衡量模型能否把真实变化排在没有变化的像元前面。没有变化的像元占 99.9% 以上，任何方法的总体精度都高于 0.999，无法区分方法好坏 [35,36]，因此变化检测不报总体精度。分割报五类交并比的平均值 mIoU。</p>
-<p><strong>重复训练与差异检验。</strong>深度网络和变化检测头的结果随随机种子波动，每个配置训练 3 次、报告平均值。比较两个配置时，同时有放回地重抽训练次数和各折内的测试影像对，重复 2,000 次，得到 F1 差的 95% 区间；区间不包含 0 称为差异显著。由于前两个折分别只有 6 个和 4 个测试影像对含有变化，区间普遍较宽。</p>
+<p><strong>重复训练与差异检验。</strong>深度网络和变化检测头的结果随随机种子波动，每个配置训练 3 次、报告平均值。比较两个配置时，同时有放回地重抽训练次数和各折内的测试影像对 2,000 次，判断差异是否显著（表中标“显著”）。前两个折含变化的测试影像对分别只有 6 个和 4 个，所以多数差异达不到显著。</p>
 <p><strong>方案选择。</strong>每一步都按测试期的 F1 选出进入下一步的方案（分割比较 mIoU）。这样做是因为验证集太小、选不出稳定的方案，代价是报告的成绩偏乐观，需要用冻结方案后的新时段、新测点做独立检验（4.4 节、5.2 节）。与最高者相差不到 0.005（与随机种子之间的波动相当）视为持平，持平时取更简单的方案（用到的数据更少、融合方式更简单）。同一张表中的配置使用同样的训练标注、训练预算和评价方法。</p>
 <h3 id="s8">1.6 实验安排</h3>
 <p>两条路线都按“先比较方法、再加数据、最后换融合方式”的顺序推进，每一步只改变一个方面。</p>
@@ -342,8 +342,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <h3 id="s10">2.1 方法谱系</h3>
 <p>直接变化检测把两期影像一起交给一个模型，直接输出每个像元“变没变”。按提出的先后，主要方法可以分为五类（表 4）。</p>
 <p><strong>（1）经典代数与变换方法（1980—2010 年前后）。</strong>变化向量分析 CVA [5] 把每个像元两期的多波段反射率看成两个向量，二者之差的长度表示变化强度，方向表示变化类型，长度超过阈值即判为变化。IR-MAD [7] 先用典型相关分析找出两期之间相关性最强的波段线性组合，再对二者之差迭代加权，使不变像元主导统计、变化像元更突出。这类方法不需要标注，阈值通常用 Otsu 法 [96] 或期望最大化 [95] 自动确定，至今仍是常用基线。</p>
-<p><strong>（2）卷积网络（2018 年起）。</strong>Daudt 等 [8] 首次把全卷积 U 形网络用于变化检测，提出三种结构：FC-EF 把两期影像在通道上拼接后输入一个网络（早融合）；FC-Siam-conc 和 FC-Siam-diff 用两份共享参数的编码器（孪生结构）分别提取两期特征，再在每一级跳跃连接处拼接或相减。此后的 SNUNet-CD [9] 用嵌套的密集跳跃连接和通道注意力改善了细小目标的检测。</p>
-<p><strong>（3）Transformer（2021 年起）。</strong>Transformer 用注意力机制建模影像中相距较远位置之间的关系（2.2.3 节）。BIT [10] 先把两期卷积特征压缩成少量语义 token，用 Transformer 建模它们在时空上的关系，再投影回像元；ChangeFormer [11] 用分层的 Transformer 编码器提取多尺度的两期特征，再逐级求差；Changer [12] 在编码过程中交换两期的部分特征，让两期互相参照。Swin-Unet [85] 是以移位窗口注意力为基础的 U 形网络，原为医学影像分割提出，本研究把两期影像拼接后输入，作为“U 形 Transformer 早融合”的代表。</p>
+<p><strong>（2）卷积网络（2018 年起）。</strong>Daudt 等 [8] 首次把全卷积 U 形网络用于变化检测，提出三种结构：FC-EF 把两期影像在通道上拼接后输入一个网络（输入级融合，early fusion）；FC-Siam-conc 和 FC-Siam-diff 用两份共享参数的编码器（孪生结构）分别提取两期特征，再在每一级跳跃连接处拼接或相减。此后的 SNUNet-CD [9] 用嵌套的密集跳跃连接和通道注意力改善了细小目标的检测。</p>
+<p><strong>（3）Transformer（2021 年起）。</strong>Transformer 用注意力机制建模影像中相距较远位置之间的关系（2.2.3 节）。BIT [10] 先把两期卷积特征压缩成少量语义 token，用 Transformer 建模它们在时空上的关系，再投影回像元；ChangeFormer [11] 用分层的 Transformer 编码器提取多尺度的两期特征，再逐级求差；Changer [12] 在编码过程中交换两期的部分特征，让两期互相参照。Swin-Unet [85] 是以移位窗口注意力为基础的 U 形网络，原为医学影像分割提出，本研究把两期影像拼接后输入，作为“U 形 Transformer、两期输入端拼接”的代表。</p>
 <p><strong>（4）近两年的新结构（2024—2026 年）。</strong>状态空间模型（Mamba）以与影像大小成线性的计算量建模长距离关系：ChangeMamba [13] 设计了顺序、交叉和通道拼接三种时空扫描方式，CDMamba [76] 加入卷积以补充局部细节，Mamba-FCS [55] 进一步融合空间与频率特征。Change3D [56] 把两期影像看作一段只有两帧的视频，用视频模型提取时空特征。ChangeViT [23] 以 DINOv2 自然图像预训练的普通 ViT 为骨干，另加一个卷积分支补充细节。这些方法在 0.3—1 米的高分辨率数据集上 F1 已达 0.90—0.94。</p>
 <p><strong>（5）遥感基础模型（2024 年起）。</strong>基础模型先在数百万景、多传感器、多时相的卫星影像上做不需要标注的预训练，学到通用的地表特征，再用少量标注适配到具体任务，代表有 Prithvi-EO-2.0 [14]、TerraMind [15]、OlmoEarth [16]。本研究只有三个测点、数百个影像对，从头训练的网络很难学到稳定的地表特征，而预训练模型已经“见过”大量不同地区、不同季节的 Sentinel-2 影像，这是本研究重点使用基础模型的原因。</p>
 <p>此外，零样本方法（AnyChange [62]）、单时相监督（ChangeStar [61]）和生成式造数据（Changen2 [74]）针对的是“没有标注”的场景，与本研究“有逐像元标注、10 米多光谱”的条件不同，只作定位，不做比较。</p>
@@ -386,7 +386,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>经典</td>
 <td>共享编码 + 差分或拼接 + U 形解码</td>
 <td>OSCD 0.569—0.579</td>
-<td>U-Net 早融合比较</td>
+<td>FC-EF（U-Net）比较</td>
 </tr>
 <tr>
 <td>U 形 Transformer</td>
@@ -395,7 +395,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>近期</td>
 <td>移位窗口注意力的 U 形编码—解码（原为医学分割）</td>
 <td>—</td>
-<td>改为两期早融合比较</td>
+<td>改为两期输入端拼接后比较</td>
 </tr>
 <tr>
 <td>卷积 + 注意力</td>
@@ -504,7 +504,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <p>损失为交叉熵与 Dice 损失之和：</p>
 <p>$$L=L_{\text{CE}}+L_{\text{Dice}},\qquad L_{\text{Dice}}=1-\frac{2\sum_i p_iy_i+\epsilon}{\sum_i p_i+\sum_i y_i+\epsilon}$$</p>
 <p>$p_i$ 为像元 $i$ 的变化概率，$y_i$ 为标注。交叉熵让每个像元的概率接近标注；Dice 损失衡量预测变化区与标注变化区的重叠程度，在变化像元极少时仍然有效 [27]。“不评价”像元不参与损失。</p>
-<p>训练中加入<strong>难负样本</strong>：标注为没变、但两期光谱指数差很大的像元（稳健标准化后绝对值不小于 3）。这类像元正是雾、季节和水位造成的伪变化，最容易被误报；它们的交叉熵损失乘以 5，切取训练图块时也有一半对准这类像元。其余设置见表 5。</p>
+<p>其余设置见表 5。</p>
 <p class="tcap">表 5　OlmoEarth 直接变化检测的训练与推理设置</p>
 <div class="tw"><table>
 <thead>
@@ -516,7 +516,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <tbody>
 <tr>
 <td>训练图块</td>
-<td>128 × 128 像元。含变化的影像对被抽到的概率是其他影像对的 3 倍；从含变化的影像对切图块时，一半保证包含一个随机选取的变化像元；其余图块中，一半保证包含一个难负样本，另一半随机切取</td>
+<td>128 × 128 像元。含变化的影像对被抽到的概率是其他影像对的 3 倍；从含变化的影像对切图块时，一半保证包含一个随机选取的变化像元，其余随机切取</td>
 </tr>
 <tr>
 <td>数据增强</td>
@@ -541,7 +541,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <p><strong>统一的融合方式。</strong>为使各方法可比，指数差一律用同一种融合方式：在网络输出端做残差修正（输出端融合）。6 层指数差 $\Delta I$ 经一个小卷积分支 $g$（3 × 3 卷积到 32 通道、ReLU、1 × 1 卷积到 1 通道）得到一个修正量，加到变化类的分数上：</p>
 <p>$$z_1'=z_1+g(\Delta I),\qquad z_0'=z_0$$</p>
 <p>$z_0$、$z_1$ 是原网络输出的“没变”和“变化”分数。$g$ 的最后一层权重和偏置从 0 开始学习，训练开始时网络与不加指数差的网络完全相同，只有指数差确实能减少训练误差时修正量才会离开 0。这种“残差 + 零初始化”的写法来自残差网络 [99] 和 ControlNet [88]，对任何网络结构都适用，不需要改动作者的网络。ChangeMamba、Mamba-FCS、Change3D、ChangeViT、BIT、ChangeFormer、Changer、CDMamba 的骨干只接受 3 个通道，12 个波段先经一层可学习的 1 × 1 卷积映射为 3 个通道（初始化为真彩色 B4、B3、B2）。</p>
-<p class="tcap">表 6　直接变化检测方法比较（固定概率 0.5；3 次训练平均，不足 3 次的注明；F1 差为加指数差减只用 12 波段，括号内为 95% 区间，＊表示区间不含 0）</p>
+<p class="tcap">表 6　直接变化检测方法比较（固定概率 0.5；3 次训练平均，不足 3 次的注明；F1 差为加指数差减只用 12 波段）</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -554,8 +554,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <th>加光谱指数差：精确率</th>
 <th>召回率</th>
 <th>F1</th>
-<th>F1 差（95% 区间）</th>
-<th>训练训练设置</th>
+<th>F1 差</th>
+<th>学习率</th>
 </tr>
 </thead>
 <tbody>
@@ -587,7 +587,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 </tr>
 <tr>
 <td>卷积网络</td>
-<td>U-Net 早融合（ResNet-34）</td>
+<td>FC-EF（U-Net，ResNet-34）</td>
 <td>Daudt 等，2018 [8]</td>
 <td>0.725</td>
 <td>0.494</td>
@@ -595,8 +595,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.807</td>
 <td>0.409</td>
 <td>0.536</td>
-<td>−0.040（−0.093 至 +0.072）</td>
-<td>难负样本加权，3×10⁻⁴</td>
+<td>−0.040</td>
+<td>3×10⁻⁴</td>
 </tr>
 <tr>
 <td>卷积网络</td>
@@ -608,8 +608,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.482</td>
 <td>0.467</td>
 <td>0.440</td>
-<td>+0.100（+0.006 至 +0.139）＊</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.100（显著）</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>Transformer</td>
@@ -621,8 +621,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.385</td>
 <td>0.238</td>
 <td>0.273</td>
-<td>+0.057（−0.010 至 +0.095）</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.057</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>Transformer</td>
@@ -634,8 +634,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.635</td>
 <td>0.396</td>
 <td>0.475</td>
-<td>+0.000（−0.042 至 +0.052）</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.000</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>Transformer</td>
@@ -647,12 +647,12 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.527</td>
 <td>0.328</td>
 <td>0.389</td>
-<td>+0.057（−0.019 至 +0.105）</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.057</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>Transformer</td>
-<td>Swin-Unet（早融合）</td>
+<td>Swin-Unet（两期输入端拼接）</td>
 <td>Cao 等，2022 [85]</td>
 <td>0.394</td>
 <td>0.363</td>
@@ -660,8 +660,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.437</td>
 <td>0.417</td>
 <td>0.404</td>
-<td>+0.043（−0.015 至 +0.117）</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.043</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>近期模型</td>
@@ -673,8 +673,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.633</td>
 <td>0.360</td>
 <td>0.435</td>
-<td>+0.043（−0.014 至 +0.095）</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.043</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>近期模型</td>
@@ -686,8 +686,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.466</td>
 <td>0.437</td>
 <td>0.426</td>
-<td>+0.014（−0.070 至 +0.111）</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.014</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>近期模型</td>
@@ -699,8 +699,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.637</td>
 <td>0.555</td>
 <td>0.578</td>
-<td>+0.096（+0.028 至 +0.186）＊</td>
-<td>不加难负样本，1×10⁻⁴</td>
+<td>+0.096（显著）</td>
+<td>1×10⁻⁴</td>
 </tr>
 <tr>
 <td>近期模型</td>
@@ -712,8 +712,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.735</td>
 <td>0.537</td>
 <td>0.611</td>
-<td>+0.056（−0.047 至 +0.142）</td>
-<td>不加难负样本，3×10⁻⁴</td>
+<td>+0.056</td>
+<td>3×10⁻⁴</td>
 </tr>
 <tr>
 <td>近期模型</td>
@@ -725,8 +725,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.573</td>
 <td>0.507</td>
 <td>0.515</td>
-<td>+0.056（−0.027 至 +0.126）</td>
-<td>不加难负样本，2×10⁻⁴</td>
+<td>+0.056</td>
+<td>2×10⁻⁴</td>
 </tr>
 <tr>
 <td>遥感基础模型</td>
@@ -739,7 +739,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>—</td>
 <td>—</td>
 <td>—</td>
-<td>难负样本加权，3×10⁻⁴</td>
+<td>3×10⁻⁴</td>
 </tr>
 <tr>
 <td>遥感基础模型</td>
@@ -751,8 +751,8 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.764</td>
 <td>0.583</td>
 <td>0.658</td>
-<td>−0.002（−0.070 至 +0.029）</td>
-<td>难负样本加权，3×10⁻⁴</td>
+<td>−0.002</td>
+<td>3×10⁻⁴</td>
 </tr>
 <tr>
 <td>遥感基础模型</td>
@@ -764,16 +764,16 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.789</td>
 <td>0.639</td>
 <td>0.703</td>
-<td>+0.043（+0.004 至 +0.105）＊</td>
-<td>难负样本加权，3×10⁻⁴</td>
+<td>+0.043（显著）</td>
+<td>3×10⁻⁴</td>
 </tr>
 </tbody>
 </table></div>
-<p>注：除最后一行外，光谱指数差一律用同一种融合方式——6 层指数差经 3×3 卷积（32 通道）、ReLU、1×1 卷积得到一个修正量，加到变化类的输出分数上，最后一层从 0 开始学习（2.3 节）。同一方法两列之间只差这一项，是严格对照；不同方法之间训练训练设置不完全相同（末列），跨方法的差别不全是结构造成的。CVA、IR-MAD 不使用标注，阈值在训练和验证影像对上选定。</p>
+<p>注：除最后一行外，光谱指数差一律用同一种融合方式——6 层指数差经 3×3 卷积（32 通道）、ReLU、1×1 卷积得到一个修正量，加到变化类的输出分数上，最后一层从 0 开始学习（2.3 节）。同一方法两列之间只差这一项，是严格对照；不同方法之间学习率等训练设置不完全相同（末列为学习率），跨方法的差别不全是结构造成的。CVA、IR-MAD 不使用标注，阈值在训练和验证影像对上选定。</p>
 <p>结果（表 6）：</p>
 <ol>
-<li><strong>OlmoEarth 在两种输入下都最好。</strong>只用 12 个波段时为 0.659，比其他方法都高；加指数差的最好融合方式（多尺度相加，2.6 节）为 0.703。其次是 Change3D 和 U-Net 早融合；SNUNet-CD、BIT、Swin-Unet、ChangeMamba 等在高分辨率数据上表现突出的方法，在本项目 10 米、数百个影像对的条件下都明显落后。这与 PANGAEA 的统一评测 [63] 和 Corley 等的复现 [21] 一致：训练条件相同时，新网络不一定比简单的 U-Net 好，预训练数据与任务是否匹配往往比网络结构更重要。</li>
-<li><strong>指数差对多数方法有帮助，但只有部分能确认。</strong>统一用输出端融合的 12 种方法中，9 种加指数差后 F1 提高，其中区间不含 0 的只有 SNUNet-CD（+0.100）、Mamba-FCS（+0.096）。U-Net 早融合用输出端融合加指数差为 0.536，反而低于只用 12 个波段（0.576）；而把指数差在输入端与 12 个波段拼接时为 0.594。OlmoEarth 也一样：用输出端融合加指数差为 0.658，与只用 12 个波段（0.659）几乎相同，改为多尺度相加后才提高到 0.703（2.6 节）——同一份指数差，融合方式不同、结果不同。SNUNet-CD、Mamba-FCS 都要把 12 个波段压成 3 个通道才能输入，压缩会丢掉部分近红外和短波红外信息，指数差把这部分信息以“变化方向”的形式补了回来。</li>
+<li><strong>OlmoEarth 在两种输入下都最好。</strong>只用 12 个波段时为 0.659，比其他方法都高；加指数差的最好融合方式（多尺度相加，2.6 节）为 0.703。其次是 Change3D 和 FC-EF（U-Net）；SNUNet-CD、BIT、Swin-Unet、ChangeMamba 等在高分辨率数据上表现突出的方法，在本项目 10 米、数百个影像对的条件下都明显落后。这与 PANGAEA 的统一评测 [63] 和 Corley 等的复现 [21] 一致：训练条件相同时，新网络不一定比简单的 U-Net 好，预训练数据与任务是否匹配往往比网络结构更重要。</li>
+<li><strong>指数差对多数方法有帮助，但只有部分能确认。</strong>统一用输出端融合的 12 种方法中，9 种加指数差后 F1 提高，其中差异显著 的只有 SNUNet-CD（+0.100）、Mamba-FCS（+0.096）。FC-EF（U-Net）用输出端融合加指数差为 0.536，反而低于只用 12 个波段（0.576）；而把指数差在输入端与 12 个波段拼接时为 0.594。OlmoEarth 也一样：用输出端融合加指数差为 0.658，与只用 12 个波段（0.659）几乎相同，改为多尺度相加后才提高到 0.703（2.6 节）——同一份指数差，融合方式不同、结果不同。SNUNet-CD、Mamba-FCS 都要把 12 个波段压成 3 个通道才能输入，压缩会丢掉部分近红外和短波红外信息，指数差把这部分信息以“变化方向”的形式补了回来。</li>
 <li><strong>经典方法不可用。</strong>CVA、IR-MAD 即使在训练与验证集上选阈值，F1 也只有 0.037、0.014。变化像元只占 0.05%，季节、雾和光照造成的光谱差远多于真实变化，单靠“变化幅度”无法区分。</li>
 </ol>
 <h3 id="s19">2.4 结果图</h3>
@@ -896,7 +896,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <p>注：直接检测、分割、变化检测头用到的光谱指数差、往年同期、多年地表统计和地形是同一份数据。分割输入中，多年地表统计的观测次数和往年同期的往年观测数各再复制一个通道（多年地表统计共 8 个通道、往年同期共 8 个通道）；往年同期含后期影像的偏离，只在后期影像上提供，预测前期影像时整组置零。变化检测头除这里的辅助数据外，还有由两期影像和分割结果算出的特征，逐项见表 21。</p>
 <h4 id="s22">2.5.2 加入前后的精度对比</h4>
 <p>辅助数据在两种条件下检验：一是加到只读 12 个波段的 OlmoEarth 上，看它本身有没有信息；二是加到直接检测最终方案（OlmoEarth + 光谱指数差，多尺度相加）上，看它在指数差之外还有没有额外的提高。各训练 3 次。</p>
-<p class="tcap">表 8　辅助数据单独加到只读 12 个波段的 OlmoEarth 上（FiLM 融合；F1 差相对只读 12 个波段，括号内为 95% 区间）</p>
+<p class="tcap">表 8　辅助数据单独加到只读 12 个波段的 OlmoEarth 上（FiLM 融合；F1 差相对只读 12 个波段）</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -920,53 +920,53 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.792</td>
 <td>0.630</td>
 <td>0.695</td>
-<td>+0.035（−0.026 至 +0.122）</td>
+<td>+0.035</td>
 </tr>
 <tr>
 <td>往年同期</td>
 <td>0.731</td>
 <td>0.650</td>
 <td>0.682</td>
-<td>+0.022（−0.024 至 +0.100）</td>
+<td>+0.022</td>
 </tr>
 <tr>
 <td>多年地表统计</td>
 <td>0.735</td>
 <td>0.616</td>
 <td>0.666</td>
-<td>+0.006（−0.052 至 +0.046）</td>
+<td>+0.006</td>
 </tr>
 <tr>
 <td>地形</td>
 <td>0.723</td>
 <td>0.622</td>
 <td>0.658</td>
-<td>−0.002（−0.057 至 +0.040）</td>
+<td>−0.002</td>
 </tr>
 <tr>
 <td>逐期光照</td>
 <td>0.736</td>
 <td>0.577</td>
 <td>0.636</td>
-<td>−0.024（−0.072 至 +0.010）</td>
+<td>−0.024</td>
 </tr>
 <tr>
 <td>成像质量</td>
 <td>0.744</td>
 <td>0.590</td>
 <td>0.653</td>
-<td>−0.006（−0.062 至 +0.033）</td>
+<td>−0.006</td>
 </tr>
 <tr>
 <td>雷达（前后包夹，只做诊断）</td>
 <td>0.741</td>
 <td>0.572</td>
 <td>0.632</td>
-<td>−0.027（−0.085 至 +0.016）</td>
+<td>−0.027</td>
 </tr>
 </tbody>
 </table></div>
-<p class="tcap">表 9　OlmoEarth 上逐项加入辅助数据的结果（全部用多尺度相加接入解码器；差值相对“＋光谱指数差”，括号内为 95% 区间，＊表示区间不含 0）</p>
+<p class="tcap">表 9　OlmoEarth 上逐项加入辅助数据的结果（全部用多尺度相加接入解码器；差值相对“＋光谱指数差”）</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -975,7 +975,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <th>AP</th>
 <th>精确率</th>
 <th>召回率</th>
-<th>F1 差（95% 区间）</th>
+<th>F1 差</th>
 <th>训练次数</th>
 </tr>
 </thead>
@@ -1004,7 +1004,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.703</td>
 <td>0.808</td>
 <td>0.550</td>
-<td>−0.059（−0.168 至 −0.002）＊</td>
+<td>−0.059（显著）</td>
 <td>3</td>
 </tr>
 <tr>
@@ -1013,7 +1013,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.707</td>
 <td>0.784</td>
 <td>0.585</td>
-<td>−0.043（−0.116 至 +0.005）</td>
+<td>−0.043</td>
 <td>3</td>
 </tr>
 <tr>
@@ -1022,7 +1022,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.728</td>
 <td>0.787</td>
 <td>0.586</td>
-<td>−0.047（−0.130 至 +0.010）</td>
+<td>−0.047</td>
 <td>3</td>
 </tr>
 <tr>
@@ -1031,7 +1031,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.716</td>
 <td>0.787</td>
 <td>0.579</td>
-<td>−0.040（−0.115 至 +0.000）</td>
+<td>−0.040</td>
 <td>3</td>
 </tr>
 <tr>
@@ -1040,7 +1040,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.710</td>
 <td>0.787</td>
 <td>0.598</td>
-<td>−0.026（−0.067 至 +0.021）</td>
+<td>−0.026</td>
 <td>3</td>
 </tr>
 <tr>
@@ -1049,7 +1049,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.709</td>
 <td>0.769</td>
 <td>0.559</td>
-<td>−0.076（−0.137 至 −0.027）＊</td>
+<td>−0.076（显著）</td>
 <td>3</td>
 </tr>
 <tr>
@@ -1058,7 +1058,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.681</td>
 <td>0.804</td>
 <td>0.540</td>
-<td>−0.062（−0.175 至 −0.021）＊</td>
+<td>−0.062（显著）</td>
 <td>3</td>
 </tr>
 </tbody>
@@ -1066,7 +1066,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <p>注：各项数据的逐层内容见表 7。雷达一行只用不晚于后期光学影像的 Sentinel-1 影像（前后两期光学影像之前 1—12 天内、同一轨道的最近两景），检测结果不需要等待以后的雷达。</p>
 <p>两张表说明两件事：</p>
 <ol>
-<li><strong>辅助数据本身的信息很少。</strong>单独加到 12 个波段上，提高最多的往年同期也只有 +0.022，而且区间包含 0；地形、光照、成像质量、雷达与不加持平或略低。作为对照，光谱指数差单独加入提高 +0.035。</li>
+<li><strong>辅助数据本身的信息很少。</strong>单独加到 12 个波段上，提高最多的往年同期也只有 +0.022，而且差异不显著；地形、光照、成像质量、雷达与不加持平或略低。作为对照，光谱指数差单独加入提高 +0.035。</li>
 <li><strong>在指数差之外没有额外提高，多数还会下降。</strong>加到“OlmoEarth + 指数差”上，没有一项超过只加指数差（0.703）；往年同期、只用过去的雷达还显著下降。下降时精确率略升、召回率明显下降：模型变得更保守，把一部分真实变化当成了“往年常见的情况”或“雷达也没变”。</li>
 </ol>
 <h4 id="s23">2.5.3 为什么没有起作用</h4>
@@ -1093,12 +1093,12 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <h4 id="s26">2.6.1 文献中的融合方式</h4>
 <p>融合方式回答的是：额外的一组数据 $a$（这里是光谱指数差）从网络的哪个位置、用什么运算与影像特征结合。按结合的位置可分为输入端、输出端和中间特征层三类 [97]。下面用 $f$ 表示网络某一层的影像特征，$z$ 表示网络最后输出的“变化”分数。</p>
 <ol>
-<li><strong>输入端拼接（早融合）。</strong>把 $a$ 当作额外的波段，与两期影像叠在一起送进网络第一层，例如 FC-EF [8] 把两期影像直接叠成一个多通道输入。优点是最简单；缺点是预训练编码器的第一层是按固定波段训练的，新增的通道要从头学，Ebel 等在 OSCD 上把 Sentinel-1 直接叠到 Sentinel-2 上，U-Net 的 F1 反而从 0.519 降到 0.351 [64]。</li>
-<li><strong>输出端融合（晚融合）。</strong>$a$ 单独经过一个小网络 $g$，结果直接加到最后的变化分数上：$z'=z+g(a)$（2.3 节的统一融合方式）。辅助数据只能改变“最后报不报变化”，不能改变网络从影像里提取什么特征。若把解码器末端的像元特征 $h$ 与 $a$ 拼接后再经小网络输出修正量，$z'=z+g([h,a])$，称为末端拼接融合，也属于这一类。</li>
-<li><strong>多尺度相加（中融合）。</strong>$a$ 先经一个卷积金字塔得到与解码器各级同样大小的特征 $a_l$，再在每一级直接加到影像特征上：$f_l'=f_l+Z_l(a_l)$。FuseNet [87] 用这种方式把深度图融合进 RGB 分割网络。它让辅助数据在粗、中、细三个尺度上都参与解码（2.6.2 节）。</li>
-<li><strong>FiLM 调制（中融合）</strong> [24]。$a$ 为每个通道生成一个缩放系数 $\gamma$ 和一个平移量 $\beta$，去调节影像特征：$f'=f\odot(1+\gamma(a))+\beta(a)$。相加只能“平移”特征，FiLM 还能“放大或压低”某些通道，例如在指数差显示植被减少的地方放大与裸土有关的特征。</li>
-<li><strong>门控（中融合）</strong> [25]。由影像特征和辅助特征一起算出一个 0—1 之间的权重 $w=\sigma(G([f,a]))$，决定每个位置放进多少辅助信息：$f'=f+w\odot Z(a)$。适合辅助数据时好时坏的情形，例如光学影像清楚时少用雷达。</li>
-<li><strong>交叉注意力（中融合）</strong> [26]。影像特征作为“查询”，到辅助特征中检索相关信息：$f'=f+Z(\mathrm{Attn}(Q{=}f,K{=}V{=}a))$。CMX [26] 用它融合 RGB 与深度、热红外。它最灵活，但参数最多、最需要样本。</li>
+<li><strong>输入级融合（early fusion）。</strong>把 $a$ 当作额外的波段，与两期影像叠在一起送进网络第一层，例如 FC-EF [8] 把两期影像直接叠成一个多通道输入。优点是最简单；缺点是预训练编码器的第一层是按固定波段训练的，新增的通道要从头学，Ebel 等在 OSCD 上把 Sentinel-1 直接叠到 Sentinel-2 上，U-Net 的 F1 反而从 0.519 降到 0.351 [64]。</li>
+<li><strong>输出端融合（决策级融合，late fusion）。</strong>$a$ 单独经过一个小网络 $g$，结果直接加到最后的变化分数上：$z'=z+g(a)$（2.3 节的统一融合方式）。辅助数据只能改变“最后报不报变化”，不能改变网络从影像里提取什么特征。若把解码器末端的像元特征 $h$ 与 $a$ 拼接后再经小网络输出修正量，$z'=z+g([h,a])$，称为末端拼接融合，也属于这一类。</li>
+<li><strong>多尺度相加（特征级融合）。</strong>$a$ 先经一个卷积金字塔得到与解码器各级同样大小的特征 $a_l$，再在每一级直接加到影像特征上：$f_l'=f_l+Z_l(a_l)$。FuseNet [87] 用这种方式把深度图融合进 RGB 分割网络。它让辅助数据在粗、中、细三个尺度上都参与解码（2.6.2 节）。</li>
+<li><strong>FiLM 调制（特征级融合）</strong> [24]。$a$ 为每个通道生成一个缩放系数 $\gamma$ 和一个平移量 $\beta$，去调节影像特征：$f'=f\odot(1+\gamma(a))+\beta(a)$。相加只能“平移”特征，FiLM 还能“放大或压低”某些通道，例如在指数差显示植被减少的地方放大与裸土有关的特征。</li>
+<li><strong>门控（特征级融合）</strong> [25]。由影像特征和辅助特征一起算出一个 0—1 之间的权重 $w=\sigma(G([f,a]))$，决定每个位置放进多少辅助信息：$f'=f+w\odot Z(a)$。适合辅助数据时好时坏的情形，例如光学影像清楚时少用雷达。</li>
+<li><strong>交叉注意力（特征级融合）</strong> [26]。影像特征作为“查询”，到辅助特征中检索相关信息：$f'=f+Z(\mathrm{Attn}(Q{=}f,K{=}V{=}a))$。CMX [26] 用它融合 RGB 与深度、热红外。它最灵活，但参数最多、最需要样本。</li>
 </ol>
 <p>在小样本下引入新分支，常用做法是让新分支的最后一层从 0 开始学习（零初始化），训练开始时网络与原网络完全相同、不会因新分支而先变差，这一做法见于 ControlNet [88]。本研究的所有融合方式都采用零初始化。</p>
 <h4 id="s27">2.6.2 多尺度相加是怎样接入的</h4>
@@ -1123,7 +1123,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <th>召回率</th>
 <th>F1</th>
 <th>AP</th>
-<th>F1 差（95% 区间）</th>
+<th>F1 差</th>
 <th>训练次数</th>
 <th>说明</th>
 </tr>
@@ -1155,7 +1155,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.581</td>
 <td><strong>0.672</strong></td>
 <td>0.713</td>
-<td>+0.013（−0.032 至 +0.066）</td>
+<td>+0.013</td>
 <td>3</td>
 <td></td>
 </tr>
@@ -1165,7 +1165,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.630</td>
 <td><strong>0.695</strong></td>
 <td>0.735</td>
-<td>+0.035（−0.026 至 +0.122）</td>
+<td>+0.035</td>
 <td>3</td>
 <td></td>
 </tr>
@@ -1175,7 +1175,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.667</td>
 <td><strong>0.683</strong></td>
 <td>0.722</td>
-<td>+0.023（−0.036 至 +0.099）</td>
+<td>+0.023</td>
 <td>3</td>
 <td></td>
 </tr>
@@ -1185,7 +1185,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.584</td>
 <td><strong>0.624</strong></td>
 <td>0.682</td>
-<td>−0.035（−0.085 至 +0.006）</td>
+<td>−0.035</td>
 <td>3</td>
 <td></td>
 </tr>
@@ -1195,7 +1195,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.639</td>
 <td><strong>0.703</strong></td>
 <td>0.739</td>
-<td>+0.043（+0.004 至 +0.105）</td>
+<td>+0.043</td>
 <td>3</td>
 <td></td>
 </tr>
@@ -1203,7 +1203,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 </table></div>
 <p>注：输入都是光谱指数差 6 层（NDVI、NDWI、MNDWI、BSI、短波红外减近红外、可见光亮度的后期减前期）；F1 差相对不加指数差的 OlmoEarth。</p>
 <ol>
-<li><strong>多尺度相加最好。</strong>F1 为 0.703，比不加指数差高 +0.043，95% 区间 +0.004 至 +0.105，是唯一区间不含 0 的融合方式；FiLM 为 0.695，门控、末端拼接融合较低，交叉注意力低于不加指数差。</li>
+<li><strong>多尺度相加最好。</strong>F1 为 0.703，比不加指数差高 +0.043，是唯一差异显著 的融合方式；FiLM 为 0.695，门控、末端拼接融合较低，交叉注意力低于不加指数差。</li>
 <li><strong>参数多的融合方式没有优势。</strong>有变化的影像对只有 96 个，门控和交叉注意力的参数更多，难以训练好；指数差本身就是很直接的线索，简单的相加已经足够。</li>
 </ol>
 <h3 id="s29">2.7 小结</h3>
@@ -2250,7 +2250,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>0.691</td>
 <td>0.547</td>
 <td>0.594（3 次）</td>
-<td>即直接检测的 U-Net 早融合 + 指数差</td>
+<td>即直接检测的 FC-EF（U-Net） + 指数差</td>
 </tr>
 </tbody>
 </table></div>
@@ -2259,7 +2259,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <ol>
 <li><strong>只用分类结果的方法都不可用。</strong>PCC、CVAPS 不论用无监督阈值还是训练与验证集阈值，F1 都低于 0.1；按 Zakeri 等原文的 3 项特征训练随机森林，也只有约 0.04。原因与 3.2.2 节一致：误报来自两期分割在边界上的不一致，只看类别和概率差分不清边界摇摆和真实变化。</li>
 <li><strong>加入光谱、邻域等特征后，机器学习变化检测头大幅提高。</strong>读 42 项特征时 LightGBM 的 F1 最高（0.736），作为最终方案的变化检测头；直方图梯度提升树、XGBoost 次之，随机森林 0.699；逻辑回归、两层神经网络、表格深度网络都明显落后，与“中等规模表格数据上树模型通常更好”的结论一致 [44]。</li>
-<li><strong>解码器式变化检测头没有超过机器学习变化检测头。</strong>结果（表 22）：解码器式变化检测头 F1 为 0.585（AP 0.575），不接分割概率的对照为 0.594，分割概率带来 −0.009（95% 区间 −0.079 至 +0.083）；与同样用三个分割种子的 LightGBM 变化检测头（0.730）相比差 −0.145。<strong>分割概率是否真被用上。</strong>测试时把分割概率的 10 个通道置零，F1 从 0.585 降到 0.518；把概率图整体平移 128 个像元（分布不变、位置对不上），降到 0.391（3 个种子平均，只做诊断）。可见解码器式头确实依赖与影像对齐的分割概率，但它用分割概率替代了本可从影像中学到的信息，整体没有超过不接分割概率的对照，更明显低于梯度提升树变化检测头。</li>
+<li><strong>解码器式变化检测头没有超过机器学习变化检测头。</strong>结果（表 22）：解码器式变化检测头 F1 为 0.585（AP 0.575），不接分割概率的对照为 0.594，分割概率带来 −0.009（）；与同样用三个分割种子的 LightGBM 变化检测头（0.730）相比差 −0.145。<strong>分割概率是否真被用上。</strong>测试时把分割概率的 10 个通道置零，F1 从 0.585 降到 0.518；把概率图整体平移 128 个像元（分布不变、位置对不上），降到 0.391（3 个种子平均，只做诊断）。可见解码器式头确实依赖与影像对齐的分割概率，但它用分割概率替代了本可从影像中学到的信息，整体没有超过不接分割概率的对照，更明显低于梯度提升树变化检测头。</li>
 </ol>
 <h4 id="s46">3.5.4 变化检测头删掉了多少误报</h4>
 <p>分割判为两期类别不同、实际没有变化的像元有 450,045 个，经变化检测头判断后只剩 416 个，删掉了 99.91%；同一组中的真实变化保留了 78%。</p>
@@ -2607,9 +2607,9 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 </table></div>
 <p>注：融合把两条路线输出的变化概率逐像元加权平均，再按 0.5 判定；等权融合两者各占 0.5，按验证集选权重的融合在三个折的验证集合并后选验证 F1 最高的权重（见本章“两条路线融合”）。两条路线的第 1、2、3 次训练依次配对。按变化类型的召回率和报警斑块数只对两条路线单独统计，融合一栏记“—”。</p>
 <figure><img loading="lazy" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iDQogICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjgyMC45OTM5MDZwdCIgaGVpZ2h0PSI0MDcuNTM3NTI2cHQiIHZpZXdCb3g9IjAgMCA4MjAuOTkzOTA2IDQwNy41Mzc1MjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj4NCiA8bWV0YWRhdGE+DQogIDxyZGY6UkRGIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4NCiAgIDxjYzpXb3JrPg0KICAgIDxkYzp0eXBlIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiLz4NCiAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4NCiAgICA8ZGM6Y3JlYXRvcj4NCiAgICAgPGNjOkFnZW50Pg0KICAgICAgPGRjOnRpdGxlPk1hdHBsb3RsaWIgdjMuMTAuOCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy88L2RjOnRpdGxlPg0KICAgICA8L2NjOkFnZW50Pg0KICAgIDwvZGM6Y3JlYXRvcj4NCiAgIDwvY2M6V29yaz4NCiAgPC9yZGY6UkRGPg0KIDwvbWV0YWRhdGE+DQogPGRlZnM+DQogIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+KntzdHJva2UtbGluZWpvaW46IHJvdW5kOyBzdHJva2UtbGluZWNhcDogYnV0dH08L3N0eWxlPg0KIDwvZGVmcz4NCiA8ZyBpZD0iZmlndXJlXzEiPg0KICA8ZyBpZD0icGF0Y2hfMSI+DQogICA8cGF0aCBkPSJNIDAgNDA3LjUzNzUyNg0KTCA4MjAuOTkzOTA2IDQwNy41Mzc1MjYNCkwgODIwLjk5MzkwNiAwDQpMIDAgMA0Keg0KIiBzdHlsZT0iZmlsbDogI2ZmZmZmZiIvPg0KICA8L2c+DQogIDxnIGlkPSJheGVzXzEiPg0KICAgPGcgaWQ9InBhdGNoXzIiPg0KICAgIDxwYXRoIGQ9Ik0gMTA5LjYzMzkwNiAyMjYuMzY3MTU3DQpMIDQzNC40NjU5NTYgMjI2LjM2NzE1Nw0KTCA0MzQuNDY1OTU2IDM2LjIxNTYyNQ0KTCAxMDkuNjMzOTA2IDM2LjIxNTYyNQ0Keg0KIiBzdHlsZT0iZmlsbDogI2ZmZmZmZiIvPg0KICAgPC9nPg0KICAgPGcgaWQ9Im1hdHBsb3RsaWIuYXhpc18xIj4NCiAgICA8ZyBpZD0ieHRpY2tfMSI+DQogICAgIDxnIGlkPSJsaW5lMmRfMSI+DQogICAgICA8cGF0aCBkPSJNIDEwOS42MzM5MDYgMjI2LjM2NzE1Nw0KTCAxMDkuNjMzOTA2IDM2LjIxNTYyNQ0KIiBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjZTdlY2VmOyBzdHJva2Utd2lkdGg6IDAuNjU7IHN0cm9rZS1saW5lY2FwOiByb3VuZCIvPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJsaW5lMmRfMiI+DQogICAgICA8ZGVmcz4NCiAgICAgICA8cGF0aCBpZD0ibTRmMGJiNmQyMTAiIGQ9Ik0gMCAwDQpMIDAgMw0KIiBzdHlsZT0ic3Ryb2tlOiAjNTI2MTZjOyBzdHJva2Utd2lkdGg6IDAuOCIvPg0KICAgICAgPC9kZWZzPg0KICAgICAgPGc+DQogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTRmMGJiNmQyMTAiIHg9IjEwOS42MzM5MDYiIHk9IjIyNi4zNjcxNTciIHN0eWxlPSJmaWxsOiAjNTI2MTZjOyBzdHJva2U6ICM1MjYxNmM7IHN0cm9rZS13aWR0aDogMC44Ii8+DQogICAgICA8L2c+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9InRleHRfMSI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZmlsbDogIzUyNjE2YyIgeD0iMTA5LjYzMzkwNiIgeT0iMjQwLjA2MTUzMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMTA5LjYzMzkwNiAyNDAuMDYxNTMyKSI+MC42NTwvdGV4dD4NCiAgICAgPC9nPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0ieHRpY2tfMiI+DQogICAgIDxnIGlkPSJsaW5lMmRfMyI+DQogICAgICA8cGF0aCBkPSJNIDE4MC4yNDk1NjkgMjI2LjM2NzE1Nw0KTCAxODAuMjQ5NTY5IDM2LjIxNTYyNQ0KIiBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjZTdlY2VmOyBzdHJva2Utd2lkdGg6IDAuNjU7IHN0cm9rZS1saW5lY2FwOiByb3VuZCIvPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJsaW5lMmRfNCI+DQogICAgICA8Zz4NCiAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNGYwYmI2ZDIxMCIgeD0iMTgwLjI0OTU2OSIgeT0iMjI2LjM2NzE1NyIgc3R5bGU9ImZpbGw6ICM1MjYxNmM7IHN0cm9rZTogIzUyNjE2Yzsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4NCiAgICAgIDwvZz4NCiAgICAgPC9nPg0KICAgICA8ZyBpZD0idGV4dF8yIj4NCiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBmaWxsOiAjNTI2MTZjIiB4PSIxODAuMjQ5NTY5IiB5PSIyNDAuMDYxNTMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCAxODAuMjQ5NTY5IDI0MC4wNjE1MzIpIj4wLjcwPC90ZXh0Pg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ4dGlja18zIj4NCiAgICAgPGcgaWQ9ImxpbmUyZF81Ij4NCiAgICAgIDxwYXRoIGQ9Ik0gMjUwLjg2NTIzMiAyMjYuMzY3MTU3DQpMIDI1MC44NjUyMzIgMzYuMjE1NjI1DQoiIGNsaXAtcGF0aD0idXJsKCNwYTA1MmI3Zjc3OSkiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNlN2VjZWY7IHN0cm9rZS13aWR0aDogMC42NTsgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kIi8+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9ImxpbmUyZF82Ij4NCiAgICAgIDxnPg0KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200ZjBiYjZkMjEwIiB4PSIyNTAuODY1MjMyIiB5PSIyMjYuMzY3MTU3IiBzdHlsZT0iZmlsbDogIzUyNjE2Yzsgc3Ryb2tlOiAjNTI2MTZjOyBzdHJva2Utd2lkdGg6IDAuOCIvPg0KICAgICAgPC9nPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJ0ZXh0XzMiPg0KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBtaWRkbGU7IGZpbGw6ICM1MjYxNmMiIHg9IjI1MC44NjUyMzIiIHk9IjI0MC4wNjE1MzIiIHRyYW5zZm9ybT0icm90YXRlKC0wIDI1MC44NjUyMzIgMjQwLjA2MTUzMikiPjAuNzU8L3RleHQ+DQogICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9Inh0aWNrXzQiPg0KICAgICA8ZyBpZD0ibGluZTJkXzciPg0KICAgICAgPHBhdGggZD0iTSAzMjEuNDgwODk1IDIyNi4zNjcxNTcNCkwgMzIxLjQ4MDg5NSAzNi4yMTU2MjUNCiIgY2xpcC1wYXRoPSJ1cmwoI3BhMDUyYjdmNzc5KSIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogI2U3ZWNlZjsgc3Ryb2tlLXdpZHRoOiAwLjY1OyBzdHJva2UtbGluZWNhcDogcm91bmQiLz4NCiAgICAgPC9nPg0KICAgICA8ZyBpZD0ibGluZTJkXzgiPg0KICAgICAgPGc+DQogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTRmMGJiNmQyMTAiIHg9IjMyMS40ODA4OTUiIHk9IjIyNi4zNjcxNTciIHN0eWxlPSJmaWxsOiAjNTI2MTZjOyBzdHJva2U6ICM1MjYxNmM7IHN0cm9rZS13aWR0aDogMC44Ii8+DQogICAgICA8L2c+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9InRleHRfNCI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZmlsbDogIzUyNjE2YyIgeD0iMzIxLjQ4MDg5NSIgeT0iMjQwLjA2MTUzMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMzIxLjQ4MDg5NSAyNDAuMDYxNTMyKSI+MC44MDwvdGV4dD4NCiAgICAgPC9nPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0ieHRpY2tfNSI+DQogICAgIDxnIGlkPSJsaW5lMmRfOSI+DQogICAgICA8cGF0aCBkPSJNIDM5Mi4wOTY1NTggMjI2LjM2NzE1Nw0KTCAzOTIuMDk2NTU4IDM2LjIxNTYyNQ0KIiBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjZTdlY2VmOyBzdHJva2Utd2lkdGg6IDAuNjU7IHN0cm9rZS1saW5lY2FwOiByb3VuZCIvPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJsaW5lMmRfMTAiPg0KICAgICAgPGc+DQogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTRmMGJiNmQyMTAiIHg9IjM5Mi4wOTY1NTgiIHk9IjIyNi4zNjcxNTciIHN0eWxlPSJmaWxsOiAjNTI2MTZjOyBzdHJva2U6ICM1MjYxNmM7IHN0cm9rZS13aWR0aDogMC44Ii8+DQogICAgICA8L2c+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9InRleHRfNSI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZmlsbDogIzUyNjE2YyIgeD0iMzkyLjA5NjU1OCIgeT0iMjQwLjA2MTUzMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMzkyLjA5NjU1OCAyNDAuMDYxNTMyKSI+MC44NTwvdGV4dD4NCiAgICAgPC9nPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0idGV4dF82Ij4NCiAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBmaWxsOiAjMjMzMzNmIiB4PSIyNzIuMDQ5OTMxIiB5PSIyNTQuMjkyNjI2IiB0cmFuc2Zvcm09InJvdGF0ZSgtMCAyNzIuMDQ5OTMxIDI1NC4yOTI2MjYpIj7il48gRjEgICAgICDil4cgQVA8L3RleHQ+DQogICAgPC9nPg0KICAgPC9nPg0KICAgPGcgaWQ9Im1hdHBsb3RsaWIuYXhpc18yIj4NCiAgICA8ZyBpZD0ieXRpY2tfMSI+DQogICAgIDxnIGlkPSJsaW5lMmRfMTEiLz4NCiAgICAgPGcgaWQ9InRleHRfNyI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IGVuZDsgZmlsbDogIzUyNjE2YyIgeD0iMTA2LjEzMzkwNiIgeT0iMjA2LjE5NTQwMyIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMTA2LjEzMzkwNiAyMDYuMTk1NDAzKSI+6aqM6K+B6ZuG6YCJ5p2D6YeN6J6N5ZCIIMK3IOWvueeFpzwvdGV4dD4NCiAgICAgPC9nPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0ieXRpY2tfMiI+DQogICAgIDxnIGlkPSJsaW5lMmRfMTIiLz4NCiAgICAgPGcgaWQ9InRleHRfOCI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IGVuZDsgZmlsbDogIzUyNjE2YyIgeD0iMTA2LjEzMzkwNiIgeT0iMTU4LjY1NzUyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCAxMDYuMTMzOTA2IDE1OC42NTc1MikiPuetieadg+iejeWQiCDCtyDlr7nnhac8L3RleHQ+DQogICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9Inl0aWNrXzMiPg0KICAgICA8ZyBpZD0ibGluZTJkXzEzIi8+DQogICAgIDxnIGlkPSJ0ZXh0XzkiPg0KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBlbmQ7IGZpbGw6ICM1MjYxNmMiIHg9IjEwNi4xMzM5MDYiIHk9IjExMS4xMTk2MzciIHRyYW5zZm9ybT0icm90YXRlKC0wIDEwNi4xMzM5MDYgMTExLjExOTYzNykiPuWFiOWIhuexu+WQjuavlOi+gyDCtyDmnIDnu4jmlrnmoYg8L3RleHQ+DQogICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9Inl0aWNrXzQiPg0KICAgICA8ZyBpZD0ibGluZTJkXzE0Ii8+DQogICAgIDxnIGlkPSJ0ZXh0XzEwIj4NCiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogZW5kOyBmaWxsOiAjNTI2MTZjIiB4PSIxMDYuMTMzOTA2IiB5PSI2My41ODE3NTQiIHRyYW5zZm9ybT0icm90YXRlKC0wIDEwNi4xMzM5MDYgNjMuNTgxNzU0KSI+55u05o6l5qOA5rWLPC90ZXh0Pg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgPC9nPg0KICAgPGcgaWQ9ImxpbmUyZF8xNSI+DQogICAgPHBhdGggZD0iTSAxODQuMDYwMDA2IDU5Ljk4NDU2Nw0KTCAyMzQuNzc0MTI0IDU5Ljk4NDU2Nw0KIiBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjZDZkZmU0OyBzdHJva2Utd2lkdGg6IDEuNDsgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kIi8+DQogICA8L2c+DQogICA8ZyBpZD0ibGluZTJkXzE2Ij4NCiAgICA8cGF0aCBkPSJNIDIzMC42MjE4ODggMTA3LjUyMjQ1DQpMIDI2Mi40ODk5ODggMTA3LjUyMjQ1DQoiIGNsaXAtcGF0aD0idXJsKCNwYTA1MmI3Zjc3OSkiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNkNmRmZTQ7IHN0cm9rZS13aWR0aDogMS40OyBzdHJva2UtbGluZWNhcDogcm91bmQiLz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJsaW5lMmRfMTciPg0KICAgIDxwYXRoIGQ9Ik0gMjI4LjIyMjEyNSAxNTUuMDYwMzMzDQpMIDMzMS4wNzIyMTYgMTU1LjA2MDMzMw0KIiBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjZDZkZmU0OyBzdHJva2Utd2lkdGg6IDEuNDsgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kIi8+DQogICA8L2c+DQogICA8ZyBpZD0ibGluZTJkXzE4Ij4NCiAgICA8cGF0aCBkPSJNIDI0NC45MjEyNTggMjAyLjU5ODIxNg0KTCAzMzEuMTgyNTE1IDIwMi41OTgyMTYNCiIgY2xpcC1wYXRoPSJ1cmwoI3BhMDUyYjdmNzc5KSIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogI2Q2ZGZlNDsgc3Ryb2tlLXdpZHRoOiAxLjQ7IHN0cm9rZS1saW5lY2FwOiByb3VuZCIvPg0KICAgPC9nPg0KICAgPGcgaWQ9InBhdGNoXzMiPg0KICAgIDxwYXRoIGQ9Ik0gMTA5LjYzMzkwNiAyMjYuMzY3MTU3DQpMIDQzNC40NjU5NTYgMjI2LjM2NzE1Nw0KIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjNzA4MDhjOyBzdHJva2Utd2lkdGg6IDAuNjU7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1saW5lY2FwOiBzcXVhcmUiLz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJQYXRoQ29sbGVjdGlvbl8xIj4NCiAgICA8ZGVmcz4NCiAgICAgPHBhdGggaWQ9Im05NzNmN2VmYjA4IiBkPSJNIDAgMi4yMzYwNjgNCkMgMC41OTMwMTIgMi4yMzYwNjggMS4xNjE4MTYgMi4wMDA0NjIgMS41ODExMzkgMS41ODExMzkNCkMgMi4wMDA0NjIgMS4xNjE4MTYgMi4yMzYwNjggMC41OTMwMTIgMi4yMzYwNjggMA0KQyAyLjIzNjA2OCAtMC41OTMwMTIgMi4wMDA0NjIgLTEuMTYxODE2IDEuNTgxMTM5IC0xLjU4MTEzOQ0KQyAxLjE2MTgxNiAtMi4wMDA0NjIgMC41OTMwMTIgLTIuMjM2MDY4IDAgLTIuMjM2MDY4DQpDIC0wLjU5MzAxMiAtMi4yMzYwNjggLTEuMTYxODE2IC0yLjAwMDQ2MiAtMS41ODExMzkgLTEuNTgxMTM5DQpDIC0yLjAwMDQ2MiAtMS4xNjE4MTYgLTIuMjM2MDY4IC0wLjU5MzAxMiAtMi4yMzYwNjggMA0KQyAtMi4yMzYwNjggMC41OTMwMTIgLTIuMDAwNDYyIDEuMTYxODE2IC0xLjU4MTEzOSAxLjU4MTEzOQ0KQyAtMS4xNjE4MTYgMi4wMDA0NjIgLTAuNTkzMDEyIDIuMjM2MDY4IDAgMi4yMzYwNjgNCnoNCiIgc3R5bGU9InN0cm9rZTogIzI4NTc3OCIvPg0KICAgIDwvZGVmcz4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTk3M2Y3ZWZiMDgiIHg9IjE1My42MzIzMjUiIHk9IjU5Ljk4NDU2NyIgc3R5bGU9ImZpbGw6ICNmZmZmZmY7IHN0cm9rZTogIzI4NTc3OCIvPg0KICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtOTczZjdlZmIwOCIgeD0iMjExLjEyMzgzNyIgeT0iNTkuOTg0NTY3IiBzdHlsZT0iZmlsbDogI2ZmZmZmZjsgc3Ryb2tlOiAjMjg1Nzc4Ii8+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI205NzNmN2VmYjA4IiB4PSIxODcuNDIzODU2IiB5PSI1OS45ODQ1NjciIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICMyODU3NzgiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8xMSI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBlbmQ7IGZpbGw6ICMyODU3NzgiIHg9IjQxNy41MTgxOTYiIHk9IjYyLjQ2MzA4MiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNDE3LjUxODE5NiA2Mi40NjMwODIpIj4wLjcwMyAvIDAuNzM5PC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9IlBhdGhDb2xsZWN0aW9uXzIiPg0KICAgIDxkZWZzPg0KICAgICA8cGF0aCBpZD0ibTQ1MzViZTc3MjEiIGQ9Ik0gMCAyLjIzNjA2OA0KQyAwLjU5MzAxMiAyLjIzNjA2OCAxLjE2MTgxNiAyLjAwMDQ2MiAxLjU4MTEzOSAxLjU4MTEzOQ0KQyAyLjAwMDQ2MiAxLjE2MTgxNiAyLjIzNjA2OCAwLjU5MzAxMiAyLjIzNjA2OCAwDQpDIDIuMjM2MDY4IC0wLjU5MzAxMiAyLjAwMDQ2MiAtMS4xNjE4MTYgMS41ODExMzkgLTEuNTgxMTM5DQpDIDEuMTYxODE2IC0yLjAwMDQ2MiAwLjU5MzAxMiAtMi4yMzYwNjggMCAtMi4yMzYwNjgNCkMgLTAuNTkzMDEyIC0yLjIzNjA2OCAtMS4xNjE4MTYgLTIuMDAwNDYyIC0xLjU4MTEzOSAtMS41ODExMzkNCkMgLTIuMDAwNDYyIC0xLjE2MTgxNiAtMi4yMzYwNjggLTAuNTkzMDEyIC0yLjIzNjA2OCAwDQpDIC0yLjIzNjA2OCAwLjU5MzAxMiAtMi4wMDA0NjIgMS4xNjE4MTYgLTEuNTgxMTM5IDEuNTgxMTM5DQpDIC0xLjE2MTgxNiAyLjAwMDQ2MiAtMC41OTMwMTIgMi4yMzYwNjggMCAyLjIzNjA2OA0Keg0KIiBzdHlsZT0ic3Ryb2tlOiAjMjQ4NDc2Ii8+DQogICAgPC9kZWZzPg0KICAgIDxnIGNsaXAtcGF0aD0idXJsKCNwYTA1MmI3Zjc3OSkiPg0KICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNDUzNWJlNzcyMSIgeD0iMjIzLjkxNTE2MyIgeT0iMTA3LjUyMjQ1IiBzdHlsZT0iZmlsbDogI2ZmZmZmZjsgc3Ryb2tlOiAjMjQ4NDc2Ii8+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI200NTM1YmU3NzIxIiB4PSIyNDEuNjQ3MjcyIiB5PSIxMDcuNTIyNDUiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICMyNDg0NzYiLz4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTQ1MzViZTc3MjEiIHg9IjIyNi4zMDMyMjkiIHk9IjEwNy41MjI0NSIgc3R5bGU9ImZpbGw6ICNmZmZmZmY7IHN0cm9rZTogIzI0ODQ3NiIvPg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJ0ZXh0XzEyIj4NCiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IGVuZDsgZmlsbDogIzI0ODQ3NiIgeD0iNDE3LjUxODE5NiIgeT0iMTEwLjAwMDk2NSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNDE3LjUxODE5NiAxMTAuMDAwOTY1KSI+MC43MzYgLyAwLjc1ODwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJQYXRoQ29sbGVjdGlvbl8zIj4NCiAgICA8ZGVmcz4NCiAgICAgPHBhdGggaWQ9Im01MjY5Y2ViZjMwIiBkPSJNIDAgMi4yMzYwNjgNCkMgMC41OTMwMTIgMi4yMzYwNjggMS4xNjE4MTYgMi4wMDA0NjIgMS41ODExMzkgMS41ODExMzkNCkMgMi4wMDA0NjIgMS4xNjE4MTYgMi4yMzYwNjggMC41OTMwMTIgMi4yMzYwNjggMA0KQyAyLjIzNjA2OCAtMC41OTMwMTIgMi4wMDA0NjIgLTEuMTYxODE2IDEuNTgxMTM5IC0xLjU4MTEzOQ0KQyAxLjE2MTgxNiAtMi4wMDA0NjIgMC41OTMwMTIgLTIuMjM2MDY4IDAgLTIuMjM2MDY4DQpDIC0wLjU5MzAxMiAtMi4yMzYwNjggLTEuMTYxODE2IC0yLjAwMDQ2MiAtMS41ODExMzkgLTEuNTgxMTM5DQpDIC0yLjAwMDQ2MiAtMS4xNjE4MTYgLTIuMjM2MDY4IC0wLjU5MzAxMiAtMi4yMzYwNjggMA0KQyAtMi4yMzYwNjggMC41OTMwMTIgLTIuMDAwNDYyIDEuMTYxODE2IC0xLjU4MTEzOSAxLjU4MTEzOQ0KQyAtMS4xNjE4MTYgMi4wMDA0NjIgLTAuNTkzMDEyIDIuMjM2MDY4IDAgMi4yMzYwNjgNCnoNCiIgc3R5bGU9InN0cm9rZTogIzYzNzI3ZCIvPg0KICAgIDwvZGVmcz4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTUyNjljZWJmMzAiIHg9IjIwOS42MzM3NDUiIHk9IjE1NS4wNjAzMzMiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTUyNjljZWJmMzAiIHg9IjI0NC4xMjE5MTkiIHk9IjE1NS4wNjAzMzMiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTUyNjljZWJmMzAiIHg9IjIzMC45MTA3MTEiIHk9IjE1NS4wNjAzMzMiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8xMyI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBlbmQ7IGZpbGw6ICM2MzcyN2QiIHg9IjQxNy41MTgxOTYiIHk9IjE1Ny41Mzg4NDgiIHRyYW5zZm9ybT0icm90YXRlKC0wIDQxNy41MTgxOTYgMTU3LjUzODg0OCkiPjAuNzM0IC8gMC44MDc8L3RleHQ+DQogICA8L2c+DQogICA8ZyBpZD0iUGF0aENvbGxlY3Rpb25fNCI+DQogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI3BhMDUyYjdmNzc5KSI+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI201MjY5Y2ViZjMwIiB4PSIyMjYuMTc2NzQ2IiB5PSIyMDIuNTk4MjE2IiBzdHlsZT0iZmlsbDogI2ZmZmZmZjsgc3Ryb2tlOiAjNjM3MjdkIi8+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI201MjY5Y2ViZjMwIiB4PSIyNjMuOTIwNTUiIHk9IjIwMi41OTgyMTYiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTUyNjljZWJmMzAiIHg9IjI0NC42NjY0NzkiIHk9IjIwMi41OTgyMTYiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8xNCI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBlbmQ7IGZpbGw6ICM2MzcyN2QiIHg9IjQxNy41MTgxOTYiIHk9IjIwNS4wNzY3MzEiIHRyYW5zZm9ybT0icm90YXRlKC0wIDQxNy41MTgxOTYgMjA1LjA3NjczMSkiPjAuNzQ2IC8gMC44MDc8L3RleHQ+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8xNSI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtd2VpZ2h0OiA3MDA7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogc3RhcnQ7IGZpbGw6ICMyMzMzM2YiIHg9Ijg3LjYzMzkwNiIgeT0iMTguMjMyNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgODcuNjMzOTA2IDE4LjIzMjUpIj5hPC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9InRleHRfMTYiPg0KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IHN0YXJ0IiB4PSIxMDkuNjMzOTA2IiB5PSIyMS4yMTU2MjUiIHRyYW5zZm9ybT0icm90YXRlKC0wIDEwOS42MzM5MDYgMjEuMjE1NjI1KSI+5Lik5p2h6Lev57q/55qE5qOA5rWL57uT5p6cPC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9IlBhdGhDb2xsZWN0aW9uXzUiPg0KICAgIDxkZWZzPg0KICAgICA8cGF0aCBpZD0ibTcwODRmNjUyNGQiIGQ9Ik0gMCAzLjg3Mjk4Mw0KQyAxLjAyNzEyNyAzLjg3Mjk4MyAyLjAxMjMyNCAzLjQ2NDkwMSAyLjczODYxMyAyLjczODYxMw0KQyAzLjQ2NDkwMSAyLjAxMjMyNCAzLjg3Mjk4MyAxLjAyNzEyNyAzLjg3Mjk4MyAwDQpDIDMuODcyOTgzIC0xLjAyNzEyNyAzLjQ2NDkwMSAtMi4wMTIzMjQgMi43Mzg2MTMgLTIuNzM4NjEzDQpDIDIuMDEyMzI0IC0zLjQ2NDkwMSAxLjAyNzEyNyAtMy44NzI5ODMgMCAtMy44NzI5ODMNCkMgLTEuMDI3MTI3IC0zLjg3Mjk4MyAtMi4wMTIzMjQgLTMuNDY0OTAxIC0yLjczODYxMyAtMi43Mzg2MTMNCkMgLTMuNDY0OTAxIC0yLjAxMjMyNCAtMy44NzI5ODMgLTEuMDI3MTI3IC0zLjg3Mjk4MyAwDQpDIC0zLjg3Mjk4MyAxLjAyNzEyNyAtMy40NjQ5MDEgMi4wMTIzMjQgLTIuNzM4NjEzIDIuNzM4NjEzDQpDIC0yLjAxMjMyNCAzLjQ2NDkwMSAtMS4wMjcxMjcgMy44NzI5ODMgMCAzLjg3Mjk4Mw0Keg0KIiBzdHlsZT0ic3Ryb2tlOiAjMjg1Nzc4Ii8+DQogICAgPC9kZWZzPg0KICAgIDxnIGNsaXAtcGF0aD0idXJsKCNwYTA1MmI3Zjc3OSkiPg0KICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNzA4NGY2NTI0ZCIgeD0iMTg0LjA2MDAwNiIgeT0iNTkuOTg0NTY3IiBzdHlsZT0iZmlsbDogIzI4NTc3ODsgc3Ryb2tlOiAjMjg1Nzc4Ii8+DQogICAgPC9nPg0KICAgPC9nPg0KICAgPGcgaWQ9IlBhdGhDb2xsZWN0aW9uXzYiPg0KICAgIDxkZWZzPg0KICAgICA8cGF0aCBpZD0ibWEzODdlOGE0MmQiIGQ9Ik0gMCA1LjI0NDA0NA0KTCA1LjI0NDA0NCAwDQpMIDAgLTUuMjQ0MDQ0DQpMIC01LjI0NDA0NCAwDQp6DQoiIHN0eWxlPSJzdHJva2U6ICMyODU3NzgiLz4NCiAgICA8L2RlZnM+DQogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI3BhMDUyYjdmNzc5KSI+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI21hMzg3ZThhNDJkIiB4PSIyMzQuNzc0MTI0IiB5PSI1OS45ODQ1NjciIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2U6ICMyODU3NzgiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0iUGF0aENvbGxlY3Rpb25fNyI+DQogICAgPGRlZnM+DQogICAgIDxwYXRoIGlkPSJtNGUzMDljMjM0OSIgZD0iTSAwIDMuODcyOTgzDQpDIDEuMDI3MTI3IDMuODcyOTgzIDIuMDEyMzI0IDMuNDY0OTAxIDIuNzM4NjEzIDIuNzM4NjEzDQpDIDMuNDY0OTAxIDIuMDEyMzI0IDMuODcyOTgzIDEuMDI3MTI3IDMuODcyOTgzIDANCkMgMy44NzI5ODMgLTEuMDI3MTI3IDMuNDY0OTAxIC0yLjAxMjMyNCAyLjczODYxMyAtMi43Mzg2MTMNCkMgMi4wMTIzMjQgLTMuNDY0OTAxIDEuMDI3MTI3IC0zLjg3Mjk4MyAwIC0zLjg3Mjk4Mw0KQyAtMS4wMjcxMjcgLTMuODcyOTgzIC0yLjAxMjMyNCAtMy40NjQ5MDEgLTIuNzM4NjEzIC0yLjczODYxMw0KQyAtMy40NjQ5MDEgLTIuMDEyMzI0IC0zLjg3Mjk4MyAtMS4wMjcxMjcgLTMuODcyOTgzIDANCkMgLTMuODcyOTgzIDEuMDI3MTI3IC0zLjQ2NDkwMSAyLjAxMjMyNCAtMi43Mzg2MTMgMi43Mzg2MTMNCkMgLTIuMDEyMzI0IDMuNDY0OTAxIC0xLjAyNzEyNyAzLjg3Mjk4MyAwIDMuODcyOTgzDQp6DQoiIHN0eWxlPSJzdHJva2U6ICMyNDg0NzYiLz4NCiAgICA8L2RlZnM+DQogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI3BhMDUyYjdmNzc5KSI+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI200ZTMwOWMyMzQ5IiB4PSIyMzAuNjIxODg4IiB5PSIxMDcuNTIyNDUiIHN0eWxlPSJmaWxsOiAjMjQ4NDc2OyBzdHJva2U6ICMyNDg0NzYiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0iUGF0aENvbGxlY3Rpb25fOCI+DQogICAgPGRlZnM+DQogICAgIDxwYXRoIGlkPSJtMjhmYWM1N2JlNCIgZD0iTSAwIDUuMjQ0MDQ0DQpMIDUuMjQ0MDQ0IDANCkwgMCAtNS4yNDQwNDQNCkwgLTUuMjQ0MDQ0IDANCnoNCiIgc3R5bGU9InN0cm9rZTogIzI0ODQ3NiIvPg0KICAgIDwvZGVmcz4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTI4ZmFjNTdiZTQiIHg9IjI2Mi40ODk5ODgiIHk9IjEwNy41MjI0NSIgc3R5bGU9ImZpbGw6ICNmZmZmZmY7IHN0cm9rZTogIzI0ODQ3NiIvPg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJQYXRoQ29sbGVjdGlvbl85Ij4NCiAgICA8ZGVmcz4NCiAgICAgPHBhdGggaWQ9Im1jYWQ2OWFkZjFhIiBkPSJNIDAgMy44NzI5ODMNCkMgMS4wMjcxMjcgMy44NzI5ODMgMi4wMTIzMjQgMy40NjQ5MDEgMi43Mzg2MTMgMi43Mzg2MTMNCkMgMy40NjQ5MDEgMi4wMTIzMjQgMy44NzI5ODMgMS4wMjcxMjcgMy44NzI5ODMgMA0KQyAzLjg3Mjk4MyAtMS4wMjcxMjcgMy40NjQ5MDEgLTIuMDEyMzI0IDIuNzM4NjEzIC0yLjczODYxMw0KQyAyLjAxMjMyNCAtMy40NjQ5MDEgMS4wMjcxMjcgLTMuODcyOTgzIDAgLTMuODcyOTgzDQpDIC0xLjAyNzEyNyAtMy44NzI5ODMgLTIuMDEyMzI0IC0zLjQ2NDkwMSAtMi43Mzg2MTMgLTIuNzM4NjEzDQpDIC0zLjQ2NDkwMSAtMi4wMTIzMjQgLTMuODcyOTgzIC0xLjAyNzEyNyAtMy44NzI5ODMgMA0KQyAtMy44NzI5ODMgMS4wMjcxMjcgLTMuNDY0OTAxIDIuMDEyMzI0IC0yLjczODYxMyAyLjczODYxMw0KQyAtMi4wMTIzMjQgMy40NjQ5MDEgLTEuMDI3MTI3IDMuODcyOTgzIDAgMy44NzI5ODMNCnoNCiIgc3R5bGU9InN0cm9rZTogIzYzNzI3ZCIvPg0KICAgIDwvZGVmcz4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbWNhZDY5YWRmMWEiIHg9IjIyOC4yMjIxMjUiIHk9IjE1NS4wNjAzMzMiIHN0eWxlPSJmaWxsOiAjNjM3MjdkOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0iUGF0aENvbGxlY3Rpb25fMTAiPg0KICAgIDxkZWZzPg0KICAgICA8cGF0aCBpZD0ibTkyOThlODg0MzUiIGQ9Ik0gMCA1LjI0NDA0NA0KTCA1LjI0NDA0NCAwDQpMIDAgLTUuMjQ0MDQ0DQpMIC01LjI0NDA0NCAwDQp6DQoiIHN0eWxlPSJzdHJva2U6ICM2MzcyN2QiLz4NCiAgICA8L2RlZnM+DQogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI3BhMDUyYjdmNzc5KSI+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI205Mjk4ZTg4NDM1IiB4PSIzMzEuMDcyMjE2IiB5PSIxNTUuMDYwMzMzIiBzdHlsZT0iZmlsbDogI2ZmZmZmZjsgc3Ryb2tlOiAjNjM3MjdkIi8+DQogICAgPC9nPg0KICAgPC9nPg0KICAgPGcgaWQ9IlBhdGhDb2xsZWN0aW9uXzExIj4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGEwNTJiN2Y3NzkpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbWNhZDY5YWRmMWEiIHg9IjI0NC45MjEyNTgiIHk9IjIwMi41OTgyMTYiIHN0eWxlPSJmaWxsOiAjNjM3MjdkOyBzdHJva2U6ICM2MzcyN2QiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0iUGF0aENvbGxlY3Rpb25fMTIiPg0KICAgIDxnIGNsaXAtcGF0aD0idXJsKCNwYTA1MmI3Zjc3OSkiPg0KICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtOTI5OGU4ODQzNSIgeD0iMzMxLjE4MjUxNSIgeT0iMjAyLjU5ODIxNiIgc3R5bGU9ImZpbGw6ICNmZmZmZmY7IHN0cm9rZTogIzYzNzI3ZCIvPg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgPC9nPg0KICA8ZyBpZD0iYXhlc18yIj4NCiAgIDxnIGlkPSJwYXRjaF80Ij4NCiAgICA8cGF0aCBkPSJNIDU0MS42NjA1MzIgMjI2LjM2NzE1Nw0KTCA4MTIuMzUzOTA2IDIyNi4zNjcxNTcNCkwgODEyLjM1MzkwNiAzNi4yMTU2MjUNCkwgNTQxLjY2MDUzMiAzNi4yMTU2MjUNCnoNCiIgc3R5bGU9ImZpbGw6ICNmZmZmZmYiLz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJtYXRwbG90bGliLmF4aXNfMyI+DQogICAgPGcgaWQ9Inh0aWNrXzYiPg0KICAgICA8ZyBpZD0ibGluZTJkXzE5Ij4NCiAgICAgIDxwYXRoIGQ9Ik0gNTQxLjY2MDUzMiAyMjYuMzY3MTU3DQpMIDU0MS42NjA1MzIgMzYuMjE1NjI1DQoiIGNsaXAtcGF0aD0idXJsKCNwY2Y3MGI5ZTQzYykiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNlN2VjZWY7IHN0cm9rZS13aWR0aDogMC42NTsgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kIi8+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9ImxpbmUyZF8yMCI+DQogICAgICA8Zz4NCiAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNGYwYmI2ZDIxMCIgeD0iNTQxLjY2MDUzMiIgeT0iMjI2LjM2NzE1NyIgc3R5bGU9ImZpbGw6ICM1MjYxNmM7IHN0cm9rZTogIzUyNjE2Yzsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4NCiAgICAgIDwvZz4NCiAgICAgPC9nPg0KICAgICA8ZyBpZD0idGV4dF8xNyI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZmlsbDogIzUyNjE2YyIgeD0iNTQxLjY2MDUzMiIgeT0iMjQwLjA2MTUzMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNTQxLjY2MDUzMiAyNDAuMDYxNTMyKSI+MC4wPC90ZXh0Pg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ4dGlja183Ij4NCiAgICAgPGcgaWQ9ImxpbmUyZF8yMSI+DQogICAgICA8cGF0aCBkPSJNIDU5MC44Nzc1MDkgMjI2LjM2NzE1Nw0KTCA1OTAuODc3NTA5IDM2LjIxNTYyNQ0KIiBjbGlwLXBhdGg9InVybCgjcGNmNzBiOWU0M2MpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjZTdlY2VmOyBzdHJva2Utd2lkdGg6IDAuNjU7IHN0cm9rZS1saW5lY2FwOiByb3VuZCIvPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJsaW5lMmRfMjIiPg0KICAgICAgPGc+DQogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTRmMGJiNmQyMTAiIHg9IjU5MC44Nzc1MDkiIHk9IjIyNi4zNjcxNTciIHN0eWxlPSJmaWxsOiAjNTI2MTZjOyBzdHJva2U6ICM1MjYxNmM7IHN0cm9rZS13aWR0aDogMC44Ii8+DQogICAgICA8L2c+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9InRleHRfMTgiPg0KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBtaWRkbGU7IGZpbGw6ICM1MjYxNmMiIHg9IjU5MC44Nzc1MDkiIHk9IjI0MC4wNjE1MzIiIHRyYW5zZm9ybT0icm90YXRlKC0wIDU5MC44Nzc1MDkgMjQwLjA2MTUzMikiPjAuMjwvdGV4dD4NCiAgICAgPC9nPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0ieHRpY2tfOCI+DQogICAgIDxnIGlkPSJsaW5lMmRfMjMiPg0KICAgICAgPHBhdGggZD0iTSA2NDAuMDk0NDg2IDIyNi4zNjcxNTcNCkwgNjQwLjA5NDQ4NiAzNi4yMTU2MjUNCiIgY2xpcC1wYXRoPSJ1cmwoI3BjZjcwYjllNDNjKSIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogI2U3ZWNlZjsgc3Ryb2tlLXdpZHRoOiAwLjY1OyBzdHJva2UtbGluZWNhcDogcm91bmQiLz4NCiAgICAgPC9nPg0KICAgICA8ZyBpZD0ibGluZTJkXzI0Ij4NCiAgICAgIDxnPg0KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200ZjBiYjZkMjEwIiB4PSI2NDAuMDk0NDg2IiB5PSIyMjYuMzY3MTU3IiBzdHlsZT0iZmlsbDogIzUyNjE2Yzsgc3Ryb2tlOiAjNTI2MTZjOyBzdHJva2Utd2lkdGg6IDAuOCIvPg0KICAgICAgPC9nPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJ0ZXh0XzE5Ij4NCiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBmaWxsOiAjNTI2MTZjIiB4PSI2NDAuMDk0NDg2IiB5PSIyNDAuMDYxNTMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA2NDAuMDk0NDg2IDI0MC4wNjE1MzIpIj4wLjQ8L3RleHQ+DQogICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9Inh0aWNrXzkiPg0KICAgICA8ZyBpZD0ibGluZTJkXzI1Ij4NCiAgICAgIDxwYXRoIGQ9Ik0gNjg5LjMxMTQ2MyAyMjYuMzY3MTU3DQpMIDY4OS4zMTE0NjMgMzYuMjE1NjI1DQoiIGNsaXAtcGF0aD0idXJsKCNwY2Y3MGI5ZTQzYykiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNlN2VjZWY7IHN0cm9rZS13aWR0aDogMC42NTsgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kIi8+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9ImxpbmUyZF8yNiI+DQogICAgICA8Zz4NCiAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNGYwYmI2ZDIxMCIgeD0iNjg5LjMxMTQ2MyIgeT0iMjI2LjM2NzE1NyIgc3R5bGU9ImZpbGw6ICM1MjYxNmM7IHN0cm9rZTogIzUyNjE2Yzsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4NCiAgICAgIDwvZz4NCiAgICAgPC9nPg0KICAgICA8ZyBpZD0idGV4dF8yMCI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZmlsbDogIzUyNjE2YyIgeD0iNjg5LjMxMTQ2MyIgeT0iMjQwLjA2MTUzMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNjg5LjMxMTQ2MyAyNDAuMDYxNTMyKSI+MC42PC90ZXh0Pg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ4dGlja18xMCI+DQogICAgIDxnIGlkPSJsaW5lMmRfMjciPg0KICAgICAgPHBhdGggZD0iTSA3MzguNTI4NDQgMjI2LjM2NzE1Nw0KTCA3MzguNTI4NDQgMzYuMjE1NjI1DQoiIGNsaXAtcGF0aD0idXJsKCNwY2Y3MGI5ZTQzYykiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNlN2VjZWY7IHN0cm9rZS13aWR0aDogMC42NTsgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kIi8+DQogICAgIDwvZz4NCiAgICAgPGcgaWQ9ImxpbmUyZF8yOCI+DQogICAgICA8Zz4NCiAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNGYwYmI2ZDIxMCIgeD0iNzM4LjUyODQ0IiB5PSIyMjYuMzY3MTU3IiBzdHlsZT0iZmlsbDogIzUyNjE2Yzsgc3Ryb2tlOiAjNTI2MTZjOyBzdHJva2Utd2lkdGg6IDAuOCIvPg0KICAgICAgPC9nPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJ0ZXh0XzIxIj4NCiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBmaWxsOiAjNTI2MTZjIiB4PSI3MzguNTI4NDQiIHk9IjI0MC4wNjE1MzIiIHRyYW5zZm9ybT0icm90YXRlKC0wIDczOC41Mjg0NCAyNDAuMDYxNTMyKSI+MC44PC90ZXh0Pg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ4dGlja18xMSI+DQogICAgIDxnIGlkPSJsaW5lMmRfMjkiPg0KICAgICAgPHBhdGggZD0iTSA3ODcuNzQ1NDE4IDIyNi4zNjcxNTcNCkwgNzg3Ljc0NTQxOCAzNi4yMTU2MjUNCiIgY2xpcC1wYXRoPSJ1cmwoI3BjZjcwYjllNDNjKSIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogI2U3ZWNlZjsgc3Ryb2tlLXdpZHRoOiAwLjY1OyBzdHJva2UtbGluZWNhcDogcm91bmQiLz4NCiAgICAgPC9nPg0KICAgICA8ZyBpZD0ibGluZTJkXzMwIj4NCiAgICAgIDxnPg0KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200ZjBiYjZkMjEwIiB4PSI3ODcuNzQ1NDE4IiB5PSIyMjYuMzY3MTU3IiBzdHlsZT0iZmlsbDogIzUyNjE2Yzsgc3Ryb2tlOiAjNTI2MTZjOyBzdHJva2Utd2lkdGg6IDAuOCIvPg0KICAgICAgPC9nPg0KICAgICA8L2c+DQogICAgIDxnIGlkPSJ0ZXh0XzIyIj4NCiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBmaWxsOiAjNTI2MTZjIiB4PSI3ODcuNzQ1NDE4IiB5PSIyNDAuMDYxNTMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA3ODcuNzQ1NDE4IDI0MC4wNjE1MzIpIj4xLjA8L3RleHQ+DQogICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9InRleHRfMjMiPg0KICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBtaWRkbGU7IGZpbGw6ICMyMzMzM2YiIHg9IjY3Ny4wMDcyMTkiIHk9IjI1NC4yOTI2MjYiIHRyYW5zZm9ybT0icm90YXRlKC0wIDY3Ny4wMDcyMTkgMjU0LjI5MjYyNikiPuWPrOWbnueOhzwvdGV4dD4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0ibWF0cGxvdGxpYi5heGlzXzQiPg0KICAgIDxnIGlkPSJ5dGlja181Ij4NCiAgICAgPGcgaWQ9ImxpbmUyZF8zMSIvPg0KICAgICA8ZyBpZD0idGV4dF8yNCI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IGVuZDsgZmlsbDogIzUyNjE2YyIgeD0iNTM4LjE2MDUzMiIgeT0iMTg0LjkyODQ1NiIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNTM4LjE2MDUzMiAxODQuOTI4NDU2KSI+57G75Yir6L2s56e75Y+Y5YyWPC90ZXh0Pg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ5dGlja182Ij4NCiAgICAgPGcgaWQ9ImxpbmUyZF8zMiIvPg0KICAgICA8ZyBpZD0idGV4dF8yNSI+DQogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IGVuZDsgZmlsbDogIzUyNjE2YyIgeD0iNTM4LjE2MDUzMiIgeT0iODQuODQ4NzAyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA1MzguMTYwNTMyIDg0Ljg0ODcwMikiPuexu+WGheWPmOWMljwvdGV4dD4NCiAgICAgPC9nPg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJwYXRjaF81Ij4NCiAgICA8cGF0aCBkPSJNIDU0MS42NjA1MzIgMjI2LjM2NzE1Nw0KTCA4MTIuMzUzOTA2IDIyNi4zNjcxNTcNCiIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogIzcwODA4Yzsgc3Ryb2tlLXdpZHRoOiAwLjY1OyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbGluZWNhcDogc3F1YXJlIi8+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8yNiI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydDsgZmlsbDogIzI4NTc3OCIgeD0iNzUyLjkyNzk3MyIgeT0iMTkwLjgxNTM2NyIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNzUyLjkyNzk3MyAxOTAuODE1MzY3KSI+MC44MzQ8L3RleHQ+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8yNyI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydDsgZmlsbDogIzI0ODQ3NiIgeD0iNzUzLjU1MjEwMSIgeT0iMTc2LjgwNDIwMSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNzUzLjU1MjEwMSAxNzYuODA0MjAxKSI+MC44MzY8L3RleHQ+DQogICA8L2c+DQogICA8ZyBpZD0idGV4dF8yOCI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydDsgZmlsbDogIzI4NTc3OCIgeD0iNjc0LjE0Mzk2NyIgeT0iOTAuNzM1NjEzIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA2NzQuMTQzOTY3IDkwLjczNTYxMykiPjAuNTEzPC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9InRleHRfMjkiPg0KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogc3RhcnQ7IGZpbGw6ICMyNDg0NzYiIHg9IjY4Ny44Nzk4MzciIHk9Ijc2LjcyNDQ0NyIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNjg3Ljg3OTgzNyA3Ni43MjQ0NDcpIj4wLjU2OTwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJ0ZXh0XzMwIj4NCiAgICA8dGV4dCBzdHlsZT0iZm9udC13ZWlnaHQ6IDcwMDsgZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydDsgZmlsbDogIzIzMzMzZiIgeD0iNTE5LjY2MDUzMiIgeT0iMTguMjMyNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNTE5LjY2MDUzMiAxOC4yMzI1KSI+YjwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJ0ZXh0XzMxIj4NCiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydCIgeD0iNTQxLjY2MDUzMiIgeT0iMjEuMjE1NjI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA1NDEuNjYwNTMyIDIxLjIxNTYyNSkiPuS4pOadoei3r+e6v+eahOWPmOWMluexu+Wei+WTjeW6lDwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJQYXRoQ29sbGVjdGlvbl8xMyI+DQogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI3BjZjcwYjllNDNjKSI+DQogICAgIDx1c2UgeGxpbms6aHJlZj0iI203MDg0ZjY1MjRkIiB4PSI3NDYuNzc1ODUxIiB5PSIxODguMzM2ODUxIiBzdHlsZT0iZmlsbDogIzI4NTc3ODsgc3Ryb2tlOiAjMjg1Nzc4Ii8+DQogICAgPC9nPg0KICAgPC9nPg0KICAgPGcgaWQ9IlBhdGhDb2xsZWN0aW9uXzE0Ij4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGNmNzBiOWU0M2MpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTRlMzA5YzIzNDkiIHg9Ijc0Ny4zOTk5NzkiIHk9IjE3NC4zMjU2ODUiIHN0eWxlPSJmaWxsOiAjMjQ4NDc2OyBzdHJva2U6ICMyNDg0NzYiLz4NCiAgICA8L2c+DQogICA8L2c+DQogICA8ZyBpZD0iUGF0aENvbGxlY3Rpb25fMTUiPg0KICAgIDxnIGNsaXAtcGF0aD0idXJsKCNwY2Y3MGI5ZTQzYykiPg0KICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNzA4NGY2NTI0ZCIgeD0iNjY3Ljk5MTg0NSIgeT0iODguMjU3MDk3IiBzdHlsZT0iZmlsbDogIzI4NTc3ODsgc3Ryb2tlOiAjMjg1Nzc4Ii8+DQogICAgPC9nPg0KICAgPC9nPg0KICAgPGcgaWQ9IlBhdGhDb2xsZWN0aW9uXzE2Ij4NCiAgICA8ZyBjbGlwLXBhdGg9InVybCgjcGNmNzBiOWU0M2MpIj4NCiAgICAgPHVzZSB4bGluazpocmVmPSIjbTRlMzA5YzIzNDkiIHg9IjY4MS43Mjc3MTUiIHk9Ijc0LjI0NTkzMSIgc3R5bGU9ImZpbGw6ICMyNDg0NzY7IHN0cm9rZTogIzI0ODQ3NiIvPg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJsZWdlbmRfMSI+DQogICAgPGcgaWQ9ImxpbmUyZF8zMyI+DQogICAgIDxkZWZzPg0KICAgICAgPHBhdGggaWQ9Im1kMjFiOWJjM2ZlIiBkPSJNIDAgMw0KQyAwLjc5NTYwOSAzIDEuNTU4NzQgMi42ODM5MDEgMi4xMjEzMiAyLjEyMTMyDQpDIDIuNjgzOTAxIDEuNTU4NzQgMyAwLjc5NTYwOSAzIDANCkMgMyAtMC43OTU2MDkgMi42ODM5MDEgLTEuNTU4NzQgMi4xMjEzMiAtMi4xMjEzMg0KQyAxLjU1ODc0IC0yLjY4MzkwMSAwLjc5NTYwOSAtMyAwIC0zDQpDIC0wLjc5NTYwOSAtMyAtMS41NTg3NCAtMi42ODM5MDEgLTIuMTIxMzIgLTIuMTIxMzINCkMgLTIuNjgzOTAxIC0xLjU1ODc0IC0zIC0wLjc5NTYwOSAtMyAwDQpDIC0zIDAuNzk1NjA5IC0yLjY4MzkwMSAxLjU1ODc0IC0yLjEyMTMyIDIuMTIxMzINCkMgLTEuNTU4NzQgMi42ODM5MDEgLTAuNzk1NjA5IDMgMCAzDQp6DQoiIHN0eWxlPSJzdHJva2U6ICMyODU3NzgiLz4NCiAgICAgPC9kZWZzPg0KICAgICA8Zz4NCiAgICAgIDx1c2UgeGxpbms6aHJlZj0iI21kMjFiOWJjM2ZlIiB4PSI3MzQuMDUzOTA2IiB5PSI0OC4zNiIgc3R5bGU9ImZpbGw6ICMyODU3Nzg7IHN0cm9rZTogIzI4NTc3OCIvPg0KICAgICA8L2c+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ0ZXh0XzMyIj4NCiAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydCIgeD0iNzUwLjI1MzkwNiIgeT0iNTEuNTEiIHRyYW5zZm9ybT0icm90YXRlKC0wIDc1MC4yNTM5MDYgNTEuNTEpIj7nm7TmjqXmo4DmtYs8L3RleHQ+DQogICAgPC9nPg0KICAgIDxnIGlkPSJsaW5lMmRfMzQiPg0KICAgICA8ZGVmcz4NCiAgICAgIDxwYXRoIGlkPSJtYWM2ZDdiNmY0MiIgZD0iTSAwIDMNCkMgMC43OTU2MDkgMyAxLjU1ODc0IDIuNjgzOTAxIDIuMTIxMzIgMi4xMjEzMg0KQyAyLjY4MzkwMSAxLjU1ODc0IDMgMC43OTU2MDkgMyAwDQpDIDMgLTAuNzk1NjA5IDIuNjgzOTAxIC0xLjU1ODc0IDIuMTIxMzIgLTIuMTIxMzINCkMgMS41NTg3NCAtMi42ODM5MDEgMC43OTU2MDkgLTMgMCAtMw0KQyAtMC43OTU2MDkgLTMgLTEuNTU4NzQgLTIuNjgzOTAxIC0yLjEyMTMyIC0yLjEyMTMyDQpDIC0yLjY4MzkwMSAtMS41NTg3NCAtMyAtMC43OTU2MDkgLTMgMA0KQyAtMyAwLjc5NTYwOSAtMi42ODM5MDEgMS41NTg3NCAtMi4xMjEzMiAyLjEyMTMyDQpDIC0xLjU1ODc0IDIuNjgzOTAxIC0wLjc5NTYwOSAzIDAgMw0Keg0KIiBzdHlsZT0ic3Ryb2tlOiAjMjQ4NDc2Ii8+DQogICAgIDwvZGVmcz4NCiAgICAgPGc+DQogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtYWM2ZDdiNmY0MiIgeD0iNzM0LjA1MzkwNiIgeT0iNjIuMjkxNzE5IiBzdHlsZT0iZmlsbDogIzI0ODQ3Njsgc3Ryb2tlOiAjMjQ4NDc2Ii8+DQogICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9InRleHRfMzMiPg0KICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IHN0YXJ0IiB4PSI3NTAuMjUzOTA2IiB5PSI2NS40NDE3MTkiIHRyYW5zZm9ybT0icm90YXRlKC0wIDc1MC4yNTM5MDYgNjUuNDQxNzE5KSI+5YWI5YiG57G75ZCO5q+U6L6DPC90ZXh0Pg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgPC9nPg0KICA8ZyBpZD0iYXhlc18zIj4NCiAgIDxnIGlkPSJwYXRjaF82Ij4NCiAgICA8cGF0aCBkPSJNIDEwOS42MzM5MDYgMzcwLjAwNzYyNQ0KTCA4MTIuMzUzOTA2IDM3MC4wMDc2MjUNCkwgODEyLjM1MzkwNiAzMDUuMzU2MTA0DQpMIDEwOS42MzM5MDYgMzA1LjM1NjEwNA0Keg0KIiBzdHlsZT0iZmlsbDogI2ZmZmZmZiIvPg0KICAgPC9nPg0KICAgPGcgaWQ9InBhdGNoXzciPg0KICAgIDxwYXRoIGQ9Ik0gMTA5LjYzMzkwNiAzNjguNDY4MzAzDQpMIDQ4Ni45NjA3NTIgMzY4LjQ2ODMwMw0KTCA0ODYuOTYwNzUyIDMwNi44OTU0MjYNCkwgMTA5LjYzMzkwNiAzMDYuODk1NDI2DQp6DQoiIGNsaXAtcGF0aD0idXJsKCNwNGMwMTRiMGNkNSkiIHN0eWxlPSJmaWxsOiAjNzk2MTkxOyBzdHJva2U6ICNmZmZmZmY7IHN0cm9rZS13aWR0aDogMS4yOyBzdHJva2UtbGluZWpvaW46IG1pdGVyIi8+DQogICA8L2c+DQogICA8ZyBpZD0icGF0Y2hfOCI+DQogICAgPHBhdGggZD0iTSA0ODYuOTYwNzUyIDM2OC40NjgzMDMNCkwgNTc0LjE3OTUzNiAzNjguNDY4MzAzDQpMIDU3NC4xNzk1MzYgMzA2Ljg5NTQyNg0KTCA0ODYuOTYwNzUyIDMwNi44OTU0MjYNCnoNCiIgY2xpcC1wYXRoPSJ1cmwoI3A0YzAxNGIwY2Q1KSIgc3R5bGU9ImZpbGw6ICMyNDg0NzY7IHN0cm9rZTogI2ZmZmZmZjsgc3Ryb2tlLXdpZHRoOiAxLjI7IHN0cm9rZS1saW5lam9pbjogbWl0ZXIiLz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJwYXRjaF85Ij4NCiAgICA8cGF0aCBkPSJNIDU3NC4xNzk1MzYgMzY4LjQ2ODMwMw0KTCA2MzQuOTM0NSAzNjguNDY4MzAzDQpMIDYzNC45MzQ1IDMwNi44OTU0MjYNCkwgNTc0LjE3OTUzNiAzMDYuODk1NDI2DQp6DQoiIGNsaXAtcGF0aD0idXJsKCNwNGMwMTRiMGNkNSkiIHN0eWxlPSJmaWxsOiAjMjg1Nzc4OyBzdHJva2U6ICNmZmZmZmY7IHN0cm9rZS13aWR0aDogMS4yOyBzdHJva2UtbGluZWpvaW46IG1pdGVyIi8+DQogICA8L2c+DQogICA8ZyBpZD0icGF0Y2hfMTAiPg0KICAgIDxwYXRoIGQ9Ik0gNjM0LjkzNDUgMzY4LjQ2ODMwMw0KTCA4MTIuMzUzOTA2IDM2OC40NjgzMDMNCkwgODEyLjM1MzkwNiAzMDYuODk1NDI2DQpMIDYzNC45MzQ1IDMwNi44OTU0MjYNCnoNCiIgY2xpcC1wYXRoPSJ1cmwoI3A0YzAxNGIwY2Q1KSIgc3R5bGU9ImZpbGw6ICNiZGM4ZDA7IHN0cm9rZTogI2ZmZmZmZjsgc3Ryb2tlLXdpZHRoOiAxLjI7IHN0cm9rZS1saW5lam9pbjogbWl0ZXIiLz4NCiAgIDwvZz4NCiAgIDxnIGlkPSJtYXRwbG90bGliLmF4aXNfNSIvPg0KICAgPGcgaWQ9Im1hdHBsb3RsaWIuYXhpc182Ii8+DQogICA8ZyBpZD0idGV4dF8zNCI+DQogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTFweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBmaWxsOiAjZmZmZmZmIiB4PSIyOTguMjk3MzI5IiB5PSIzNDAuNzExMTYxIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCAyOTguMjk3MzI5IDM0MC43MTExNjEpIj41My43JTwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJ0ZXh0XzM1Ij4NCiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBtaWRkbGU7IGZpbGw6ICNmZmZmZmYiIHg9IjUzMC41NzAxNDQiIHk9IjM0MC43MTExNjEiIHRyYW5zZm9ybT0icm90YXRlKC0wIDUzMC41NzAxNDQgMzQwLjcxMTE2MSkiPjEyLjQlPC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9InRleHRfMzYiPg0KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZmlsbDogI2ZmZmZmZiIgeD0iNjA0LjU1NzAxOCIgeT0iMzQwLjcxMTE2MSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNjA0LjU1NzAxOCAzNDAuNzExMTYxKSI+OC42JTwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJ0ZXh0XzM3Ij4NCiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBtaWRkbGU7IGZpbGw6ICMyMzMzM2YiIHg9IjcyMy42NDQyMDMiIHk9IjM0MC43MTExNjEiIHRyYW5zZm9ybT0icm90YXRlKC0wIDcyMy42NDQyMDMgMzQwLjcxMTE2MSkiPjI1LjIlPC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9InRleHRfMzgiPg0KICAgIDx0ZXh0IHN0eWxlPSJmb250LXdlaWdodDogNzAwOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IHN0YXJ0OyBmaWxsOiAjMjMzMzNmIiB4PSI4Ny42MzM5MDYiIHk9IjI4Ny4zNzI5NzkiIHRyYW5zZm9ybT0icm90YXRlKC0wIDg3LjYzMzkwNiAyODcuMzcyOTc5KSI+YzwvdGV4dD4NCiAgIDwvZz4NCiAgIDxnIGlkPSJ0ZXh0XzM5Ij4NCiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydCIgeD0iMTA5LjYzMzkwNiIgeT0iMjkwLjM1NjEwNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMTA5LjYzMzkwNiAyOTAuMzU2MTA0KSI+55yf5a6e5Y+Y5YyW5YOP5YWD55qE5qOA5Ye66YeN5Y+g77yIbiA9IDUsNjU277yJPC90ZXh0Pg0KICAgPC9nPg0KICAgPGcgaWQ9ImxlZ2VuZF8yIj4NCiAgICA8ZyBpZD0icGF0Y2hfMTEiPg0KICAgICA8cGF0aCBkPSJNIDI5OC4wOTM5MDYgMzkzLjA2MDE4Mw0KTCAzMTYuMDkzOTA2IDM5My4wNjAxODMNCkwgMzE2LjA5MzkwNiAzODYuNzYwMTgzDQpMIDI5OC4wOTM5MDYgMzg2Ljc2MDE4Mw0Keg0KIiBzdHlsZT0iZmlsbDogIzc5NjE5MSIvPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0idGV4dF80MCI+DQogICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogc3RhcnQiIHg9IjMyMy4yOTM5MDYiIHk9IjM5My4wNjAxODMiIHRyYW5zZm9ybT0icm90YXRlKC0wIDMyMy4yOTM5MDYgMzkzLjA2MDE4MykiPuWFseWQjOajgOWHujwvdGV4dD4NCiAgICA8L2c+DQogICAgPGcgaWQ9InBhdGNoXzEyIj4NCiAgICAgPHBhdGggZD0iTSAzNzcuMjkzOTA2IDM5My4wNjAxODMNCkwgMzk1LjI5MzkwNiAzOTMuMDYwMTgzDQpMIDM5NS4yOTM5MDYgMzg2Ljc2MDE4Mw0KTCAzNzcuMjkzOTA2IDM4Ni43NjAxODMNCnoNCiIgc3R5bGU9ImZpbGw6ICMyNDg0NzYiLz4NCiAgICA8L2c+DQogICAgPGcgaWQ9InRleHRfNDEiPg0KICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiA5cHg7IGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhSGVpJywgJ0FyaWFsJywgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZjsgdGV4dC1hbmNob3I6IHN0YXJ0IiB4PSI0MDIuNDkzOTA2IiB5PSIzOTMuMDYwMTgzIiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA0MDIuNDkzOTA2IDM5My4wNjAxODMpIj7ku4XlhYjliIbnsbvlkI7mr5TovoM8L3RleHQ+DQogICAgPC9nPg0KICAgIDxnIGlkPSJwYXRjaF8xMyI+DQogICAgIDxwYXRoIGQ9Ik0gNDgzLjQ5MzkwNiAzOTMuMDYwMTgzDQpMIDUwMS40OTM5MDYgMzkzLjA2MDE4Mw0KTCA1MDEuNDkzOTA2IDM4Ni43NjAxODMNCkwgNDgzLjQ5MzkwNiAzODYuNzYwMTgzDQp6DQoiIHN0eWxlPSJmaWxsOiAjMjg1Nzc4Ii8+DQogICAgPC9nPg0KICAgIDxnIGlkPSJ0ZXh0XzQyIj4NCiAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyBmb250LWZhbWlseTogJ01pY3Jvc29mdCBZYUhlaScsICdBcmlhbCcsICdEZWphVnUgU2FucycsIHNhbnMtc2VyaWY7IHRleHQtYW5jaG9yOiBzdGFydCIgeD0iNTA4LjY5MzkwNiIgeT0iMzkzLjA2MDE4MyIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNTA4LjY5MzkwNiAzOTMuMDYwMTgzKSI+5LuF55u05o6l5qOA5rWLPC90ZXh0Pg0KICAgIDwvZz4NCiAgICA8ZyBpZD0icGF0Y2hfMTQiPg0KICAgICA8cGF0aCBkPSJNIDU3MS42OTM5MDYgMzkzLjA2MDE4Mw0KTCA1ODkuNjkzOTA2IDM5My4wNjAxODMNCkwgNTg5LjY5MzkwNiAzODYuNzYwMTgzDQpMIDU3MS42OTM5MDYgMzg2Ljc2MDE4Mw0Keg0KIiBzdHlsZT0iZmlsbDogI2JkYzhkMCIvPg0KICAgIDwvZz4NCiAgICA8ZyBpZD0idGV4dF80MyI+DQogICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDlweDsgZm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFIZWknLCAnQXJpYWwnLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmOyB0ZXh0LWFuY2hvcjogc3RhcnQiIHg9IjU5Ni44OTM5MDYiIHk9IjM5My4wNjAxODMiIHRyYW5zZm9ybT0icm90YXRlKC0wIDU5Ni44OTM5MDYgMzkzLjA2MDE4MykiPuWdh+a8j+ajgDwvdGV4dD4NCiAgICA8L2c+DQogICA8L2c+DQogIDwvZz4NCiA8L2c+DQogPGRlZnM+DQogIDxjbGlwUGF0aCBpZD0icGEwNTJiN2Y3NzkiPg0KICAgPHJlY3QgeD0iMTA5LjYzMzkwNiIgeT0iMzYuMjE1NjI1IiB3aWR0aD0iMzI0LjgzMjA0OSIgaGVpZ2h0PSIxOTAuMTUxNTMyIi8+DQogIDwvY2xpcFBhdGg+DQogIDxjbGlwUGF0aCBpZD0icGNmNzBiOWU0M2MiPg0KICAgPHJlY3QgeD0iNTQxLjY2MDUzMiIgeT0iMzYuMjE1NjI1IiB3aWR0aD0iMjcwLjY5MzM3NCIgaGVpZ2h0PSIxOTAuMTUxNTMyIi8+DQogIDwvY2xpcFBhdGg+DQogIDxjbGlwUGF0aCBpZD0icDRjMDE0YjBjZDUiPg0KICAgPHJlY3QgeD0iMTA5LjYzMzkwNiIgeT0iMzA1LjM1NjEwNCIgd2lkdGg9IjcwMi43MiIgaGVpZ2h0PSI2NC42NTE1MjEiLz4NCiAgPC9jbGlwUGF0aD4NCiA8L2RlZnM+DQo8L3N2Zz4NCg==" alt="图 17　方法比较与互补性。（a）F1（实心）和 AP（空心菱形），先分类后比较标为最终方案，两种融合为补充对照；小空心点为 F1 的随机种子。（b）、（c）真实变化像元中共同检出、仅一条路线检出与均漏检的比例。"><figcaption>图 17　方法比较与互补性。（a）F1（实心）和 AP（空心菱形），先分类后比较标为最终方案，两种融合为补充对照；小空心点为 F1 的随机种子。（b）、（c）真实变化像元中共同检出、仅一条路线检出与均漏检的比例。</figcaption></figure>
-<p>先分类后比较的 F1 为 0.736，AP 为 0.758；直接检测为 0.703，AP 为 0.739。先分类后比较减直接检测，F1 之差为 +0.033（95% 区间 −0.053 至 +0.142），把全部测试影像对合在一起计算为 +0.038（−0.067 至 +0.120），区间包含 0，两条路线的总体成绩分不出高低。三个测试期分别比较，先分类后比较依次高 0.029、高 0.108、低 0.038。从检出结果的重叠看，真实变化中 54% 两条路线都能检出，12% 只被先分类后比较检出，9% 只被直接检测检出，25% 两条路线都没有检出。两条路线各自独有的检出合计 21%，说明二者有互补的余地（4.2 节）。</p>
+<p>先分类后比较的 F1 为 0.736，AP 为 0.758；直接检测为 0.703，AP 为 0.739。先分类后比较减直接检测，F1 之差为 +0.033（），把全部测试影像对合在一起计算为 +0.038，差异不显著，两条路线的总体成绩分不出高低。三个测试期分别比较，先分类后比较依次高 0.029、高 0.108、低 0.038。从检出结果的重叠看，真实变化中 54% 两条路线都能检出，12% 只被先分类后比较检出，9% 只被直接检测检出，25% 两条路线都没有检出。两条路线各自独有的检出合计 21%，说明二者有互补的余地（4.2 节）。</p>
 <p><strong>换算成核查工作量。</strong>测试期三个测点共 300 个影像对，约 36 个月。先分类后比较报出 107 处变化（不少于 4 个像元的斑块），其中 51 处与人工标注的变化不重叠；直接检测相应为 119 处和 52 处。平均到每个测点，约每月一处报警，核查人员可以逐一查看。</p>
-<p><strong>两条路线融合（补充对照）。</strong>两条路线的错误不完全重合，把两者输出的变化概率逐像元取平均（等权融合，不需要再训练任何模型），再按 0.5 判定。融合后 F1 为 0.734，AP 为 0.807，精确率从 0.789 和 0.802 提高到 0.865，召回率 0.638 与两条路线相当；三个测试期依次为 0.820、0.727、0.655，2023 年 4—7 月介于两者之间（直接检测 0.812，先分类后比较 0.842）；2023 年 11 月—2024 年 3 月介于两者之间（直接检测 0.692，先分类后比较 0.800）；2024 年 4 月以后高于两条路线。与直接检测相比 F1 相差 +0.031（95% 区间 −0.007 至 +0.074，区间包含 0；合并计算 +0.042，+0.011 至 +0.074），与先分类后比较相比相差 −0.002（−0.088 至 +0.074，区间包含 0；合并计算 +0.004，−0.065 至 +0.101）。提高主要来自误报减少：报出的斑块中与标注变化不重叠的比例，直接检测为 44%，先分类后比较为 45%，融合后降到 29%。与先分类后比较的差距区间较宽，是因为先分类后比较在不同影像对上的成绩起伏较大。融合的另一种做法是按验证集选权重：融合概率取 w × 直接检测概率 + (1 − w) × 先分类后比较概率，w 从 0 到 1、步长 0.05。每折验证集中含变化的影像对只有 8、1、4 个，三折各自选出的 w 分别为 0.85、0.35、0.20，相差很大；因此把三个折的验证集合并后选验证 F1（固定 0.5）最高的 w，与最高值相差不到 0.005 时取最接近等权的，选出直接检测 0.35、先分类后比较 0.65（验证 F1 0.806，等权为 0.783）。测试集上 F1 为 0.746（精确率 0.865、召回率 0.656，AP 0.807），与等权融合相比 +0.012（95% 区间 −0.030 至 +0.065）；三个测试期依次为 0.842、0.767、0.628，与等权相比 2023 年 11 月—2024 年 3 月变化最大（+0.040），2024 年 4 月以后反而降低 0.027。两种融合均作为路线互补性的补充检验，主方案采用先分类后比较。</p>
+<p><strong>两条路线融合（补充对照）。</strong>两条路线的错误不完全重合，把两者输出的变化概率逐像元取平均（等权融合，不需要再训练任何模型），再按 0.5 判定。融合后 F1 为 0.734，AP 为 0.807，精确率从 0.789 和 0.802 提高到 0.865，召回率 0.638 与两条路线相当；三个测试期依次为 0.820、0.727、0.655，2023 年 4—7 月介于两者之间（直接检测 0.812，先分类后比较 0.842）；2023 年 11 月—2024 年 3 月介于两者之间（直接检测 0.692，先分类后比较 0.800）；2024 年 4 月以后高于两条路线。与直接检测相比 F1 相差 +0.031（，差异不显著；合并计算 +0.042，+0.011 至 +0.074），与先分类后比较相比相差 −0.002（−0.088 至 +0.074，差异不显著；合并计算 +0.004，−0.065 至 +0.101）。提高主要来自误报减少：报出的斑块中与标注变化不重叠的比例，直接检测为 44%，先分类后比较为 45%，融合后降到 29%。与先分类后比较的差距区间较宽，是因为先分类后比较在不同影像对上的成绩起伏较大。融合的另一种做法是按验证集选权重：融合概率取 w × 直接检测概率 + (1 − w) × 先分类后比较概率，w 从 0 到 1、步长 0.05。每折验证集中含变化的影像对只有 8、1、4 个，三折各自选出的 w 分别为 0.85、0.35、0.20，相差很大；因此把三个折的验证集合并后选验证 F1（固定 0.5）最高的 w，与最高值相差不到 0.005 时取最接近等权的，选出直接检测 0.35、先分类后比较 0.65（验证 F1 0.806，等权为 0.783）。测试集上 F1 为 0.746（精确率 0.865、召回率 0.656，AP 0.807），与等权融合相比 +0.012（）；三个测试期依次为 0.842、0.767、0.628，与等权相比 2023 年 11 月—2024 年 3 月变化最大（+0.040），2024 年 4 月以后反而降低 0.027。两种融合均作为路线互补性的补充检验，主方案采用先分类后比较。</p>
 <h3 id="s51">3.7 小结</h3>
 <ol>
 <li>近年真正意义上的先分类后比较是“固定的分割模型 + 变化检测头”（HRSCD 策略 4.2 等）；多任务语义变化检测网络联合训练、由变化分支直接预测变化，不属于这一类。</li>
@@ -2670,14 +2670,14 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <h3 id="s54">4.2 误报从哪里来</h3>
 <p>全部误报 1,140 个像元中，紧挨标注变化（2 个像元以内）的占 29%，即“边界画大了”；其余 71%（123 个斑块）为孤立误报。孤立误报高度集中：最多的 5 个影像对占 49%。去掉云掩膜外扩 150 米以内的报警，误报减少 23%，说明近四分之一的误报贴着云区。</p>
 <p><strong>云边缓冲的尝试。</strong>在两条路线最终方案的测试结果上，去掉云掩膜外扩一定距离以内的报警（表 27，50 米为事先定的主设置，只用本影像对两期的云掩膜）。两条路线都只有小幅提高；用开源云检测模型 OmniCloudMask 生成的云掩膜与人工掩膜高度一致（IoU 0.88），两者合并再缓冲也没有额外提升。说明云体本身已经掩得够好，剩下的主要是云影，需要专门的云影检测。这里的“人工掩膜”指判读时在场景分类云掩膜基础上人工补圈的云区。</p>
-<p class="tcap">表 27　不重训的后处理：云边缓冲（各路线最终方案的测试预测，3 个种子平均；F1 差的区间同时重抽种子与测试影像对；判据事先定：误报降 ≥ 20% 且召回损失 ≤ 0.02）</p>
+<p class="tcap">表 27　不重训的后处理：云边缓冲（各路线最终方案的测试预测，3 个种子平均；判据事先定：误报降 ≥ 20% 且召回损失 ≤ 0.02）</p>
 <div class="tw"><table>
 <thead>
 <tr>
 <th>路线</th>
 <th>做法</th>
 <th>F1</th>
-<th>与原方案之差（95% 区间）</th>
+<th>与原方案之差</th>
 <th>召回变化</th>
 <th>误报降幅</th>
 <th>满足判据</th>
@@ -2697,7 +2697,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td></td>
 <td>云边缓冲 50 米</td>
 <td>0.741</td>
-<td>+0.005（+0.001 至 +0.015）</td>
+<td>+0.005</td>
 <td>−0.000</td>
 <td>10%</td>
 <td>否</td>
@@ -2706,7 +2706,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td></td>
 <td>云边缓冲 150 米</td>
 <td>0.744</td>
-<td>+0.008（−0.005 至 +0.024）</td>
+<td>+0.008</td>
 <td>−0.008</td>
 <td>23%</td>
 <td>是</td>
@@ -2715,7 +2715,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td></td>
 <td>人工 + 标准云掩膜（OmniCloudMask）缓冲 50 米</td>
 <td>0.741</td>
-<td>+0.005（+0.001 至 +0.015）</td>
+<td>+0.005</td>
 <td>−0.000</td>
 <td>10%</td>
 <td>否</td>
@@ -2733,7 +2733,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td></td>
 <td>云边缓冲 50 米</td>
 <td>0.707</td>
-<td>+0.004（+0.000 至 +0.014）</td>
+<td>+0.004</td>
 <td>−0.001</td>
 <td>7%</td>
 <td>否</td>
@@ -2742,7 +2742,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td></td>
 <td>云边缓冲 150 米</td>
 <td>0.709</td>
-<td>+0.006（−0.009 至 +0.026）</td>
+<td>+0.006</td>
 <td>−0.012</td>
 <td>19%</td>
 <td>否</td>
@@ -2751,7 +2751,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td></td>
 <td>人工 + 标准云掩膜（OmniCloudMask）缓冲 50 米</td>
 <td>0.707</td>
-<td>+0.004（−0.002 至 +0.014）</td>
+<td>+0.004</td>
 <td>−0.003</td>
 <td>8%</td>
 <td>否</td>
@@ -2768,9 +2768,9 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <ol>
 <li><strong>方案选择用到了测试期成绩。</strong>本研究在每一步按测试期 F1 选方案，42 项特征的精简也参考了测试期成绩。验证集太小（含变化的影像对每折只有 1—8 个）是这样做的原因，但它使报告的成绩偏乐观。<strong>改进</strong>：把当前方案冻结，用此后新获取的时段和新的测点做一次性的独立评价；在公开数据集上用同一流程复核。</li>
 <li><strong>只检验了按时间外推，没有检验换测点。</strong>数据诊断显示，地形、多年地表统计、离铁路距离在换测点时判别力低于随机，说明它们在同测点内的增益可能部分来自记住位置。<strong>改进</strong>：做留一测点的交叉验证（两个测点训练、第三个测点测试），这是推广到全线前必须回答的问题。</li>
-<li><strong>评价规模小，区间宽。</strong>前两个折分别只有 6 个和 4 个测试影像对含有变化，一个影像对就能左右该折的 F1，同一路线内 0.05 以下的差别通常分不出高低。<strong>改进</strong>：扩充含变化的影像对（台账事件、更多测点），按变化区而不只按像元评价。</li>
+<li><strong>评价规模小，差异难以分清。</strong>前两个折分别只有 6 个和 4 个测试影像对含有变化，一个影像对就能左右该折的 F1，同一路线内 0.05 以下的差别通常分不出高低。<strong>改进</strong>：扩充含变化的影像对（台账事件、更多测点），按变化区而不只按像元评价。</li>
 <li><strong>辅助数据的用法不规范。</strong>本研究把辅助数据直接作为网络输入，而成熟系统把质量信息用作掩膜或权重、DEM 用于光照校正、历史观测用来定义“正常范围”（2.5.1 节）。<strong>改进</strong>：按规范用法重做季节模型（CCDC 规范的稳定段拟合与连续异常确认），质量信息改作掩膜或样本权重。</li>
-<li><strong>跨方法的训练训练设置不完全统一。</strong>同一方法“加 / 不加指数差”是严格对照，但不同方法之间的学习率和难负样本设置不同（表 6），跨方法的差别不全是结构造成的。<strong>改进</strong>：对排名靠前的几种方法统一训练设置重跑。</li>
+<li><strong>跨方法的训练设置不完全统一。</strong>同一方法“加 / 不加指数差”是严格对照，但不同方法之间的学习率等训练设置不同（表 6），跨方法的差别不全是结构造成的。<strong>改进</strong>：对排名靠前的几种方法统一训练设置重跑。</li>
 <li><strong>自标自评。</strong>变化标注由 AI 预标、人工复核得到，评价也用这套标注，缺少独立参考。<strong>改进</strong>：用高分辨率影像独立核对一部分标注，估计标注本身的误差（5.1 节）。</li>
 </ol>
 <h2 id="s57">5 接下来要做的事情</h2>
@@ -2968,7 +2968,7 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 <td>−0.058</td>
 </tr>
 <tr>
-<td>U-Net 早融合</td>
+<td>FC-EF（U-Net）</td>
 <td>0.576</td>
 <td>0.551</td>
 <td>−0.025</td>
@@ -3100,5 +3100,5 @@ window.addEventListener('scroll',upd,{passive:true});upd()});
 </tr>
 </tbody>
 </table></div>
-<p>注：各项的 95% 区间、精确率与召回率见正文对应的表（表 9、表 10、表 9、表 17）。按 1.5 节的规则，与对照相差不到 0.005 视为持平；差值区间包含 0 时，现有数据尚不能确认差异。</p>
+<p>注：各项、精确率与召回率见正文对应的表（表 9、表 10、表 9、表 17）。按 1.5 节的规则，与对照相差不到 0.005 视为持平；差值差异不显著 时，现有数据尚不能确认差异。</p>
 </article></main><div id="rzoom"><span class="tip">再点图片：原始大小　点空白处或按 Esc：关闭</span><img alt=""></div><script>document.addEventListener('DOMContentLoaded',function(){var z=document.getElementById('rzoom');if(!z)return;var zi=z.querySelector('img');function close(){z.style.display='none';document.body.style.overflow=''}document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){zi.src=i.src;zi.classList.remove('full');z.style.display='block';z.scrollTop=0;document.body.style.overflow='hidden'})});zi.addEventListener('click',function(e){e.stopPropagation();zi.classList.toggle('full')});z.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape')close()})});</script></body></html>
